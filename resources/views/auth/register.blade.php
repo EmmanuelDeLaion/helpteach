@@ -15,6 +15,11 @@
             </div>
 
             <div class="mt-4">
+                <x-jet-label for="control_number" value="{{ __('Número de Control') }}" />
+                <x-jet-input id="control_number" class="block mt-1 w-full" type="text" name="control_number" :value="old('control_number')" required />
+            </div>
+
+            <div class="mt-4">
                 <x-jet-label for="email" value="{{ __('Correo') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
