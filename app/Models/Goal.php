@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Review extends Model
+class Goal extends Model
 {
     use HasFactory;
 
@@ -14,13 +14,8 @@ class Review extends Model
     //  RELACION DE 1 A MUCHOS INVERSA    //
     //                                    //
     //************************************//
-    
-    public function user(){
-        $this->belongsTo('App\Models\User');
-    }
-
-    public function course(){
-        $this->belongsTo('App\Models\Course');
+    public function courses(){
+        return $this->belongsTo('App\Models\Course');
     }
     
 }
