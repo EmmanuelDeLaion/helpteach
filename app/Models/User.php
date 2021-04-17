@@ -62,14 +62,21 @@ class User extends Authenticatable
 
 
     
-    //Relacion 1 - 1
-
+    //***************************//
+    //                           //
+    //    RELACION DE 1 A 1      //
+    //                           //
+    //***************************//
     public function profile(){
         return $this->hasOne('App\Models\Profile');
     }
 
 
-    //Relacion 1 - n
+    //*****************************//
+    //                             //
+    //  RELACION DE 1 A MUCHOS     //
+    //                             //
+    //*****************************//    
     public function courses_dictate(){
         return $this->hasMany('App\Models\Course');
     }
@@ -78,7 +85,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Review');
     }
 
-    //Relacion n - n
+    //******************************************//
+    //                                          //
+    //  RELACION DE MUCHOS A MUCHOS INVERSA     //
+    //                                          //
+    //******************************************//    
     public function courses_enrolled(){
         return $this->belongsTo('App\Models\Course');
     }

@@ -14,20 +14,43 @@ class Course extends Model
     const REVISION = 2;
     const PUBLICADO = 3;
 
-    //Relacion 1 - n
-    public function reviews()
-    {
+
+    //******************************//
+    //                              //
+    //  RELACION DE 1 A MUCHOS      //
+    //                              //
+    //******************************//
+    public function reviews(){
         return $this->hasMany('App\Models\Review');
     }
 
-    //Relacion 1 - n inversa
-    public function teacher()
-    {
+    public function requirements(){
+        return $this->hasMany('App\Models\Requirement');
+    }
+
+    public function goals(){
+        return $this->hasMany('App\Models\Goal');
+    }
+
+    public function audiences(){
+        return $this->hasMany('App\Models\Audience');
+    }
+
+    public function sections(){
+        return $this->hasMany('App\Models\Section');
+    }
+
+
+    //************************************//
+    //                                    //
+    //  RELACION DE 1 A MUCHOS INVERSA    //
+    //                                    //
+    //************************************//
+    public function teacher(){
         return $this->belongsTo('App\Models\User', 'user_id');
     }
 
-    public function students()
-    {
+    public function students(){
         return $this->belongsToMany('App\Models\User');
     }
 

@@ -9,7 +9,12 @@ class Level extends Model
 {
     use HasFactory;
 
-    //relacion 1 - n
+    //*****************************//
+    //                             //
+    //  RELACION DE 1 A MUCHOS     //
+    //                             //
+    //*****************************//
+
     public function courses(){
         return $this->hasMany('App\Models\Course');
     }
