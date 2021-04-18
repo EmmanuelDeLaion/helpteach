@@ -9,6 +9,17 @@ class Section extends Model
 {
     use HasFactory;
 
+
+    //*****************************//
+    //                             //
+    //  RELACION DE 1 A MUCHOS     //
+    //                             //
+    //*****************************//
+    public function lessons(){
+        return $this->hasMany('App\Models\Lesson');
+    }
+
+
     //************************************//
     //                                    //
     //  RELACION DE 1 A MUCHOS INVERSA    //
