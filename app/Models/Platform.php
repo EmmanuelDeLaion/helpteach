@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Platform extends Model
 {
     use HasFactory;
+
+    //******************************//
+    //                              //
+    //  RELACION DE 1 A MUCHOS      //
+    //                              //
+    //******************************//
+    
+    public function lessons(){
+        return $this->hasMany('App\Models\Lesson');
+    }
 }
