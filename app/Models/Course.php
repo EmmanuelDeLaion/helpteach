@@ -49,11 +49,7 @@ class Course extends Model
     public function teacher(){
         return $this->belongsTo('App\Models\User', 'user_id');
     }
-
-    public function students(){
-        return $this->belongsToMany('App\Models\User');
-    }
-
+  
     public function level(){
         return $this->belongsTo('App\Models\Level');
     }
@@ -64,5 +60,15 @@ class Course extends Model
 
     public function price(){
         return $this->belongsTo('App\Models\Level');
+    }
+
+    //**********************************//
+    //                                  //
+    //  RELACION DE MUCHOS A MUCHOS     //
+    //                                  //
+    //**********************************//   
+
+    public function students(){
+        return $this->belongsToMany('App\Models\User');
     }
 }

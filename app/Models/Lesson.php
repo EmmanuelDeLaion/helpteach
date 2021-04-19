@@ -36,11 +36,11 @@ class Lesson extends Model
     }
 
 
-    //******************************************//
-    //                                          //
-    //  RELACION DE MUCHOS A MUCHOS INVERSA     //
-    //                                          //
-    //******************************************//  
+    //**********************************//
+    //                                  //
+    //  RELACION DE MUCHOS A MUCHOS     //
+    //                                  //
+    //**********************************//  
 
     public function users(){
         return $this->belongsToMany('App\Models\User');
