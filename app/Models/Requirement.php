@@ -14,7 +14,7 @@ class Requirement extends Model
     //  RELACION DE 1 A MUCHOS INVERSA    //
     //                                    //
     //************************************//
-    public function courses(){
+    public function course(){
         return $this->belongsTo('App\Models\Course');
     }
 }

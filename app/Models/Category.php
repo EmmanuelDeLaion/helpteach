@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
+
+    //*****************************//
+    //                             //
+    //  RELACION DE 1 A MUCHOS     //
+    //                             //
+    //*****************************//  
+    
+    public function courses(){
+        return $this->hasMany('App\Models\Course');
+    }
 }

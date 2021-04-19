@@ -77,7 +77,7 @@ class User extends Authenticatable
     //  RELACION DE 1 A MUCHOS     //
     //                             //
     //*****************************//    
-    public function courses_dictate(){
+    public function courses_dictated(){
         return $this->hasMany('App\Models\Course');
     }
 
