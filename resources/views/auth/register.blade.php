@@ -14,10 +14,6 @@
                 <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
-            <div class="mt-4">
-                <x-jet-label for="control_number" value="{{ __('Número de Control') }}" />
-                <x-jet-input id="control_number" class="block mt-1 w-full" type="text" name="control_number" :value="old('control_number')" required />
-            </div>
 
             <div class="mt-4">
                 <x-jet-label for="email" value="{{ __('Correo') }}" />
