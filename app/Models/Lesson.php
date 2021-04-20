@@ -46,4 +46,35 @@ class Lesson extends Model
         return $this->belongsToMany('App\Models\User');
     }
 
+    //************************************//
+    //                                    //
+    //    RELACION DE 1 A 1 POLIMORFICA   //
+    //                                    //
+    //************************************//
+
+    public function resource(){
+        return $this->morphOne('App\Models\Resource', 'resourseable');
+    }
+
+
+    //*****************************************//
+    //                                         //
+    //    RELACION DE 1 A MUCHOS POLIMORFICA   //
+    //                                         //
+    //*****************************************//
+
+    public function comments(){
+        return $this->morphMany('App\Models\Comment', 'commentable');
+    }
+
+
+    public function reaction(){
+        $this->morphMany('App\Models\Reaction', 'reactionable');
+    }
+
+
+
+
+
+
 }
