@@ -7,13 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
+    protected $guarded = ['id'];
+
+    
     use HasFactory;
 
     public function commentable(){
         return $this->morphTo();
     }
 
-    
+
     //************************************//
     //                                    //
     //  RELACION DE 1 A MUCHOS INVERSA    //
