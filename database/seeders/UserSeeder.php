@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+
+
 use App\Models\User;
 
 class UserSeeder extends Seeder
@@ -16,10 +18,10 @@ class UserSeeder extends Seeder
     {
         User::create([
             'name' => 'Jesus Emmanuel de Leon Lerma',
-            'control_number' => '1701F01633',
+            'email' => 'emmanuel@gmail.com',
             'password' => bcrypt('12345678'),
         ]);
 
-        
+        User::factory(99)->create();
     }
 }
