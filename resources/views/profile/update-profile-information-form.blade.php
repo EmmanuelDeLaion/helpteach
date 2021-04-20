@@ -59,11 +59,7 @@
             <x-jet-input-error for="name" class="mt-2" />
         </div>
 
-        <div class="col-span-6 sm:col-span-4">
-            <x-jet-label for="control_number" value="{{__('Número de control')}}" />
-            <x-jet-input id="control_number" type="text" class="mt-1 block w-full" wire:model.defer="state.control_number" autocomplete="control_number" />
-            <x-jet-input-error for="control_number" class="mt-2" />
-        </div>
+  
 
         <!-- Email -->
         <div class="col-span-6 sm:col-span-4">
