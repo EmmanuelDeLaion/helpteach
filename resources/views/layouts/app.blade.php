@@ -20,22 +20,17 @@
         <x-jet-banner />
 
         <div class="min-h-screen bg-gray-200">
+            {{-- Menu de Navegacion --}}
             @livewire('navigation-menu')
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-3 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}                        
-                    </div>
-                </header>
-            @endif
-
-            <!-- Page Content -->
+            <!-- Contenido de la pagina -->
             <main>
                 {{ $slot }}
             </main>
+
+            
         </div>
+
 
         @stack('modals')
 
