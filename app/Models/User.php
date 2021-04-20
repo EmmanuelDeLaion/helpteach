@@ -85,6 +85,14 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Review');
     }
 
+    public function comments(){
+        return $this->hasMany('App\Models\Comment');
+    }
+
+    public function reaction(){
+        return $this->hasMany('App\Models\Reaction');
+    }
+
     //**********************************//
     //                                  //
     //  RELACION DE MUCHOS A MUCHOS     //

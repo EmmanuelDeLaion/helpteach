@@ -20,6 +20,7 @@ class Course extends Model
     //  RELACION DE 1 A MUCHOS      //
     //                              //
     //******************************//
+
     public function reviews(){
         return $this->hasMany('App\Models\Review');
     }
@@ -46,6 +47,7 @@ class Course extends Model
     //  RELACION DE 1 A MUCHOS INVERSA    //
     //                                    //
     //************************************//
+
     public function teacher(){
         return $this->belongsTo('App\Models\User', 'user_id');
     }
@@ -71,4 +73,24 @@ class Course extends Model
     public function students(){
         return $this->belongsToMany('App\Models\User');
     }
+
+
+    //************************************//
+    //                                    //
+    //    RELACION DE 1 A 1 POLIMORFICA   //
+    //                                    //
+    //************************************//
+
+    public function image(){
+        return $this->morphOne('App\Models\Image', 'imageable');
+    }
+
+
+    public function lessons(){
+        return $this->HasManyThrough('App\Models\Lesson','App\Models\Section');
+    }
+
+
+
+
 }
