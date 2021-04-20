@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Goal extends Model
 {
+    protected $guarded = ['id'];
+
     use HasFactory;
 
     //************************************//

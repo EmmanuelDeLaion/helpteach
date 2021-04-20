@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
 {
+    protected $guarded = ['id', 'status'];
+
+
     use HasFactory;
 
     //constantes para el estado del curso
