@@ -22,7 +22,7 @@ class RequirementFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->sentence()
         ];
     }
 }
