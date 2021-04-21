@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         Storage::deleteDirectory('cursos');
         Storage::makeDirectory('cursos');
+
+        
         $this->call(UserSeeder::class);
         $this->call(LevelSeeder::class);
         $this->call(CategorySeeder::class);

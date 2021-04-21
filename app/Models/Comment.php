@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
+    use HasFactory;
+
     protected $guarded = ['id'];
 
     
-    use HasFactory;
 
     public function commentable(){
         return $this->morphTo();

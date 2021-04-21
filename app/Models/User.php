@@ -98,7 +98,7 @@ class User extends Authenticatable
     //                                  //
     //**********************************//    
     public function courses_enrolled(){
-        return $this->belongsTo('App\Models\Course');
+        return $this->belongsToMany('App\Models\Course');
     }
 
     public function lessons(){
