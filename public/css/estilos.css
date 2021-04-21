@@ -15,10 +15,12 @@
     src: url('/fonts/KGBlankSpaceSolid.ttf');
 }
 
-
-
 *{
     font-family: 'Poppins', sans-serif;
+}
+
+.body{
+    background-color: #fff;
 }
 
 :root{
@@ -26,24 +28,40 @@
     --color-blanco: #fff;
     --color-negro: #212033; 
 
+    --texto-portada: 100px;
+    --texto-titulos-secciones: 50px;
+
     scroll-behavior: smooth;
 }
 
-.portada-home{
+
+/* compartidos  */
+.seccion{
     position: relative;
-    /* background-image: url('/images/home/portada-home-cursos.jpg'); */
-    background-color: var(--color-blanco);
     height: 100vh;
+}
+
+
+/* secciones  */
+.portada-home{
+     /* background-image: url('/images/home/portada-home-cursos.jpg'); */
+    background-color: var(--color-blanco);
     background-size: cover;
     overflow-x: hidden;
+}
+
+.seccion-enseñar{
 
 }
 
-/* titulos  */
 
+
+
+/* titulos  */
+/* portada  */
 .h1-titulo-home{
     font-weight: bold;
-    font-size: 100px;
+    font-size: var(--texto-portada);
     color: var(--color-negro);
     line-height: 80%;
 }
@@ -61,7 +79,23 @@
     z-index: 100;
 }
 
+/* titulos seccion enseñar */
+.titulos-enseñar{
+    position: absolute;
+    top: 35%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+.h1-titulo-enseñar{
+    font-size: var(--texto-titulos-secciones);
+    color: var(--color-negro);
+    line-height: 80%;
+    font-weight: bold;
+}
 
+
+
+/* botones  */
 .btn-buscar-home{
     border: 1px solid var(--color-primario);
     background-color: #0C27D1;
@@ -72,7 +106,8 @@
 }
 
 .btn-buscar-home:hover{
-    background-color: var(--color-primario);
+    background-color: var(--color-negro);
+    border: 1px solid var(--color-negro);
 }
 
 
@@ -90,3 +125,19 @@
     transform: translate(-50%, -50%);
     width: 600px;
 }
+
+.ilustracion-manos-enseñar{
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    transition: 0.50s;
+}
+
+.ilustracion-manos-enseñar:hover {
+    filter: grayscale(100%);
+}
+
+
+
