@@ -19,6 +19,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
+*::selection{
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+}
+
+
 .body{
     background-color: #fff;
 }
@@ -48,14 +54,10 @@
     background-color: var(--color-blanco);
     background-size: cover;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
-.seccion-enseñar{
-
-}
-
-
-
+ 
 
 /* titulos  */
 /* portada  */
@@ -93,10 +95,22 @@
     font-weight: bold;
 }
 
+.titulos-camino-enseñanza{
+    position: relative;
+    z-index: 100;
+}
+.h1-titulo-enseñar{
+    font-size: var(--texto-titulos-secciones);
+    color: var(--color-negro);
+    line-height: 80%;
+    font-weight: bold;
+}
+
 
 
 /* botones  */
 .btn-buscar-home{
+    margin-top: 20px;
     border: 1px solid var(--color-primario);
     background-color: #0C27D1;
     color: var(--color-blanco);
@@ -124,8 +138,11 @@
     left: 70%;
     transform: translate(-50%, -50%);
     width: 600px;
+    transition: 0.50s;
 }
-
+.ilustracion-h:hover{
+    filter: grayscale(100%);
+}
 .ilustracion-manos-enseñar{
     position: absolute;
     top: 40%;
@@ -134,10 +151,19 @@
     width: 600px;
     transition: 0.50s;
 }
-
 .ilustracion-manos-enseñar:hover {
     filter: grayscale(100%);
 }
 
-
+.ilustracion-camino{
+    position: absolute;
+    top: 55%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    transition: 0.50s;
+}
+.ilustracion-camino:hover{
+    filter: grayscale(100%);
+}
 
