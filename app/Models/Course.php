@@ -11,9 +11,8 @@ class Course extends Model
     use HasFactory;
 
     protected $guarded = ['id', 'status'];
+    protected $withCount = ['students', 'reviews'];
 
-
-    protected $witchCount = ['students'];
 
 
 
@@ -21,6 +20,21 @@ class Course extends Model
     const BORRADOR = 1;
     const REVISION = 2;
     const PUBLICADO = 3;
+
+    // Retornar el valor del rating sobre dicho cursos 
+    public function getRatingAttribute()
+    {
+
+        // si el curso tiene alguna calificacion se retorna el valor promedio del curso 
+        if ($this->reviews_count) {
+            // se redondea el rating 
+            return round($this->reviews->avg('rating'), 1);
+        }
+        // caso contrario retorna el valor de 5 para el curso sin calificacion 
+        else{
+            return 5;
+        }
+    }
 
 
     //******************************//
