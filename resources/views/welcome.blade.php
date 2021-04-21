@@ -7,11 +7,11 @@
     
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
  </head>
-<body>
+<body class="body">
     
     <x-app-layout>
      
-        <section class="portada-home">
+        <section class="portada-home seccion">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
                 <div class=" text-home w-full md:w-3/4 lg:w-1/2">
                     <h1 class="h1-titulo-home">Cursa o crea un <span class="span"> curso</span> </h1>
@@ -24,13 +24,21 @@
                           </button>
                       </div>
                 </div>
-
                 <img class="ilustracion-h" src="{{ asset('/images/home/ilustracion-home.png') }}" alt="ilustacion">
-                
             </div>
-            
             </section>
-       
+
+
+            <section class="seccion seccion-enseñar">
+                <div class="titulos-enseñar">
+                    <h1 class="h1-titulo-enseñar">Ayudar a <br> enseñar</h1>
+                    <p class="p-subtitulo-home">Regístrate y crea cursos <br> para las nuevas generaciones</p>
+                    <button class="btn-buscar-home">Ver más</button>
+                </div>
+                <img class="ilustracion-manos-enseñar" src="{{ asset('/images/home/ilustracion-manos.png') }}" alt="">
+            </section>
+
+
     </x-app-layout>
 
     
