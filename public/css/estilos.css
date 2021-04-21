@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('/fonts/RadioGrotesk-Regular.otf');
+
+
+/* KGBlankSpaceSolid.ttf */
+
+@font-face {
+    font-family: radioGrotesk;
+    src: url('/fonts/RadioGrotesk-Regular.otf');
+}
+
+@font-face {
+    font-family: kgBlankSpaceSolid;
+    src: url('/fonts/KGBlankSpaceSolid.ttf');
+}
+
+
 
 *{
     font-family: 'Poppins', sans-serif;
@@ -8,7 +24,7 @@
 :root{
     --color-primario: #0C27D1;
     --color-blanco: #fff;
-    --color-negro: #000; 
+    --color-negro: #212033; 
 
     scroll-behavior: smooth;
 }
@@ -32,7 +48,9 @@
     line-height: 80%;
 }
 .p-subtitulo-home{
+    margin-top: 20px;
     color: var(--color-negro);
+ 
 }
 .span{
     color: var(--color-primario);
