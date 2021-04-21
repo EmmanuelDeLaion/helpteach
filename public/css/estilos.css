@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --color-primario: #0099FF;
+    --color-blanco: #fff;
+}
+
+.portada-home{
+    background-image: url('/images/home/portada-home-cursos.jpg');
+    height: 70vh;
+    background-size: cover;
+}
+
+.h1-titulo-home{
+    font-weight: bold;
+    font-size: 50px;
+    color: #fff;
+}
+.p-subtitulo-home{
+    
+}
+.span{
+    color: var(--color-primario);
+}
+
+.btn-buscar-home{
+    border: 1px solid var(--color-primario);
+    background-color: #0099ffa6;
+    color: var(--color-blanco);
+    padding: 7px;
+    transition: 0.25s;
+    border-radius: 5px;
+}
+
+.btn-buscar-home:hover{
+    background-color: var(--color-primario);
+}
