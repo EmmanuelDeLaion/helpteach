@@ -7,19 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-
+    use HasFactory;
     protected $guarded = ['id'];
 
-    
-    use HasFactory;
+
+
 
     //*****************************//
     //                             //
     //  RELACION DE 1 A MUCHOS     //
     //                             //
     //*****************************//  
-    
-    public function courses(){
+
+    public function courses()
+    {
         return $this->hasMany('App\Models\Course');
     }
 }

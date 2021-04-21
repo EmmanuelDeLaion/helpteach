@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Lesson extends Model
 {
+    use HasFactory;
+
     protected $guarded = ['id'];
 
-    use HasFactory;
 
     //***************************//
     //                           //

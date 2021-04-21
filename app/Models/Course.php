@@ -7,10 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
 {
+
+    use HasFactory;
+
     protected $guarded = ['id', 'status'];
 
 
-    use HasFactory;
+    protected $witchCount = ['students'];
+
+
 
     //constantes para el estado del curso
     const BORRADOR = 1;
@@ -24,23 +29,28 @@ class Course extends Model
     //                              //
     //******************************//
 
-    public function reviews(){
+    public function reviews()
+    {
         return $this->hasMany('App\Models\Review');
     }
 
-    public function requirements(){
+    public function requirements()
+    {
         return $this->hasMany('App\Models\Requirement');
     }
 
-    public function goals(){
+    public function goals()
+    {
         return $this->hasMany('App\Models\Goal');
     }
 
-    public function audiences(){
+    public function audiences()
+    {
         return $this->hasMany('App\Models\Audience');
     }
 
-    public function sections(){
+    public function sections()
+    {
         return $this->hasMany('App\Models\Section');
     }
 
@@ -51,19 +61,23 @@ class Course extends Model
     //                                    //
     //************************************//
 
-    public function teacher(){
+    public function teacher()
+    {
         return $this->belongsTo('App\Models\User', 'user_id');
     }
-  
-    public function level(){
+
+    public function level()
+    {
         return $this->belongsTo('App\Models\Level');
     }
 
-    public function category(){
+    public function category()
+    {
         return $this->belongsTo('App\Models\Level');
     }
 
-    public function price(){
+    public function price()
+    {
         return $this->belongsTo('App\Models\Level');
     }
 
@@ -73,7 +87,8 @@ class Course extends Model
     //                                  //
     //**********************************//   
 
-    public function students(){
+    public function students()
+    {
         return $this->belongsToMany('App\Models\User');
     }
 
@@ -84,16 +99,14 @@ class Course extends Model
     //                                    //
     //************************************//
 
-    public function image(){
+    public function image()
+    {
         return $this->morphOne('App\Models\Image', 'imageable');
     }
 
 
-    public function lessons(){
-        return $this->HasManyThrough('App\Models\Lesson','App\Models\Section');
+    public function lessons()
+    {
+        return $this->HasManyThrough('App\Models\Lesson', 'App\Models\Section');
     }
-
-
-
-
 }
