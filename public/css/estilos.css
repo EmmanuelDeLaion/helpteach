@@ -81,6 +81,10 @@
     z-index: 100;
 }
 
+.p-typing{
+    font-size: 14px;
+}
+
 /* titulos seccion enseñar */
 .titulos-enseñar{
     position: absolute;
