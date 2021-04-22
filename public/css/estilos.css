@@ -1,38 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-@import url('/fonts/RadioGrotesk-Regular.otf');
-
+@import url("/fonts/RadioGrotesk-Regular.otf");
 
 /* KGBlankSpaceSolid.ttf */
 
 @font-face {
     font-family: radioGrotesk;
-    src: url('/fonts/RadioGrotesk-Regular.otf');
+    src: url("/fonts/RadioGrotesk-Regular.otf");
 }
 
 @font-face {
     font-family: kgBlankSpaceSolid;
-    src: url('/fonts/KGBlankSpaceSolid.ttf');
+    src: url("/fonts/KGBlankSpaceSolid.ttf");
 }
 
-*{
-    font-family: 'Poppins', sans-serif;
+html{
+    -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-*::selection{
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+*::selection {
     background-color: var(--color-negro);
     color: var(--color-blanco);
 }
 
-
-.body{
+.body {
     background-color: #fff;
 }
 
-:root{
-    --color-primario: #0C27D1;
+:root {
+    --color-primario: #0c27d1;
     --color-blanco: #fff;
-    --color-negro: #212033; 
+    --color-negro: #212033;
 
     --texto-portada: 100px;
     --texto-titulos-secciones: 50px;
@@ -40,168 +45,196 @@
     scroll-behavior: smooth;
 }
 
-
 /* compartidos  */
-.seccion{
+.seccion {
     position: relative;
     height: 100vh;
 }
 
-
 /* secciones  */
-.portada-home{
-     /* background-image: url('/images/home/portada-home-cursos.jpg'); */
+.portada-home {
+    /* background-image: url('/images/home/portada-home-cursos.jpg'); */
     background-color: var(--color-blanco);
     background-size: cover;
     overflow-x: hidden;
     overflow-y: hidden;
 }
 
- 
-
 /* titulos  */
 /* portada  */
-.h1-titulo-home{
+.h1-titulo-home {
     font-weight: bold;
     font-size: var(--texto-portada);
     color: var(--color-negro);
     line-height: 80%;
 }
-.p-subtitulo-home{
+.p-subtitulo-home {
     margin-top: 20px;
     color: var(--color-negro);
- 
 }
-.span{
+.span {
     color: var(--color-primario);
     font-weight: bold;
 }
-.text-home{
+.text-home {
     position: relative;
     z-index: 100;
 }
 
-.p-typing{
+.p-typing {
     font-size: 14px;
 }
 
 /* titulos seccion enseñar */
-.titulos-enseñar{
+.titulos-enseñar {
     position: absolute;
     top: 35%;
     left: 70%;
     transform: translate(-50%, -50%);
 }
-.h1-titulo-enseñar{
+.h1-titulo-enseñar {
     font-size: var(--texto-titulos-secciones);
     color: var(--color-negro);
     line-height: 80%;
     font-weight: bold;
 }
 
-.titulos-camino-enseñanza{
+.titulos-camino-enseñanza {
     position: relative;
     z-index: 100;
 }
-.h1-titulo-enseñar{
+.h1-titulo-enseñar {
     font-size: var(--texto-titulos-secciones);
     color: var(--color-negro);
     line-height: 80%;
     font-weight: bold;
 }
 
-.titulo-cursos-home{
+.titulo-cursos-home {
     font-size: 40px;
     font-weight: bold;
     color: var(--color-negro);
     line-height: 80%;
 }
 
-
-
 /* botones  */
-.btn-buscar-home{
+.btn-buscar-home {
     margin-top: 20px;
     border: 1px solid var(--color-primario);
-    background-color: #0C27D1;
+    background-color: #0c27d1;
     color: var(--color-blanco);
     padding: 7px;
     transition: 0.25s;
     border-radius: 5px;
 }
 
-.btn-buscar-home:hover{
+.btn-buscar-home:hover {
     background-color: var(--color-negro);
     border: 1px solid var(--color-negro);
 }
 
-.btn-principal-outline{
+.btn-principal-outline {
     margin-top: 20px;
     border: 1px solid var(--color-primario);
     background-color: transparent;
     color: var(--color-primario);
-    padding: 7px 15px 7px 15px ;
-    transition: 0.40s;
+    padding: 7px 15px 7px 15px;
+    transition: 0.4s;
     border-radius: 50px;
 }
 
-.btn-principal-outline:hover{
+.btn-principal-outline:hover {
     background-color: var(--color-primario);
     border: 1px solid var(--color-blanco);
     color: var(--color-blanco);
 }
 
-
-
 /* navbar  */
-.navbar-jet{
+.navbar-jet {
     position: fixed;
     z-index: 999;
 }
 
 /* ilustraciones  */
-.ilustracion-h{
+.ilustracion-h {
     position: absolute;
     top: 35%;
     left: 70%;
     transform: translate(-50%, -50%);
     width: 600px;
-    transition: 0.50s;
+    transition: 0.5s;
 }
-.ilustracion-h:hover{
+.ilustracion-h:hover {
     filter: grayscale(100%);
 }
-.ilustracion-manos-enseñar{
+.ilustracion-manos-enseñar {
     position: absolute;
     top: 40%;
     left: 30%;
     transform: translate(-50%, -50%);
     width: 600px;
-    transition: 0.50s;
+    transition: 0.5s;
 }
 .ilustracion-manos-enseñar:hover {
     filter: grayscale(100%);
 }
 
-.ilustracion-camino{
+.ilustracion-camino {
     position: absolute;
     top: 55%;
     left: 80%;
     transform: translate(-50%, -50%);
     width: 500px;
-    transition: 0.50s;
+    transition: 0.5s;
 }
-.ilustracion-camino:hover{
+.ilustracion-camino:hover {
     filter: grayscale(100%);
 }
 
-.ilustracion-planeta{
+.ilustracion-planeta {
     position: absolute;
     top: 13%;
     left: 9%;
     transform: translate(-50%, -50%);
     width: 300px;
-    transition: 0.50s;
+    transition: 0.5s;
     opacity: 80%;
 }
 
+.ilustracion-libreta{
+    position: absolute;
+    opacity: 20%;
+    top: 10px;
+    width: 70px;
+}
+
+
+/* footer  */
+.bottom center {
+    padding: 5px;
+    font-size: 14px;
+    background: #151515;
+}
+.bottom center span {
+    color: #656565;
+}
+.bottom center a {
+    color: var(--color-blanco);
+    text-decoration: none;
+}
+.bottom center a:hover {
+    color: var(--color-primario);
+}
+@media screen and (max-width: 900px) {
+    footer {
+        position: relative;
+        bottom: 0px;
+    }
+    .main-content {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main-content .box {
+        margin: 5px 0;
+    }
+}
