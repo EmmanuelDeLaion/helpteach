@@ -26,7 +26,6 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
                 <div class=" text-home w-full md:w-3/4 lg:w-1/2">
                     <h1 class="h1-titulo-home">Cursa o crea un <span class="span"> curso</span> </h1>
-                    
                     <p class="p-subtitulo-home text-lg ">En <span class="span"> HelpTeach </span>  podrás encontrar cursos creados por alumnos totalmente gratuitos </p>
                     <div class="pt-2 relative mx-auto text-gray-600">
                         <input class="w-full border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
@@ -37,13 +36,14 @@
                           <p class="typing p-typing mt-2"></p>
                       </div>
                 </div>
-                <img class="ilustracion-h" src="{{ asset('/images/home/ilustracion-home.png') }}" alt="ilustacion">
+                <img class="ilustracion-h  " src="{{ asset('/images/home/ilustracion-home.png') }}" alt="ilustacion">
+                <img class="ilustracion-libreta  full-image" src="{{ asset('/images/home/ilustracion-libreta.png') }}" alt="">
+
             </div>
             </section>
 
 
             <section class="seccion seccion-enseñar">
-
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
 
                     <div class="titulos-enseñar">
@@ -51,7 +51,7 @@
                     <p class="p-subtitulo-home">Regístrate y crea cursos <br> para las nuevas generaciones</p>
                     <button onclick="location.href = '#camino' " class="btn-principal-outline">Regístrate ahora</button>
                 </div>
-                <img class="ilustracion-manos-enseñar" src="{{ asset('/images/home/ilustracion-manos.png') }}" alt="">
+                <img class="ilustracion-manos-enseñar  " src="{{ asset('/images/home/ilustracion-manos.png') }}" alt="">
                 </div>
             </section>
 
@@ -80,12 +80,22 @@
             </section>
 
 
+ 
+                <div class="bottom">
+                  <center class="center">
+                    <span class="credit">Created By <a target="_blanck" href="http://emmanueldl.tecdevsmx.com/#/home">EmmanuelDL</a> | </span>
+                    <span class="far fa-copyright"></span><span> 2021 All rights reserved.</span>
+                  </center>
+                </div>
+ 
+
             
 
     </x-app-layout>
 
   
     <script type="text/javascript" src="{{ asset('js/funciones-home.js') }}" ></script>
+    <script type="text/javascript" src="{{ asset('js/funcion-scroll.js') }}" ></script>
 
 </body>
 </html>
