@@ -36,11 +36,21 @@
                     <div class="titulos-enseñar">
                     <h1 class="h1-titulo-enseñar">Ayudar a <br> enseñar</h1>
                     <p class="p-subtitulo-home">Regístrate y crea cursos <br> para las nuevas generaciones</p>
-                    <button onclick="location.href = '#camino' " class="btn-buscar-home ">Ver más</button>
+                    <button onclick="location.href = '#camino' " class="btn-principal-outline">Regístrate ahora</button>
                 </div>
                 <img class="ilustracion-manos-enseñar" src="{{ asset('/images/home/ilustracion-manos.png') }}" alt="">
                 </div>
+            </section>
+
+
+            <section class="">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-36">
+                    <div class="px-4 sm:px-6 w-full lg:w-1/2">
+                        <h1 class="titulo-cursos-home">Obtén el conocimiento de los siguientes cursos</h1>
+                        <p class="mt-2">Estos son los ultimos cursos que se han subido</p>
+                    </div>
                 
+                </div>
             </section>
 
 
@@ -49,13 +59,19 @@
                     <div class="titulos-camino-enseñanza w-full md:w-3/4 lg:w-1/2">
                     <h1 class="h1-titulo-enseñar">Sigue el camino <br> de la enseñanza</h1>
                     <p class="p-subtitulo-home"> Motivar a los alumnos que sigan el camino de la enseñanza sin que existan decaídas principalmente a la hora de entender los temas y no hacer complicado el buscar información en sitios donde cobran una cantidad excesiva </p>
-                    <button class="btn-buscar-home">Ver más</button>
+                    <button class="btn-principal-outline">Ver más</button>
                 </div>
                 <img class="ilustracion-camino" src="{{ asset('/images/home/ilustracion-camino-enseñanza.png') }}" alt="">
                 <img class="ilustracion-planeta" src="{{ asset('/images/home/ilustracion-planeta.png') }}" alt="">    
             </div>
-                
             </section>
+
+
+            
+
+            
+
+ 
 
 
     </x-app-layout>

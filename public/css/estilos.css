@@ -106,6 +106,13 @@
     font-weight: bold;
 }
 
+.titulo-cursos-home{
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--color-negro);
+    line-height: 80%;
+}
+
 
 
 /* botones  */
@@ -123,6 +130,23 @@
     background-color: var(--color-negro);
     border: 1px solid var(--color-negro);
 }
+
+.btn-principal-outline{
+    margin-top: 20px;
+    border: 1px solid var(--color-primario);
+    background-color: transparent;
+    color: var(--color-primario);
+    padding: 7px 15px 7px 15px ;
+    transition: 0.40s;
+    border-radius: 50px;
+}
+
+.btn-principal-outline:hover{
+    background-color: var(--color-primario);
+    border: 1px solid var(--color-blanco);
+    color: var(--color-blanco);
+}
+
 
 
 /* navbar  */
