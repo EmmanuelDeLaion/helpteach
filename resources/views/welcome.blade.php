@@ -49,7 +49,7 @@
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-3 gap-6">
                     <article>
                         <figure>
-                            <img class="rounded-xl h-36 w-full object-cover" src="{{ asset('/images/home/portada-home-cursos.jpg') }}" alt="">
+                            <img class="rounded-xl h-36 w-full object-cover" src="{{ asset('/images/home/contenido-facil-usar.jpg') }}" alt="">
                         </figure>
                         <header>
                             <h1 class="text-center">Ayuda a Enseñar</h1>
