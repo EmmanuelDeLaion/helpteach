@@ -112,7 +112,7 @@
         </section>
 
 
-        <section class="seccion">
+        <section class="">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div class="px-4 sm:px-6 w-full lg:w-1/2">
                     <h1 class="titulo-cursos-home">Obtén el conocimiento de los siguientes cursos</h1>
@@ -120,12 +120,15 @@
                 </div>
             </div>
 
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid-cols-4 gap-x-6 gap-y-8">
+            <div class=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid-cols-4 gap-x-6 gap-y-8">
 
-                {{-- @foreach ($courses as $course) --}}
 
-                <section class="cards">
-                    <article class="card card-1">
+                @foreach ($courses as $course)
+
+                    {{-- {{ Storage::url($course->image->url) }} --}}
+
+
+                    <article class="card-cursos card-1">
                         <div class="card-info-hover">
                             <svg class="card-like" viewBox="0 0 24 24">
                                 <path fill="#000000"
@@ -133,18 +136,19 @@
                             </svg>
                         </div>
                         <div class="card-img"
-                            style="background-image: url('https://scontent.frex1-1.fna.fbcdn.net/v/t1.6435-9/36627150_1027414267428172_7736275383397384192_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHLuCwTVUl9H2FWF_U0mo1jUZxsY2u4sI9RnGxja7iwj5aCv90Q9aOgIdZLWSj5atQiTpHXbaMMmaVhqwv7cDzD&_nc_ohc=4b8YdlbVuKIAX9Hw0pf&_nc_ht=scontent.frex1-1.fna&oh=808a008800ced74c615f30805d02caed&oe=60AC9DB1')">
+                            style="background-image: url('{{ Storage::url($course->image->url) }}')">
                         </div>
+
                         <a class="card-link">
                             <div class="card-img-hover"
-                                style="background-image: url('https://scontent.frex1-1.fna.fbcdn.net/v/t1.6435-9/36627150_1027414267428172_7736275383397384192_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHLuCwTVUl9H2FWF_U0mo1jUZxsY2u4sI9RnGxja7iwj5aCv90Q9aOgIdZLWSj5atQiTpHXbaMMmaVhqwv7cDzD&_nc_ohc=4b8YdlbVuKIAX9Hw0pf&_nc_ht=scontent.frex1-1.fna&oh=808a008800ced74c615f30805d02caed&oe=60AC9DB1')">
+                                style="background-image: url('{{ Storage::url($course->image->url) }}')">
                             </div>
                         </a>
                         <div class="card-info">
                             <span class="card-category">Desarrollo web</span>
-                            <h3 class="card-title">Curso HTML y CSS desde 0</h3>
-                            <span class="card-by">De: <a href="#" class="card-author" title="author">Emmanuel de
-                                    León</a></span>
+                            <h3 class="card-title"> {{ $course->title }} </h3>
+                            <span class="card-by">De: <a href="#" class="card-author" title="author">
+                                    {{ $course->teacher->name }} </a></span>
                         </div>
 
                         <div class="flex justify-center">
@@ -153,16 +157,16 @@
                                 Más información
                             </button>
                         </div>
-                        
                     </article>
 
 
-                </section>
-                {{-- @endforeach --}}
+                @endforeach
+
 
 
             </div>
         </section>
+
 
 
         <section id="camino" class="seccion portada-home">
