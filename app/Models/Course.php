@@ -24,13 +24,11 @@ class Course extends Model
     // Retornar el valor del rating sobre dicho cursos 
     public function getRatingAttribute()
     {
-
         // si el curso tiene alguna calificacion se retorna el valor promedio del curso 
         if ($this->reviews_count) {
             // se redondea el rating 
             return round($this->reviews->avg('rating'), 1);
         }
-        // caso contrario retorna el valor de 5 para el curso sin calificacion 
         else{
             return 5;
         }
