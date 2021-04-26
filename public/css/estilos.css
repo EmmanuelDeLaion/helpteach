@@ -176,7 +176,6 @@ html {
 }
 
 .btn-ver-curso {
-    margin-top: 20px;
     border: 1px solid var(--color-primario);
     background-color: transparent;
     color: var(--color-primario);
@@ -261,8 +260,6 @@ html {
     position: absolute;
 }
 
-
-
 /* cards  */
 
 /* .cards {
@@ -276,6 +273,7 @@ html {
 
 .cards {
     width: 100%;
+    display: flex;
 }
 
 .card-like {
@@ -333,16 +331,22 @@ html {
     margin-right: 25px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
     background-color: #fff;
-    width: 33.3%;
+    width: 100%;
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+
+    -webkit-box-shadow: 0px 0px 34px -25px rgba(0, 0, 0, 0.61);
+    -moz-box-shadow: 0px 0px 34px -25px rgba(0, 0, 0, 0.61);
+    box-shadow: 0px 0px 34px -25px rgba(0, 0, 0, 0.61);
+
+    /* box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1); */
+    /* border: 1px solid var(--color-primario); */
 }
 
 .card-cursos:hover {
     box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
-    transform: scale(1.1, 1.1);
+    transform: scale(1.05, 1.05);
 }
 
 .card-info {
@@ -372,7 +376,7 @@ html {
 .card-author {
     font-weight: 600;
     text-decoration: none;
-    color: #ad7d52;
+    color: var(--color-primario);
 }
 
 .card-cursos:hover .card-img-hover {
@@ -387,6 +391,14 @@ html {
 
 .card-cursos:hover .card-info-hover {
     opacity: 1;
+}
+
+.rating {
+    z-index: 20;
+}
+
+.icon-students {
+    color: var(--color-negro);
 }
 
 /* seccion cual curso ver  */
