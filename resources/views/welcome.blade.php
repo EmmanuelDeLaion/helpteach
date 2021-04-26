@@ -43,6 +43,73 @@
             </section>
 
 
+            <section class="mt-24">
+                <h1 class="text-gray-600 text-center text-3xl mb-6">Contenido</h1>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-4 gap-6">
+                    <article>
+                        <figure>
+                            <img class="rounded-xl h-36 w-full object-cover" src="{{ asset('/images/home/portada-home-cursos.jpg') }}" alt="">
+                        </figure>
+                        <header>
+                            <h1 class="text-center">Ayuda a Enseñar</h1>
+                        </header>
+
+                        <p class="text-sm text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa ut nesciunt impedit!</p>
+                    </article>
+
+
+                    <article>
+                        <figure>
+                            <img class="rounded-xl h-36 w-full object-cover" src="{{ asset('/images/home/portada-home-cursos.jpg') }}" alt="">
+                        </figure>
+                        <header>
+                            <h1 class="text-center">Ayuda a Enseñar</h1>
+                        </header>
+
+                        <p class="text-sm text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa ut nesciunt impedit!</p>
+                    </article>
+
+
+                    <article>
+                        <figure>
+                            <img class="rounded-xl h-36 w-full object-cover" src="{{ asset('/images/home/portada-home-cursos.jpg') }}" alt="">
+                        </figure>
+                        <header>
+                            <h1 class="text-center">Ayuda a Enseñar</h1>
+                        </header>
+
+                        <p class="text-sm text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa ut nesciunt impedit!</p>
+                    </article>
+
+
+                    <article>
+                        <figure>
+                            <img class="rounded-xl h-36 w-full object-cover" src="{{ asset('/images/home/portada-home-cursos.jpg') }}" alt="">
+                        </figure>
+                        <header>
+                            <h1 class="text-center">Ayuda a Enseñar</h1>
+                        </header>
+
+                        <p class="text-sm text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa ut nesciunt impedit!</p>
+                    </article>
+
+
+                </div>
+
+  
+
+                <div class="flex justify-center ...">
+                     <button type="submit" class="btn-principal-outline mb-24  text-center">
+                        ¿Quienes somos?
+                    </button>
+                </div>
+                
+
+
+            </section>
+
+
             <section class="seccion seccion-enseñar">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
 
