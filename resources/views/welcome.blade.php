@@ -118,13 +118,44 @@
             <section id="camino" class="seccion portada-home">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-36">
                     <div class="titulos-camino-enseñanza w-full md:w-3/4 lg:w-1/2">
-                    <h1 class="h1-titulo-enseñar">Sigue el camino <br> de la enseñanza</h1>
+                    <h1 class="h1-titulo-enseñar">Rumbo al <br> aprendizaje</h1>
                     <p class="p-subtitulo-home"> Motivar a los alumnos que sigan el camino de la enseñanza sin que existan decaídas principalmente a la hora de entender los temas y no hacer complicado el buscar información en sitios donde cobran una cantidad excesiva </p>
                     <button class="btn-principal-outline">Ver más</button>
                 </div>
                 <img class="ilustracion-camino" src="{{ asset('/images/home/ilustracion-camino-enseñanza.png') }}" alt="">
                 <img class="ilustracion-planeta" src="{{ asset('/images/home/ilustracion-planeta.png') }}" alt="">    
             </div>
+            </section>
+
+
+            <section class="contenedor-fondo-animado">
+                 {{-- <svg class="svg-index" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L60,90.7C120,85,240,75,360,80C480,85,600,107,720,122.7C840,139,960,149,1080,144C1200,139,1320,117,1380,106.7L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg> --}}
+
+                <div class="animacion">
+                    <span class="uno"></span>
+                    <span class="dos"></span>
+                    <span class="tres"></span>
+                    <span class="cuatro"></span>
+                 
+                    <span class="uno"></span>
+                    <span class="dos"></span>
+                    <span class="tres"></span>
+                    <span class="cuatro"></span>
+                  
+                    <span class="uno"></span>
+                    <span class="dos"></span>
+                    <span class="tres"></span>
+                    <span class="cuatro"></span>
+                </div>
+                <div class="seccion-contenido">
+                    <div class="contenido">
+                        <h1>¿No sabes cual curso ver?</h1>
+                        <p class="text-sm text-center text-gray-500">Puedes buscar más cursos en el apartado de todos los cursos</p>
+                        <button type="submit" class="btn-principal-outline-blanco   ">
+                            Ver cursos
+                        </button>
+                    </div>
+                </div>
             </section>
 
 
@@ -135,6 +166,10 @@
                     <span class="far fa-copyright"></span><span> 2021 All rights reserved.</span>
                   </center>
                 </div>
+
+
+
+
  
 
             
