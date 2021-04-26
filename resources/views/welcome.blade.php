@@ -73,13 +73,13 @@
 
                     <article>
                         <figure>
-                            <img class="rounded-xl h-36 w-full object-cover" src="{{ asset('/images/home/portada-home-cursos.jpg') }}" alt="">
+                            <img class="rounded-xl h-36 w-full object-cover" src="{{ asset('/images/home/contenido-acceso-gratis.jpg') }}" alt="">
                         </figure>
                         <header>
-                            <h1 class="text-center ">Ayuda a Enseñar</h1>
+                            <h1 class="text-center ">Acceso Gratis</h1>
                         </header>
 
-                        <p class="text-sm text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa ut nesciunt impedit!</p>
+                        <p class="text-sm text-center text-gray-500">Regístrate e inicia sesión para poder tener acceso a los cursos disponibles</p>
                     </article>
 
 
