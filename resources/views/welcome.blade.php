@@ -44,9 +44,9 @@
 
 
             <section class="mt-24">
-                <h1 class="text-center mb-6 h1-titulo-enseñar">Contenido</h1>
+                <h1 class="text-center mb-20  h1-titulo-enseñar">Contenido</h1>
 
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-4 gap-6">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-3 gap-6">
                     <article>
                         <figure>
                             <img class="rounded-xl h-36 w-full object-cover" src="{{ asset('/images/home/portada-home-cursos.jpg') }}" alt="">
@@ -54,22 +54,11 @@
                         <header>
                             <h1 class="text-center">Ayuda a Enseñar</h1>
                         </header>
-
-                        <p class="text-sm text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa ut nesciunt impedit!</p>
+                        <p class="text-sm text-center text-gray-500">Regístrate y crea cursos para las nuevas generaciones</p>
                     </article>
 
 
-                    <article>
-                        <figure>
-                            <img class="rounded-xl h-36 w-full object-cover" src="{{ asset('/images/home/portada-home-cursos.jpg') }}" alt="">
-                        </figure>
-                        <header>
-                            <h1 class="text-center">Ayuda a Enseñar</h1>
-                        </header>
-
-                        <p class="text-sm text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa ut nesciunt impedit!</p>
-                    </article>
-
+          
 
                     <article>
                         <figure>
@@ -78,7 +67,6 @@
                         <header>
                             <h1 class="text-center ">Acceso Gratis</h1>
                         </header>
-
                         <p class="text-sm text-center text-gray-500">Regístrate e inicia sesión para poder tener acceso a los cursos disponibles</p>
                     </article>
 
@@ -90,14 +78,9 @@
                         <header>
                             <h1 class="text-center">Alumnos Instructores</h1>
                         </header>
-
                         <p class="text-sm text-center text-gray-500">Cursos creados por alumnos para alumnoss</p>
                     </article>
-
-
                 </div>
-
-  
 
                 <div class="flex justify-center ...">
                      <button type="submit" class="btn-principal-outline mb-24  text-center">
@@ -105,8 +88,6 @@
                     </button>
                 </div>
                 
-
-
             </section>
 
 
