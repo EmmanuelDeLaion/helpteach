@@ -29,3 +29,8 @@ Route::get('cursos', function(){
 Route::get('about', function(){
     return "Aqui es la pagina de quienes somos";
 })->name('about.index');
+
+
+Route::get('cursos/{course}', function($course){
+    return "Aqui se muestra el curso";
+})->name('course.show');

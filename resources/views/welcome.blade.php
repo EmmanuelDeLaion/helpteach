@@ -104,7 +104,7 @@
                 <div class="titulos-enseñar">
                     <h1 class="h1-titulo-enseñar">Ayudar a <br> enseñar</h1>
                     <p class="p-subtitulo-home">Regístrate y crea cursos <br> para las nuevas generaciones</p>
-                    <button onclick="location.href = '#camino' " class="btn-principal-outline">Regístrate ahora</button>
+                    <button onclick="location.href = '#' " class="btn-principal-outline">Regístrate ahora</button>
                 </div>
                 <img class="ilustracion-manos-enseñar  " src="{{ asset('/images/home/ilustracion-manos.png') }}"
                     alt="">
@@ -120,7 +120,8 @@
                 </div>
             </div>
 
-            <div class="grid gap-4 grid-cols-4 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  gap-x-6 gap-y-8">
+            <div
+                class="grid gap-4 grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 gap-x-6 gap-y-8">
 
                 @foreach ($courses as $course)
 
@@ -171,18 +172,15 @@
                                     <i class=" icon-students fas fa-chalkboard-teacher"></i>
                                     ({{ $course->students_count }})
                                 </p>
-
                             </div>
-
 
                         </div>
 
 
 
-
                         <div class="flex justify-center">
 
-                            <button onclick="location.href='{{ route('about.index') }}'" type="submit"
+                            <button onclick="location.href='{{ route('course.show', $course) }}'" type="submit"
                                 class="w-11/12 btn-ver-curso mb-12 text-center">
                                 Más información
                             </button>
@@ -198,7 +196,7 @@
 
 
 
-        <section id="camino" class="seccion portada-home">
+        <section class="seccion portada-home">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-36">
                 <div class="titulos-camino-enseñanza w-full md:w-3/4 lg:w-1/2">
                     <h1 class="h1-titulo-enseñar">Rumbo al <br> aprendizaje</h1>
