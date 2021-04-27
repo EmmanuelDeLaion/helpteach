@@ -35,6 +35,12 @@ class Course extends Model
     }
 
 
+    public function getRouteKeyName()
+    {
+        return "slug";
+    }
+
+
     //******************************//
     //                              //
     //  RELACION DE 1 A MUCHOS      //
