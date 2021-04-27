@@ -247,13 +247,6 @@ html {
     opacity: 80%;
 }
 
-.ilustracion-libreta {
-    position: absolute;
-    opacity: 20%;
-    top: 10px;
-    width: 70px;
-}
-
 .svg-index {
     top: 0;
     z-index: 3;
@@ -398,7 +391,7 @@ html {
 }
 
 .icon-students {
-    color: #747474 ;
+    color: #747474;
 }
 
 /* seccion cual curso ver  */

@@ -42,8 +42,7 @@
                     </div>
                 </div>
                 <img class="ilustracion-h  " src="{{ asset('/images/home/ilustracion-home.png') }}" alt="ilustacion">
-                <img class="ilustracion-libreta  full-image" src="{{ asset('/images/home/ilustracion-libreta.png') }}"
-                    alt="">
+
             </div>
         </section>
 

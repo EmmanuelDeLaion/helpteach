@@ -32,5 +32,5 @@ Route::get('about', function(){
 
 
 Route::get('cursos/{course}', function($course){
-    return "Aqui se muestra el curso";
+    return "Aqui se muestra el curso: $course ";
 })->name('course.show');
