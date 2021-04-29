@@ -3,6 +3,7 @@
 @import url('botones.css');
 @import url('cards-cursos.css');
 @import url('titulos.css');
+@import url('cards-contenido.css');
 
 
 
@@ -76,6 +77,8 @@ html {
     background-image: url("/images/home/contenido-facil-usar.jpg");
     background-size: cover;
     background-position-y: 60%;
+    /* background: linear-gradient(to bottom right, #003A99, #0E77E2); */
+
     overflow-x: hidden;
     overflow-y: hidden;
     height: 100vh;
