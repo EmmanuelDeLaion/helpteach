@@ -1,0 +1,91 @@
+
+/* botones  */
+
+.btn-primario-outline,
+.btn-primario-outline-blanco,
+.btn-primario,
+.btn-ver-curso
+{
+    padding: 7px 30px 7px 30px;
+    transition: 0.4s;
+    border-radius: 50px;
+    margin: 20px;
+}
+
+/* boton buscar en home  */
+.btn-buscar-home {
+    margin-top: 20px;
+    border: 1px solid var(--color-primario);
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 7px;
+    transition: 0.25s;
+    border-radius: 5px;
+}
+.btn-buscar-home:hover {
+    background-color: var(--color-negro);
+    border: 1px solid var(--color-negro);
+}
+
+
+/* boton primario azul */
+.btn-primario{
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+}
+.btn-primario:hover{
+    -webkit-box-shadow: 0px 0px 18px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 18px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 18px -6px rgba(0,0,0,0.75);
+}
+
+
+/* boton primario azul con borde  */
+.btn-primario-outline {
+    border: 1px solid var(--color-primario);
+    background-color: transparent;
+    color: var(--color-primario);
+}
+.btn-primario-outline:focus {
+    outline: none;
+}
+
+.btn-primario-outline:hover {
+    background-color: var(--color-primario);
+    border: 1px solid var(--color-blanco);
+    color: var(--color-blanco);
+}
+
+/* boton blanco con borde */
+.btn-primario-outline-blanco {
+    border: 1px solid var(--color-blanco);
+    background-color: transparent;
+    color: var(--color-blanco);
+    font-weight: bold;
+}
+
+.btn-primario-outline-blanco:focus {
+    outline: none;
+}
+.btn-primario-outline-blanco:hover {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-blanco);
+    color: var(--color-negro);
+}
+
+
+/* boton ver cursos con borde  */
+.btn-ver-curso {
+    border: 1px solid var(--color-primario);
+    background-color: transparent;
+    color: var(--color-primario);
+    z-index: 20;
+}
+.btn-ver-curso:focus {
+    outline: none;
+}
+.btn-ver-curso:hover {
+    background-color: var(--color-negro);
+    border: 1px solid var(--color-negro);
+    color: var(--color-blanco);
+}
