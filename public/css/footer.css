@@ -64,6 +64,7 @@ ul{
 	border-radius: 50%;
 	color: #ffffff;
 	transition: all 0.5s ease;
+    margin-top: 10px;
 }
 .footer-col .social-links a:hover{
 	color: var(--color-negro);
