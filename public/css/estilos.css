@@ -38,12 +38,22 @@ html {
 }
 
 :root {
-    --color-primario: #0c27d1;
+    /* colores  */
+    --color-blanco-fondo: #f7f8fc;
+    --color-primario: #328af1;
+    --color-negro: #22292f;
+    /* color botones secundarios  */
+    --color-blanco-primario: #f4f4f4;
+    --color-blanco-secundario: #e8e8e8;
+    --color-gris-fondo: #f6f6f6;
+    --color-gris: #9da9b2;
     --color-blanco: #fff;
-    --color-negro: #212033;
 
+    /* tamaños  */
     --texto-portada: 100px;
     --texto-titulos-secciones: 50px;
+
+     
 
     scroll-behavior: smooth;
 }
@@ -52,15 +62,18 @@ html {
 .seccion {
     position: relative;
     height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 /* secciones  */
 .portada-home {
-    /* background-image: url('/images/home/portada-home-cursos.jpg'); */
-    background-color: var(--color-blanco);
+    background-image: url("/images/home/contenido-facil-usar.jpg");
     background-size: cover;
+    background-position-y: 60%;
     overflow-x: hidden;
     overflow-y: hidden;
+    height: 100vh;
 }
 
 /* titulos  */
@@ -69,7 +82,7 @@ html {
     font-weight: bold;
     font-size: var(--texto-portada);
     color: var(--color-negro);
-    line-height: 80%;
+    line-height: 75%;
 }
 .p-subtitulo-home {
     margin-top: 20px;
@@ -86,6 +99,7 @@ html {
 
 .p-typing {
     font-size: 14px;
+    color: var(--color-blanco);
 }
 
 /* titulos seccion enseñar */
@@ -136,25 +150,29 @@ html {
     border: 1px solid var(--color-negro);
 }
 
-.btn-principal-outline {
+
+
+/* boton primario azul con borde  */
+.btn-primario-outline {
+    padding: 7px 15px 7px 15px;
+    transition: 0.4s;
+    border-radius: 50px;
     margin-top: 20px;
     border: 1px solid var(--color-primario);
     background-color: transparent;
     color: var(--color-primario);
-    padding: 7px 15px 7px 15px;
-    transition: 0.4s;
-    border-radius: 50px;
 }
-.btn-principal-outline:focus {
+.btn-primario-outline:focus {
     outline: none;
 }
 
-.btn-principal-outline:hover {
+.btn-primario-outline:hover {
     background-color: var(--color-primario);
     border: 1px solid var(--color-blanco);
     color: var(--color-blanco);
 }
 
+/* boton blanco con borde */
 .btn-principal-outline-blanco {
     margin-top: 20px;
     border: 1px solid var(--color-blanco);
