@@ -1,0 +1,58 @@
+
+/* titulos  */
+/* portada  */
+.h1-titulo-home {
+    font-weight: bold;
+    font-size: var(--texto-portada);
+    color: var(--color-negro);
+    line-height: 75%;
+}
+.p-subtitulo-home {
+    margin-top: 20px;
+    color: var(--color-negro);
+}
+.span {
+    color: var(--color-primario);
+    font-weight: bold;
+}
+.text-home {
+    position: relative;
+    z-index: 100;
+}
+
+.p-typing {
+    font-size: 14px;
+    color: var(--color-blanco);
+}
+
+/* titulos seccion enseñar */
+.titulos-enseñar {
+    position: absolute;
+    top: 35%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+.h1-titulo-enseñar {
+    font-size: var(--texto-titulos-secciones);
+    color: var(--color-negro);
+    line-height: 80%;
+    font-weight: bold;
+}
+
+.titulos-camino-enseñanza {
+    position: relative;
+    z-index: 100;
+}
+.h1-titulo-enseñar {
+    font-size: var(--texto-titulos-secciones);
+    color: var(--color-negro);
+    line-height: 80%;
+    font-weight: bold;
+}
+
+.titulo-cursos-home {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--color-negro);
+    line-height: 80%;
+}

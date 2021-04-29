@@ -51,7 +51,13 @@
             <h1 class="text-center mb-20  h1-titulo-enseñar">Contenido</h1>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-3 gap-6">
-                <article>
+
+                <div class="card">
+                    
+                </div>
+
+
+                {{-- <div class="card">
                     <figure>
                         <img class="rounded-xl h-36 w-full object-cover"
                             src="{{ asset('/images/home/contenido-facil-usar.jpg') }}" alt="">
@@ -61,31 +67,12 @@
                     </header>
                     <p class="text-sm text-center text-gray-500">Regístrate y crea cursos para las nuevas generaciones
                     </p>
-                </article>
+                </div> --}}
 
-                <article>
-                    <figure>
-                        <img class="rounded-xl h-36 w-full object-cover"
-                            src="{{ asset('/images/home/contenido-acceso-gratis.jpg') }}" alt="">
-                    </figure>
-                    <header>
-                        <h1 class="text-center ">Acceso Gratis</h1>
-                    </header>
-                    <p class="text-sm text-center text-gray-500">Regístrate e inicia sesión para poder tener acceso a
-                        los cursos disponibles</p>
-                </article>
 
-                <article>
-                    <figure>
-                        <img class="rounded-xl h-36 w-full object-cover"
-                            src="{{ asset('/images/home/contenido-instructores.jpg') }}" alt="">
-                    </figure>
-                    <header>
-                        <h1 class="text-center">Alumnos Instructores</h1>
-                    </header>
-                    <p class="text-sm text-center text-gray-500">Cursos creados por alumnos para alumnoss</p>
-                </article>
             </div>
+
+
 
             <div class="flex justify-center">
                 <button onclick="location.href='{{ route('about.index') }}'" type="submit"
@@ -103,7 +90,7 @@
                 <div class="titulos-enseñar">
                     <h1 class="h1-titulo-enseñar">Ayudar a <br> enseñar</h1>
                     <p class="p-subtitulo-home">Regístrate y crea cursos <br> para las nuevas generaciones</p>
-                    <button onclick="location.href = '#' " class="btn-principal-outline">Regístrate ahora</button>
+                    <button onclick="location.href = '#' " class="btn-primario-outline">Regístrate ahora</button>
                 </div>
                 <img class="ilustracion-manos-enseñar  " src="{{ asset('/images/home/ilustracion-manos.png') }}"
                     alt="">
@@ -202,7 +189,9 @@
                     <p class="p-subtitulo-home"> Motivar a los alumnos que sigan el camino de la enseñanza sin que
                         existan decaídas principalmente a la hora de entender los temas y no hacer complicado el buscar
                         información en sitios donde cobran una cantidad excesiva </p>
-                    <button class="btn-principal-outline">Ver más</button>
+                    <button class="btn-primario-outline">Ver más</button>
+
+
                 </div>
                 <img class="ilustracion-camino" src="{{ asset('/images/home/ilustracion-camino-enseñanza.png') }}"
                     alt="">
@@ -236,9 +225,11 @@
                     <p class="text-sm text-center text-gray-500">Puedes buscar más cursos en el apartado de todos los
                         cursos</p>
                     <button onclick="location.href='{{ route('courses.index') }}'" type="submit"
-                        class="btn-principal-outline-blanco   ">
+                        class="btn-primario-outline-blanco   ">
                         Ver cursos
                     </button>
+
+
                 </div>
             </div>
         </section>
