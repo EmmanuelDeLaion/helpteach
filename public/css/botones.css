@@ -4,7 +4,9 @@
 .btn-primario-outline,
 .btn-primario-outline-blanco,
 .btn-primario,
-.btn-ver-curso
+.btn-ver-curso,
+.btn-secundario,
+.btn-secundario-outline
 {
     padding: 7px 30px 7px 30px;
     transition: 0.4s;
@@ -56,6 +58,10 @@
     color: var(--color-blanco);
 }
 
+.btn-primario:focus{
+    outline: none;
+}
+
 /* boton blanco con borde */
 .btn-primario-outline-blanco {
     border: 1px solid var(--color-blanco);
@@ -88,4 +94,26 @@
     background-color: var(--color-negro);
     border: 1px solid var(--color-negro);
     color: var(--color-blanco);
+}
+
+
+.btn-secundario{
+    color: var(--color-negro);
+    background-color: var(--color-blanco-primario);
+    font-weight: bold;
+    border: 1px solid var(--color-gris);
+}
+
+.btn-secundario:hover{
+    background-color: var(--color-blanco-secundario);
+}
+.btn-secundario:focus{
+    outline: none;
+}
+
+.btn-secundario-outline{
+
+}
+.btn-secundario-outline:hover{
+
 }

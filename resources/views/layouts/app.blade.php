@@ -25,7 +25,9 @@
 
         <style>
             body{
+                /* --color-blanco:#F7F8FC;  */
                 font-family: 'Poppins', sans-serif;
+                /* background-color: var(--color-blanco); */
              }
         </style>
 

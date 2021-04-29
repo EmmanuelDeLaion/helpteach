@@ -47,44 +47,67 @@
         </section>
 
 
-        <section class="mt-24">
+        <section class="seccion mt-24">
             <h1 class="text-center mb-20  h1-titulo-enseñar">Contenido</h1>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-3 gap-6">
 
                 <div class="card">
-                    
+                    <div class="card-header">
+                        <div class="flex justify-center">
+                            <img class="img-card-header" src="{{ asset('/images/home/ilustracion-manos.png') }}" />
+                        </div>
+                        <h3 class="titulo-card mt-2">Ayuda a enseñar</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="p-card">Regístrate y crea cursos para las nuevas generaciones</p>
+
+                        <div class="flex justify-center">
+                            <button class="btn-secundario w-11/12">hola</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="card2">
+                    <div class="card-header">
+                        <div class="flex justify-center">
+                            <img class="img-card-header" src="{{ asset('/images/home/ilustracion-libreta.png') }}" />
+                        </div>
+                        <h3 class="titulo-card mt-2">Acceso gratis</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="p-card">Regístrate e inicia sesión para poder tener acceso a los cursos disponibles</p>
+
+                        <div class="flex justify-center">
+                            <button class="btn-primario w-11/12">hola</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="flex justify-center">
+                            <img class="img-card-header" src="{{ asset('/images/home/ilustracion-home.png') }}" />
+                        </div>
+                        <h3 class="titulo-card mt-2">Alumnos instructores</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="p-card">Cursos creados por alumnos para alumnos</p>
+
+                        <div class="flex justify-center">
+                            <button class="btn-secundario w-11/12">hola</button>
+                        </div>
+                    </div>
                 </div>
 
 
-                {{-- <div class="card">
-                    <figure>
-                        <img class="rounded-xl h-36 w-full object-cover"
-                            src="{{ asset('/images/home/contenido-facil-usar.jpg') }}" alt="">
-                    </figure>
-                    <header>
-                        <h1 class="text-center">Ayuda a Enseñar</h1>
-                    </header>
-                    <p class="text-sm text-center text-gray-500">Regístrate y crea cursos para las nuevas generaciones
-                    </p>
-                </div> --}}
-
-
             </div>
 
-
-
-            <div class="flex justify-center">
-                <button onclick="location.href='{{ route('about.index') }}'" type="submit"
-                    class="btn-primario-outline mb-24  text-center">
-                    ¿Quienes somos?
-                </button>
-            </div>
-
+ 
         </section>
 
 
-        <section class="seccion seccion-enseñar">
+        {{-- <section class="seccion seccion-enseñar">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
 
                 <div class="titulos-enseñar">
@@ -95,10 +118,10 @@
                 <img class="ilustracion-manos-enseñar  " src="{{ asset('/images/home/ilustracion-manos.png') }}"
                     alt="">
             </div>
-        </section>
+        </section> --}}
 
 
-        <section class="">
+        <section class=" mb-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div class="px-4 sm:px-6 w-full lg:w-1/2">
                     <h1 class="titulo-cursos-home">Obtén el conocimiento de los siguientes cursos</h1>
