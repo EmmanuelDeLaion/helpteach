@@ -25,7 +25,7 @@
 
     <x-app-layout>
 
-        <section class="portada-home seccion">
+        <section class="portada-home">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
                 <div class=" text-home w-full md:w-3/4 lg:w-1/2">
                     <h1 class="h1-titulo-home">Cursa o crea un <span class="span"> curso</span> </h1>
@@ -41,7 +41,7 @@
                         <p class="typing p-typing mt-2"></p>
                     </div>
                 </div>
-                <img class="ilustracion-h  " src="{{ asset('/images/home/ilustracion-home.png') }}" alt="ilustacion">
+                {{-- <img class="ilustracion-h  " src="{{ asset('/images/home/ilustracion-home.png') }}" alt="ilustacion"> --}}
 
             </div>
         </section>
@@ -89,7 +89,7 @@
 
             <div class="flex justify-center">
                 <button onclick="location.href='{{ route('about.index') }}'" type="submit"
-                    class="btn-principal-outline mb-24  text-center">
+                    class="btn-primario-outline mb-24  text-center">
                     ¿Quienes somos?
                 </button>
             </div>
@@ -180,7 +180,7 @@
                         <div class="flex justify-center">
 
                             <button onclick="location.href='{{ route('course.show', $course) }}'" type="submit"
-                                class="w-11/12 btn-ver-curso mb-12 text-center">
+                                class="w-11/12 btn-ver-curso mb-6 text-center">
                                 Más información
                             </button>
                         </div>
@@ -195,7 +195,7 @@
 
 
 
-        <section class="seccion portada-home">
+        <section class="seccion portada-aprendizaje">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-36">
                 <div class="titulos-camino-enseñanza w-full md:w-3/4 lg:w-1/2">
                     <h1 class="h1-titulo-enseñar">Rumbo al <br> aprendizaje</h1>
