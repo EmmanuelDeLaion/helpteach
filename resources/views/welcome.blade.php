@@ -47,10 +47,11 @@
         </section>
 
 
-        <section class="seccion mt-24">
-            <h1 class="text-center mb-20  h1-titulo-enseñar">Contenido</h1>
+        <section class="seccion-conteiner">
+            <h1 class="text-center mb-12 mt-24  h1-titulo-enseñar">Contenido</h1>
 
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-3 gap-6">
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-3 gap-6  ">
 
                 <div class="card">
                     <div class="card-header">
@@ -76,7 +77,8 @@
                         <h3 class="titulo-card mt-2">Acceso gratis</h3>
                     </div>
                     <div class="card-body">
-                        <p class="p-card">Regístrate e inicia sesión para poder tener acceso a los cursos disponibles</p>
+                        <p class="p-card">Regístrate e inicia sesión para poder tener acceso a los cursos disponibles
+                        </p>
 
                         <div class="flex justify-center">
                             <button class="btn-primario w-11/12">hola</button>
@@ -103,7 +105,7 @@
 
             </div>
 
- 
+
         </section>
 
 
@@ -245,17 +247,67 @@
             <div class="seccion-contenido">
                 <div class="contenido">
                     <h1>¿No sabes cual curso ver?</h1>
-                    <p class="text-sm text-center text-gray-500">Puedes buscar más cursos en el apartado de todos los
+                    <p class="text-sm text-center text-white-500">Puedes buscar más cursos en el apartado de todos los
                         cursos</p>
                     <button onclick="location.href='{{ route('courses.index') }}'" type="submit"
                         class="btn-primario-outline-blanco   ">
                         Ver cursos
                     </button>
-
-
                 </div>
             </div>
         </section>
+
+
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>HelpTeach</h4>
+                        <ul>
+                            <li><a href="{{ route('about.index') }}">¿Quienes Somos?</a></li>
+                            <li><a href="#">Políticas de privacidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Ayuda</h4>
+                        <ul>
+                            <li><a href="">Preguntas Frecuentes</a></li>
+                            <li><a href="#">Opciones de pago</a></li>
+                            <li><a href="#">Ser instructor</a></li>
+                            <li><a href="#">Ser cursante</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Otros servicios</h4>
+                        <ul>
+                            <li><a href="#">Sistemas Web Empresariales</a></li>
+                            <li><a href="#">Sitios Web </a></li>
+                        </ul>
+                        <button onclick="location.href='http://tecdevsmx.com/'" type="submit"
+                        class="btn-primario   ">
+                        TecDevs
+                    </button>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Síguenos en</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+
+                        <button onclick="location.href='{{ route('courses.index') }}'" type="submit"
+                            class="btn-primario-outline-blanco   ">
+                            Empieza Ahora
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
 
 
 
@@ -266,13 +318,6 @@
                 <span class="far fa-copyright"></span><span> 2021 All rights reserved.</span>
             </center>
         </div>
-
-
-
-
-
-
-
 
     </x-app-layout>
 
