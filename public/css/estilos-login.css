@@ -58,7 +58,6 @@
     transform: translate(-50%, -50%);
     left: 75%;
     width: 50%;
-    transition: 1s 0.7s ease-in-out;
     display: grid;
     grid-template-columns: 1fr;
     z-index: 5;
@@ -136,6 +135,7 @@ form.sign-in-form {
     max-width: 380px;
     width: 100%;
     font-weight: bold;
+    font-size: 16px;
     background-color: var(--color-primario);
     border: none;
     outline: none;
@@ -176,12 +176,6 @@ form.sign-in-form {
     z-index: 6;
 }
 
-.image {
-    width: 100%;
-    transition: transform 1.1s ease-in-out;
-    transition-delay: 0.4s;
-}
-
 .panel {
     display: flex;
     flex-direction: column;
@@ -213,17 +207,23 @@ form.sign-in-form {
     padding: 0.7rem 0;
 }
 
-.btn.transparent {
+.btn-transparent {
     background: none;
-    border: 2px solid var(--color-blanco);
+    border: 1px solid var(--color-blanco);
     width: 130px;
     height: 41px;
-    font-weight: 600;
-    font-size: 0.8rem;
-    padding: 15px 30px 15px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-blanco);
     transition: 0.4s;
     border-radius: 50px;
     margin: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.btn-transparent:hover {
+    background-color: var(--color-blanco-primario);
+    color: var(--color-negro);
 }
 
 @media (max-width: 870px) {
@@ -233,9 +233,8 @@ form.sign-in-form {
     }
     .signin-signup {
         width: 100%;
-        top: 95%;
-        transform: translate(-50%, -100%);
-        transition: 1s 0.8s ease-in-out;
+        top: 60%;
+        transform: translate(-50%, -50%);
     }
 
     .signin-signup,
@@ -264,12 +263,6 @@ form.sign-in-form {
         grid-row: 1 / 2;
     }
 
-    .image {
-        width: 200px;
-        transition: transform 0.9s ease-in-out;
-        transition-delay: 0.6s;
-    }
-
     .panel .content {
         padding-right: 15%;
         transition: transform 0.9s ease-in-out;
@@ -285,7 +278,7 @@ form.sign-in-form {
         padding: 0.5rem 0;
     }
 
-    .btn.transparent {
+    .btn-transparent {
         width: 110px;
         height: 35px;
         font-size: 0.7rem;
@@ -308,9 +301,6 @@ form.sign-in-form {
         padding: 0 1.5rem;
     }
 
-    .image {
-        display: none;
-    }
     .panel .content {
         padding: 0.5rem 1rem;
     }

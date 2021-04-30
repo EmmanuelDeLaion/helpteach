@@ -13,7 +13,7 @@
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                
+
                 @if (session('status'))
                     <div class="mb-4 font-medium text-sm text-green-600">
                         {{ session('status') }}
@@ -60,8 +60,6 @@
 
                 </form>
 
-
-
             </div>
         </div>
 
@@ -72,17 +70,17 @@
                     <p>
                         Para poder iniciar sesión debes de registrarte
                     </p>
-                    <button class="btn transparent" id="sign-up-btn">
+                    <button onclick="location.href='{{ route('register') }}'" class="btn-transparent">
                         Regístrate
                     </button>
                 </div>
-                <img src="img/log.svg" class="image" alt="" />
+
             </div>
-          
+
         </div>
     </div>
 
-   
+
 </body>
 
 </html>

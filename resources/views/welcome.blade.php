@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/0dd7a6f868.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="{{ asset('/images/logo.svg') }}">
+    {{-- <link rel="shortcut icon" href="{{ asset('/images/logo.svg') }}"> --}}
 
     <title>HelpTeach</title>
 
@@ -109,19 +109,6 @@
 
         </section>
 
-
-        {{-- <section class="seccion seccion-enseñar">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-
-                <div class="titulos-enseñar">
-                    <h1 class="h1-titulo-enseñar">Ayudar a <br> enseñar</h1>
-                    <p class="p-subtitulo-home">Regístrate y crea cursos <br> para las nuevas generaciones</p>
-                    <button onclick="location.href = '#' " class="btn-primario-outline">Regístrate ahora</button>
-                </div>
-                <img class="ilustracion-manos-enseñar  " src="{{ asset('/images/home/ilustracion-manos.png') }}"
-                    alt="">
-            </div>
-        </section> --}}
 
 
         <section class=" mb-24">
