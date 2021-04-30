@@ -23,9 +23,6 @@
                 <form class="sign-in-form" method="POST" action="{{ route('login') }}">
                     @csrf
                     <h2 class="title">Inicia sesión</h2>
-
-
-
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" placeholder="Usuario" id="email" class="block mt-1 w-full" type="email"
@@ -39,27 +36,22 @@
 
                     <x-jet-validation-errors class="mt-12 error-login" />
 
-
                     @if (Route::has('password.request'))
                         <a class="underline text-sm text-gray-600 hover:text-gray-900"
                             href="{{ route('password.request') }}">
                             {{ __('¿Olvidaste tu contraseña?') }}
                         </a>
                     @endif
-
                     <div class="block mt-4">
                         <label for="remember_me" class="flex items-center">
                             <x-jet-checkbox id="remember_me" name="remember" />
                             <span class="ml-2 text-sm text-gray-600">{{ __('Recordar Contraseña') }}</span>
                         </label>
                     </div>
-
                     <x-jet-button class="ml-4 btn solid">
                         {{ __('Iniciar Sesión') }}
                     </x-jet-button>
-
                 </form>
-
             </div>
         </div>
 
@@ -74,12 +66,9 @@
                         Regístrate
                     </button>
                 </div>
-
             </div>
-
         </div>
     </div>
-
 
 </body>
 
