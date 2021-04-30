@@ -185,10 +185,7 @@
                                     ({{ $course->students_count }})
                                 </p>
                             </div>
-
                         </div>
-
-
 
                         <div class="flex justify-center">
 
@@ -216,8 +213,6 @@
                         existan decaídas principalmente a la hora de entender los temas y no hacer complicado el buscar
                         información en sitios donde cobran una cantidad excesiva </p>
                     <button class="btn-primario-outline">Ver más</button>
-
-
                 </div>
                 <img class="ilustracion-camino" src="{{ asset('/images/home/ilustracion-camino-enseñanza.png') }}"
                     alt="">
@@ -267,7 +262,8 @@
                             <li><a href="{{ route('about.index') }}">¿Quienes Somos?</a></li>
                             <li><a href="">Políticas de privacidad</a></li>
                         </ul>
-                        <svg onclick="location.href='#' " class="mt-6 logo-footer" xmlns="http://www.w3.org/2000/svg" width="150" height="70" viewBox="0 0 66 28">
+                        <svg onclick="location.href='#' " class="mt-6 logo-footer" xmlns="http://www.w3.org/2000/svg"
+                            width="150" height="70" viewBox="0 0 66 28">
                             <defs>
                                 <style>
                                     .a {
@@ -328,9 +324,11 @@
                             <li><a href="#">emmanueldl@tecdevsmx.com</a></li>
                         </ul>
                         <div class="social-links">
-                            <a class="fb" target="_blanck" href="https://web.facebook.com/jesusemmanuel.lerma/?_rdc=1&_rdr"><i
+                            <a class="fb" target="_blanck"
+                                href="https://web.facebook.com/jesusemmanuel.lerma/?_rdc=1&_rdr"><i
                                     class="fab fa-facebook-f"></i></a>
-                            <a class="tw" target="_blanck" href="https://twitter.com/ElMonoDl"><i class="fab fa-twitter"></i></a>
+                            <a class="tw" target="_blanck" href="https://twitter.com/ElMonoDl"><i
+                                    class="fab fa-twitter"></i></a>
                             <a class="ig" target="_blanck" href="https://www.instagram.com/emmanueldelaion/"><i
                                     class="fab fa-instagram"></i></a>
                             <a class="li" target="_blanck"

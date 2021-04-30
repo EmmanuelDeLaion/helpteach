@@ -1,24 +1,23 @@
-
-.container{
+.container {
 	max-width: 1170px;
-	margin:auto;
+	margin: auto;
 }
-.row{
+.row {
 	display: flex;
 	flex-wrap: wrap;
 }
-ul{
+ul {
 	list-style: none;
 }
-.footer{
+.footer {
 	background-color: var(--color-negro);
-    padding: 70px 0;
+	padding: 70px 0;
 }
-.footer-col{
-   width: 25%;
-   padding: 0 15px;
+.footer-col {
+	width: 25%;
+	padding: 0 15px;
 }
-.footer-col h4{
+.footer-col h4 {
 	font-size: 18px;
 	color: #ffffff;
 	text-transform: capitalize;
@@ -26,20 +25,20 @@ ul{
 	font-weight: 500;
 	position: relative;
 }
-.footer-col h4::before{
-	content: '';
+.footer-col h4::before {
+	content: "";
 	position: absolute;
-	left:0;
+	left: 0;
 	bottom: -10px;
 	background-color: var(--color-primario);
 	height: 2px;
 	box-sizing: border-box;
 	width: 50px;
 }
-.footer-col ul li:not(:last-child){
+.footer-col ul li:not(:last-child) {
 	margin-bottom: 10px;
 }
-.footer-col ul li a{
+.footer-col ul li a {
 	font-size: 16px;
 	text-transform: capitalize;
 	color: #ffffff;
@@ -49,57 +48,52 @@ ul{
 	display: block;
 	transition: all 0.3s ease;
 }
-.footer-col ul li a:hover{
+.footer-col ul li a:hover {
 	color: #ffffff;
 	padding-left: 8px;
 }
-.footer-col .social-links a{
+.footer-col .social-links a {
 	display: inline-block;
 	height: 40px;
 	width: 40px;
-	background-color: rgba(255,255,255,0.2);
-	margin:0 10px 10px 0;
+	background-color: rgba(255, 255, 255, 0.2);
+	margin: 0 10px 10px 0;
 	text-align: center;
 	line-height: 40px;
 	border-radius: 50%;
 	color: #ffffff;
 	transition: all 0.25s ease;
-    margin-top: 10px;
+	margin-top: 10px;
 }
-.footer-col .social-links a:hover{
+.footer-col .social-links a:hover {
 	color: var(--color-blanco);
-	 
 }
-.footer-col .social-links .fb:hover{
-	background-color: #0178F8;
+.footer-col .social-links .fb:hover {
+	background-color: #0178f8;
 }
-.footer-col .social-links .ig:hover{
-	background: linear-gradient( #ED5847, #DF2F73);
+.footer-col .social-links .ig:hover {
+	background: linear-gradient(#ed5847, #df2f73);
 }
-.footer-col .social-links .tw:hover{
-	background-color: #00A2F5;
+.footer-col .social-links .tw:hover {
+	background-color: #00a2f5;
 }
-.footer-col .social-links .li:hover{
-	background-color: #007BB6;
+.footer-col .social-links .li:hover {
+	background-color: #007bb6;
 }
 
-
-.logo-footer:hover{
+.logo-footer:hover {
 	cursor: pointer;
 }
 
-
 /*responsive*/
-@media(max-width: 767px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
+@media (max-width: 767px) {
+	.footer-col {
+		width: 50%;
+		margin-bottom: 30px;
+	}
 }
+@media (max-width: 574px) {
+	.footer-col {
+		width: 100%;
+	}
 }
-@media(max-width: 574px){
-  .footer-col{
-    width: 100%;
-}
-}
-
-
