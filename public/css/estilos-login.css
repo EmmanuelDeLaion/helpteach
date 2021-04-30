@@ -44,6 +44,14 @@
     overflow: hidden;
 }
 
+.container-register {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
 .forms-container {
     position: absolute;
     width: 100%;
@@ -176,6 +184,21 @@ form.sign-in-form {
     z-index: 6;
 }
 
+.container-register:before {
+    content: "";
+    position: absolute;
+    height: 2000px;
+    width: 2000px;
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+    background-image: url("/images/home/contenido-instructores.jpg");
+    background-size: cover;
+    background-position-x: 0;  
+    transition: 1.8s ease-in-out;
+    z-index: 6;
+}
+
 .panel {
     display: flex;
     flex-direction: column;
@@ -228,6 +251,10 @@ form.sign-in-form {
 
 @media (max-width: 870px) {
     .container {
+        min-height: 800px;
+        height: 100vh;
+    }
+    .container-register {
         min-height: 800px;
         height: 100vh;
     }
@@ -294,6 +321,16 @@ form.sign-in-form {
         top: initial;
         transition: 2s ease-in-out;
     }
+    .container-register:before {
+        width: 1500px;
+        height: 1500px;
+        transform: translateX(-50%);
+        left: 30%;
+        bottom: 68%;
+        right: initial;
+        top: initial;
+        transition: 2s ease-in-out;
+    }
 }
 
 @media (max-width: 570px) {
@@ -307,14 +344,27 @@ form.sign-in-form {
     .container {
         padding: 1.5rem;
     }
-
     .container:before {
         bottom: 72%;
         left: 50%;
     }
-
     .container.sign-up-mode:before {
         bottom: 28%;
         left: 50%;
     }
+
+    .container-register {
+        padding: 1.5rem;
+    }
+
+    .container-register:before {
+        bottom: 72%;
+        left: 50%;
+    }
+    .container-register.sign-up-mode:before {
+        bottom: 28%;
+        left: 50%;
+    }
+
+    
 }

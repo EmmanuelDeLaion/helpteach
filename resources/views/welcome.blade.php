@@ -82,7 +82,8 @@
                         </p>
 
                         <div class="flex justify-center">
-                            <button class="btn-primario w-11/12">Regístrate ahora</button>
+                            <button class="btn-primario w-11/12"
+                                onclick="location.href='{{ route('register') }}'">Regístrate ahora</button>
                         </div>
                     </div>
                 </div>
