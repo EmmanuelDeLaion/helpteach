@@ -1,10 +1,10 @@
 @if ($errors->any())
     <div {{ $attributes }}>
-        <div class="font-medium text-red-600">{{ __('Whoops! Something went wrong.') }}</div>
+        <div class="font-medium text-red-500">{{ __('El usuario y/o la contraseña no son correctos') }}</div>
 
-        <ul class="mt-3 list-disc list-inside text-sm text-red-600">
+        <ul class="mt-6 list-disc list-inside text-sm text-red-500">
             @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
+                {{-- <li>{{ $error }}</li> --}}
             @endforeach
         </ul>
     </div>
