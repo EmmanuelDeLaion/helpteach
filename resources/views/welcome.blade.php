@@ -65,7 +65,7 @@
                         <p class="p-card">Regístrate y crea cursos para las nuevas generaciones</p>
 
                         <div class="flex justify-center">
-                            <button class="btn-secundario w-11/12">hola</button>
+                            <button class="btn-secundario w-11/12">Ver más</button>
                         </div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                         </p>
 
                         <div class="flex justify-center">
-                            <button class="btn-primario w-11/12">hola</button>
+                            <button class="btn-primario w-11/12">Regístrate ahora</button>
                         </div>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                         <p class="p-card">Cursos creados por alumnos para alumnos</p>
 
                         <div class="flex justify-center">
-                            <button class="btn-secundario w-11/12">hola</button>
+                            <button class="btn-secundario w-11/12">Ver más</button>
                         </div>
                     </div>
                 </div>
@@ -267,7 +267,7 @@
                             <li><a href="{{ route('about.index') }}">¿Quienes Somos?</a></li>
                             <li><a href="">Políticas de privacidad</a></li>
                         </ul>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="150" height="70" viewBox="0 0 66 28">
+                        <svg onclick="location.href='#' " class="mt-6 logo-footer" xmlns="http://www.w3.org/2000/svg" width="150" height="70" viewBox="0 0 66 28">
                             <defs>
                                 <style>
                                     .a {
@@ -328,12 +328,12 @@
                             <li><a href="#">emmanueldl@tecdevsmx.com</a></li>
                         </ul>
                         <div class="social-links">
-                            <a target="_blanck" href="https://web.facebook.com/jesusemmanuel.lerma/?_rdc=1&_rdr"><i
+                            <a class="fb" target="_blanck" href="https://web.facebook.com/jesusemmanuel.lerma/?_rdc=1&_rdr"><i
                                     class="fab fa-facebook-f"></i></a>
-                            <a target="_blanck" href="https://twitter.com/ElMonoDl"><i class="fab fa-twitter"></i></a>
-                            <a target="_blanck" href="https://www.instagram.com/emmanueldelaion/"><i
+                            <a class="tw" target="_blanck" href="https://twitter.com/ElMonoDl"><i class="fab fa-twitter"></i></a>
+                            <a class="ig" target="_blanck" href="https://www.instagram.com/emmanueldelaion/"><i
                                     class="fab fa-instagram"></i></a>
-                            <a target="_blanck"
+                            <a class="li" target="_blanck"
                                 href="https://www.linkedin.com/in/jesus-emmanuel-de-leon-lerma-0903071b7/"><i
                                     class="fab fa-linkedin-in"></i></a>
                         </div>

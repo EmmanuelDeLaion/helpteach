@@ -1,4 +1,4 @@
- 
+
 .container{
 	max-width: 1170px;
 	margin:auto;
@@ -63,13 +63,31 @@ ul{
 	line-height: 40px;
 	border-radius: 50%;
 	color: #ffffff;
-	transition: all 0.5s ease;
+	transition: all 0.25s ease;
     margin-top: 10px;
 }
 .footer-col .social-links a:hover{
-	color: var(--color-negro);
-	background-color: var(--color-primario);
+	color: var(--color-blanco);
+	 
 }
+.footer-col .social-links .fb:hover{
+	background-color: #0178F8;
+}
+.footer-col .social-links .ig:hover{
+	background: linear-gradient( #ED5847, #DF2F73);
+}
+.footer-col .social-links .tw:hover{
+	background-color: #00A2F5;
+}
+.footer-col .social-links .li:hover{
+	background-color: #007BB6;
+}
+
+
+.logo-footer:hover{
+	cursor: pointer;
+}
+
 
 /*responsive*/
 @media(max-width: 767px){
