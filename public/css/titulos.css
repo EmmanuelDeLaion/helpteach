@@ -1,5 +1,4 @@
-/* titulos  */
-/* portada  */
+/* seccion portada  */
 .h1-titulo-home {
     font-weight: bold;
     font-size: var(--texto-portada);
@@ -24,7 +23,7 @@
     color: var(--color-blanco);
 }
 
-/* titulos seccion enseñar */
+/* seccion enseñar */
 .titulos-enseñar {
     position: absolute;
     top: 35%;
@@ -52,6 +51,7 @@
     line-height: 80%;
 }
 
+/* seccion numeros plataforma  */
 .titulo-numeros {
     font-size: 20px;
     font-weight: bold;
@@ -67,4 +67,23 @@
 .descripcion-numeros {
     font-size: 12px;
     color: var(--color-gris);
+}
+
+/* seccion alumnos instructores  */
+
+.seccion-alumnos-instructores .contenido-alumnos .titulo-alumnos-instructores {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--color-negro);
+    margin-top: 10%;
+    line-height: 90%;
+
+}
+
+/* seccion empezar  */
+
+.seccion-empezar .contenido-empezar .titulo-empezar {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 90%;
 }
