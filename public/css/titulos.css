@@ -3,15 +3,15 @@
 .h1-titulo-home {
     font-weight: bold;
     font-size: var(--texto-portada);
-    color: var(--color-negro);
+    color: var(--color-blanco);
     line-height: 75%;
 }
 .p-subtitulo-home {
     margin-top: 20px;
-    color: var(--color-negro);
+    color: var(--color-blanco);
 }
 .span {
-    color: var(--color-primario);
+    color: var(--color-negro);
     font-weight: bold;
 }
 .text-home {
@@ -21,7 +21,7 @@
 
 .p-typing {
     font-size: 14px;
-    color: var(--color-negro);
+    color: var(--color-blanco);
 }
 
 /* titulos seccion enseñar */

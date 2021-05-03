@@ -27,7 +27,7 @@
     <x-app-layout>
 
         <section class="portada-home">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-36">
                 <div class=" text-home w-full md:w-3/4 lg:w-1/2">
                     <h1 class="h1-titulo-home">Cursa o crea un <span class="span"> curso</span> </h1>
                     <p class="p-subtitulo-home text-lg ">En <span class="span"> HelpTeach </span> podrás encontrar
@@ -39,7 +39,16 @@
                         <button type="submit" class="btn-buscar-home absolute right-0 top-0 mt-2 ">
                             buscar
                         </button>
-                        <p class="typing p-typing mt-2"></p>
+ 
+                        <nav class="nav-busquedas">
+                            <ul class="ul-busquedas">
+                                <li class="li-busquedas"> <a class="a-busquedas" href="">Diseño web</a></li>
+                                <li class="li-busquedas"> <a class="a-busquedas" href="">Programación</a></li>
+                                <li class="li-busquedas"> <a class="a-busquedas" href="">Calculo</a></li>
+                                <li class="li-busquedas"><a class="a-busquedas" href="">Ingles</a></li>
+                            </ul>
+                        </nav>
+
                     </div>
                 </div>
                 {{-- <img class="ilustracion-h  " src="{{ asset('/images/home/ilustracion-home.png') }}" alt="ilustacion"> --}}
