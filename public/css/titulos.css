@@ -38,7 +38,6 @@
     font-weight: bold;
 }
 
-
 .h1-titulo-enseñar {
     font-size: var(--texto-titulos-secciones);
     color: var(--color-negro);
@@ -53,13 +52,19 @@
     line-height: 80%;
 }
 
-
-.titulos-numeros{
+.titulo-numeros {
+    font-size: 20px;
+    font-weight: bold;
+}
+.span-numeros {
+    color: var(--color-primario);
+}
+.titulos-numeros {
     color: var(--color-primario);
     font-weight: bold;
-    font-size: 40px;
+    font-size: 50px;
 }
-.descripcion-numeros{
+.descripcion-numeros {
     font-size: 12px;
     color: var(--color-gris);
 }

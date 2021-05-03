@@ -118,22 +118,23 @@
             <img class="puntos-izquierda" src="{{ asset('/images/home/puntos.png') }}" alt="ilustracion puntos">
 
             <div class="container-num">
-                <h1 class="text-center mt-6"> Estudia y practica en <span class="span"> HelpTeach</span> </h1>
+                <h1 class="text-center mt-6 titulo-numeros"> Estudia y practica en <span class="span-numeros">
+                        HelpTeach</span> </h1>
 
                 <div class="  justify-center mx-auto grid grid-cols-1 lg:grid-cols-4 px-4 mt-6">
                     <div>
-                        <h1 class="text-center titulos-numeros">105+</h1>
+                        <h1 class="text-center titulos-numeros" id="cont1">0</h1>
                         <p class="text-center descripcion-numeros">Alumnos inscritos</p>
                     </div>
 
                     <div>
-                        <h1 class="text-center titulos-numeros">15</h1>
+                        <h1 class="text-center titulos-numeros" id="cont2">0</h1>
                         <p class="text-center descripcion-numeros">Alumnos instructores</p>
                     </div>
 
 
                     <div>
-                        <h1 class="text-center titulos-numeros">15</h1>
+                        <h1 class="text-center titulos-numeros" id="cont3">0</h1>
                         <p class="text-center descripcion-numeros">Cursos disponibles</p>
                     </div>
 
@@ -389,6 +390,7 @@
 
     <script type="text/javascript" src="{{ asset('js/funciones-home.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/funcion-scroll.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/contadores.js') }}"></script>
 
 </body>
 
