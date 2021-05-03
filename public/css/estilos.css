@@ -6,7 +6,6 @@
 @import url("cards-contenido.css");
 @import url("footer.css");
 
-
 /* KGBlankSpaceSolid.ttf */
 
 @font-face {
@@ -57,10 +56,6 @@ html {
     color: var(--color-blanco);
 }
 
-.body {
-    background-color: var(--color-blanco-fondo);
-}
-
 /* compartidos  */
 .seccion {
     position: relative;
@@ -71,11 +66,10 @@ html {
 
 /* secciones  */
 .portada-home {
-    background-image: url("/images/home/contenido-facil-usar.jpg");
+    /* background-image: url("/images/home/contenido-facil-usar.jpg"); */
     background-size: cover;
     background-position-y: 60%;
     /* background: linear-gradient(to bottom right, #003A99, #0E77E2); */
-
     overflow-x: hidden;
     overflow-y: hidden;
     height: 100vh;
@@ -83,6 +77,50 @@ html {
 .seccion-conteiner {
     position: relative;
     height: 80vh;
+}
+
+/* secion empezar */
+.seccion-empezar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 60vh;
+}
+
+.seccion-empezar .contenido-empezar {
+    display: block;
+    text-align: center;
+}
+
+.seccion-empezar .contenido-empezar .titulo-empezar {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.seccion-alumnos-instructores {
+    background-image: url("/images/home/contenido-instructores.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    /* margin: 50px 0 100px 0; */
+}
+
+.seccion-alumnos-instructores .contenido-alumnos {
+    display: block;
+    text-align: center;
+}
+.seccion-alumnos-instructores .contenido-alumnos .titulo-alumnos-instructores {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--color-negro);
+    margin-top: 10%;
 }
 
 /* navbar  */
@@ -144,8 +182,6 @@ html {
     position: absolute;
 }
 
-/* cards  */
-
 /* seccion cual curso ver  */
 
 .contenedor-fondo-animado {
@@ -163,7 +199,7 @@ html {
     align-items: center;
     justify-content: center;
 }
-.seccion-contenido {
+.contenido {
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -272,7 +308,6 @@ span.cuatro {
     color: var(--color-primario);
 }
 
-/* keyframes  */
 @keyframes vuela {
     from {
         transform: rotate(0deg);
@@ -292,7 +327,6 @@ span.cuatro {
     }
 }
 
-/* medias  */
 @media screen and (max-width: 900px) {
     footer {
         position: relative;

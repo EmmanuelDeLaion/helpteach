@@ -10,6 +10,8 @@
     background-color: var(--color-blanco);
 }
 .card:hover {
+    border: 1px solid var(--color-primario);
+    cursor: default;
 }
 
 .titulo-card {
@@ -26,7 +28,4 @@
     width: 100px;
     background-size: cover;
 }
-
-#card2 {
-    border: 1px solid var(--color-primario);
-}
+ 

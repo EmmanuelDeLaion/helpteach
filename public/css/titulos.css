@@ -38,10 +38,7 @@
     font-weight: bold;
 }
 
-.titulos-camino-enseñanza {
-    position: relative;
-    z-index: 100;
-}
+
 .h1-titulo-enseñar {
     font-size: var(--texto-titulos-secciones);
     color: var(--color-negro);
