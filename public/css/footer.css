@@ -10,7 +10,7 @@ ul {
 	list-style: none;
 }
 .footer {
-	background-color: var(--color-negro);
+	background-color: var(--color-negro-primario);
 	padding: 70px 0;
 }
 .footer-col {

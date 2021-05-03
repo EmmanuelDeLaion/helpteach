@@ -23,6 +23,7 @@
     --color-blanco-fondo: #f7f8fc;
     --color-primario: #328af1;
     --color-negro: #22292f;
+    --color-negro-primario: #151515;
     /* color botones secundarios  */
     --color-blanco-primario: #f4f4f4;
     --color-blanco-secundario: #e8e8e8;
@@ -115,7 +116,7 @@ html {
 
 .seccion-conteiner {
     position: relative;
-    height: 80vh;
+    min-height: 80vh;
 }
 
 /* secion empezar */
@@ -131,11 +132,6 @@ html {
 .seccion-empezar .contenido-empezar {
     display: block;
     text-align: center;
-}
-
-.seccion-empezar .contenido-empezar .titulo-empezar {
-    font-size: 40px;
-    font-weight: bold;
 }
 
 .seccion-alumnos-instructores {
@@ -155,18 +151,12 @@ html {
     display: block;
     text-align: center;
 }
-.seccion-alumnos-instructores .contenido-alumnos .titulo-alumnos-instructores {
-    font-size: 40px;
-    font-weight: bold;
-    color: var(--color-negro);
-    margin-top: 10%;
-}
 
 .seccion-numeros {
     position: relative;
     display: flex;
     width: 100%;
-    height: 70vh;
+    height: 90vh;
     justify-content: center;
     align-items: center;
 }
@@ -174,37 +164,37 @@ html {
 .puntos-derecha {
     position: absolute;
     width: 200px;
-    right: 70px;
-    bottom: 70px;
-    opacity: 0.5;
+    right: 100px;
+    bottom: 150px;
+    opacity: 0.2;
 }
 
 .puntos-izquierda {
     position: absolute;
     width: 200px;
-    left: 80px;
-    top: 75px;
-    opacity: 0.5;
+    left: 100px;
+    top: 150px;
+    opacity: 0.2;
 }
 
 .container-num {
     position: absolute;
     z-index: 10;
     width: 80%;
-    height: 50%;
+    padding: 0 0 30px 0;
     background-color: var(--color-blanco);
     box-shadow: 0px 0px 30px -6px rgba(0, 0, 0, 0.118);
     border-radius: 10px;
 }
 
-.numeros-estadisticas{
+.numeros-estadisticas {
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-gap: 10px;
     padding: 10px;
 }
 
-.numeros-estadisticas > .item{
+.numeros-estadisticas > .item {
     text-align: center;
     padding: 20px 0;
 }
@@ -273,7 +263,7 @@ html {
 .contenedor-fondo-animado {
     display: block;
     height: 50vh;
-    background: linear-gradient(var(--color-primario), var(--color-negro));
+    background: linear-gradient(var(--color-primario), var(--color-negro-primario));
     color: #fff;
     position: relative;
     overflow: hidden;
@@ -381,7 +371,7 @@ span.cuatro {
 .bottom center {
     padding: 5px;
     font-size: 14px;
-    background: #151515;
+    background: var(--color-negro);
 }
 .bottom center span {
     color: #656565;
@@ -394,22 +384,22 @@ span.cuatro {
     color: var(--color-primario);
 }
 
-@keyframes aparecer{
-    0%{
+@keyframes aparecer {
+    0% {
         opacity: 0;
         transform: translateY(100px);
     }
-    100%{
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-.ocultar{
+.ocultar {
     opacity: 0;
 }
 
-.animar{
+.animar {
     animation: aparecer 1.3s;
 }
 
@@ -443,5 +433,22 @@ span.cuatro {
     }
     .main-content .box {
         margin: 5px 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .puntos-derecha {
+        width: 150px;
+        right: 0px;
+        bottom: 0px;
+        opacity: 0.2;
+    }
+
+    .puntos-izquierda {
+        position: absolute;
+        width: 150px;
+        left: 0px;
+        top: 0px;
+        opacity: 0.2;
     }
 }
