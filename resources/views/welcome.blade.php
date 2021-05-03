@@ -70,7 +70,7 @@
                     </div>
                 </div>
 
-                <div class="card" id="card2">
+                <div class="card">
                     <div class="card-header">
                         <div class="flex justify-center">
                             <img class="img-card-header" src="{{ asset('/images/home/ilustracion-libreta.png') }}" />
@@ -192,19 +192,23 @@
         </section>
 
 
-
-        <section class="seccion portada-aprendizaje">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-36">
-                <div class="titulos-camino-enseñanza w-full md:w-3/4 lg:w-1/2">
-                    <h1 class="h1-titulo-enseñar">Rumbo al <br> aprendizaje</h1>
-                    <p class="p-subtitulo-home"> Motivar a los alumnos que sigan el camino de la enseñanza sin que
-                        existan decaídas principalmente a la hora de entender los temas y no hacer complicado el buscar
-                        información en sitios donde cobran una cantidad excesiva </p>
-                    <button class="btn-primario-outline">Ver más</button>
+        <section>
+            <div class="seccion-alumnos-instructores">
+                <div class="contenido-alumnos">
+                    <h1 class="titulo-alumnos-instructores">Alumnos Instructores</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, qui?</p>
+                    <button class="btn-primario">Más información</button>
                 </div>
-                <img class="ilustracion-camino" src="{{ asset('/images/home/ilustracion-camino-enseñanza.png') }}"
-                    alt="">
-                <img class="ilustracion-planeta" src="{{ asset('/images/home/ilustracion-planeta.png') }}" alt="">
+            </div>
+        </section>
+
+
+
+        <section class="seccion-empezar">
+            <div class="contenido-empezar">
+                <h1 class="titulo-empezar">Estás a un paso de empezar algo grande <br> ¿Empezamos? </h1>
+                <button onclick="location.href='{{ route('courses.index') }}'" class="btn-primario">Empezar
+                    ahora</button>
             </div>
         </section>
 

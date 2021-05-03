@@ -51,7 +51,7 @@
 
 .btn-primario-outline:hover {
     background-color: var(--color-primario);
-    border: 1px solid var(--color-blanco);
+     
     color: var(--color-blanco);
 }
 
