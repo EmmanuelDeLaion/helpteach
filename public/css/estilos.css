@@ -46,9 +46,6 @@ html {
 
 * {
     font-family: "Poppins", sans-serif;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
 }
 
 *::selection {
@@ -85,36 +82,35 @@ html {
     opacity: 0.8;
 }
 
-.ul-busquedas{
+.ul-busquedas {
     width: auto;
     float: left;
     margin-top: 8px;
 }
 
-.li-busquedas{
+.li-busquedas {
     display: inline-block;
     padding: 15px 5px;
 }
 
-.a-busquedas{
+.a-busquedas {
     text-decoration: none;
     text-align: center;
     color: var(--color-blanco);
     border: 1px solid transparent;
     padding: 0 15px 0 15px;
     font-weight: 300;
-    border: 1px solid  var(--color-blanco);
+    border: 1px solid var(--color-blanco);
     border-radius: 50px;
     transition: 0.25s;
 }
 
-.a-busquedas:hover{
+.a-busquedas:hover {
     border-radius: 50px;
-    border: 1px solid  var(--color-blanco);
+    border: 1px solid var(--color-blanco);
     background-color: var(--color-blanco);
     color: var(--color-negro);
 }
-
 
 .seccion-conteiner {
     position: relative;
@@ -128,7 +124,7 @@ html {
     justify-content: center;
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: 70vh;
 }
 
 .seccion-empezar .contenido-empezar {
@@ -163,6 +159,53 @@ html {
     font-weight: bold;
     color: var(--color-negro);
     margin-top: 10%;
+}
+
+.seccion-numeros {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.puntos-derecha {
+    position: absolute;
+    width: 200px;
+    right: 70px;
+    bottom: 70px;
+    opacity: 0.5;
+}
+
+.puntos-izquierda {
+    position: absolute;
+    width: 200px;
+    left: 80px;
+    top: 75px;
+    opacity: 0.5;
+}
+
+.container-num {
+    position: absolute;
+    z-index: 10;
+    width: 80%;
+    height: 50%;
+    background-color: var(--color-blanco);
+    box-shadow: 0px 0px 30px -6px rgba(0, 0, 0, 0.118);
+    border-radius: 10px;
+}
+
+.numeros-estadisticas{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.numeros-estadisticas > .item{
+    text-align: center;
+    padding: 20px 0;
 }
 
 /* navbar  */

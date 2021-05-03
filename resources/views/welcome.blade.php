@@ -39,7 +39,7 @@
                         <button type="submit" class="btn-buscar-home absolute right-0 top-0 mt-2 ">
                             buscar
                         </button>
- 
+
                         <nav class="nav-busquedas">
                             <ul class="ul-busquedas">
                                 <li class="li-busquedas"> <a class="a-busquedas" href="">Diseño web</a></li>
@@ -59,10 +59,8 @@
 
         <section class="seccion-conteiner">
             <h1 class="text-center mb-12 mt-24  h1-titulo-enseñar">Contenido</h1>
-
             <div
                 class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-3 gap-6  ">
-
                 <div class="card">
                     <div class="card-header">
                         <div class="flex justify-center">
@@ -78,7 +76,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="card">
                     <div class="card-header">
                         <div class="flex justify-center">
@@ -96,7 +93,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="card">
                     <div class="card-header">
                         <div class="flex justify-center">
@@ -112,12 +108,43 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
+
+
+        <div class="seccion-numeros">
+            <img class="puntos-derecha" src="{{ asset('/images/home/puntos.png') }}" alt="ilustracion puntos">
+            <img class="puntos-izquierda" src="{{ asset('/images/home/puntos.png') }}" alt="ilustracion puntos">
+
+            <div class="container-num">
+                <h1 class="text-center mt-6"> Estudia y practica en <span class="span"> HelpTeach</span> </h1>
+
+                <div class="  justify-center mx-auto grid grid-cols-1 lg:grid-cols-4 px-4 mt-6">
+                    <div>
+                        <h1 class="text-center titulos-numeros">105+</h1>
+                        <p class="text-center descripcion-numeros">Alumnos inscritos</p>
+                    </div>
+
+                    <div>
+                        <h1 class="text-center titulos-numeros">15</h1>
+                        <p class="text-center descripcion-numeros">Alumnos instructores</p>
+                    </div>
+
+
+                    <div>
+                        <h1 class="text-center titulos-numeros">15</h1>
+                        <p class="text-center descripcion-numeros">Cursos disponibles</p>
+                    </div>
+
+                    <div>
+                        <button class="btn-primario-outline">Ver más </button>
+                    </div>
+
+                </div>
 
             </div>
-
-
-        </section>
+        </div>
 
 
 
