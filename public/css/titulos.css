@@ -52,3 +52,14 @@
     color: var(--color-negro);
     line-height: 80%;
 }
+
+
+.titulos-numeros{
+    color: var(--color-primario);
+    font-weight: bold;
+    font-size: 40px;
+}
+.descripcion-numeros{
+    font-size: 12px;
+    color: var(--color-gris);
+}
