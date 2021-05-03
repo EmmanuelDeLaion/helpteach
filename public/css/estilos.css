@@ -71,6 +71,7 @@ html {
     overflow-y: hidden;
     height: 100vh;
     position: relative;
+    background-attachment: fixed;
 }
 
 .portada-home::before {
@@ -391,6 +392,25 @@ span.cuatro {
 }
 .bottom center a:hover {
     color: var(--color-primario);
+}
+
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ocultar{
+    opacity: 0;
+}
+
+.animar{
+    animation: aparecer 1.3s;
 }
 
 @keyframes vuela {
