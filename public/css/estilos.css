@@ -21,7 +21,7 @@
 :root {
     /* colores  */
     --color-blanco-fondo: #f7f8fc;
-    --color-primario: #1DA1F2;
+    --color-primario: #1da1f2;
     --color-negro: #22292f;
     --color-negro-primario: #151515;
     /* color botones secundarios  */
@@ -77,7 +77,28 @@ html {
 
 .portada-home::before {
     content: "";
-    background: linear-gradient(var(--color-primario), #1062c0);
+    background: linear-gradient(transparent, var(--color-primario));
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    opacity: 0.8;
+}
+
+.portada-cursos {
+    background-image: url("/images/home/contenido-facil-usar.jpg");
+    background-size: cover;
+    background-position-y: 60%;
+    /* background: linear-gradient(to bottom right, #003A99, #0E77E2); */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.portada-cursos::before {
+    content: "";
+    background: linear-gradient(transparent, var(--color-primario));
     width: 100%;
     height: 100vh;
     position: absolute;

@@ -3,7 +3,7 @@
     font-weight: bold;
     font-size: var(--texto-portada);
     color: var(--color-blanco);
-    line-height: 75%;
+    line-height: 90%;
 }
 .p-subtitulo-home {
     margin-top: 20px;
@@ -77,7 +77,6 @@
     color: var(--color-negro);
     margin-top: 10%;
     line-height: 90%;
-
 }
 
 /* seccion empezar  */
