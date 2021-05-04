@@ -26,6 +26,12 @@
     --texto-portada: 100px;
     --texto-titulos-secciones: 50px;
 
+
+    
+    /* bordes  */
+    --border-radius-botones: 5px;
+    --border-radius-enlaces: 50px;
+
     scroll-behavior: smooth;
 }
 
@@ -104,7 +110,7 @@ form.sign-in-form {
     background-color: #f0f0f0;
     margin: 10px 0;
     height: 55px;
-    border-radius: 55px;
+    border-radius: var(--border-radius-botones);
     display: grid;
     grid-template-columns: 15% 85%;
     padding: 0 0.4rem;
@@ -150,7 +156,7 @@ form.sign-in-form {
     color: var(--color-blanco);
     padding: 15px 30px 15px 30px;
     transition: 0.4s;
-    border-radius: 50px;
+    border-radius: var(--border-radius-botones);
     margin: 20px;
     cursor: pointer;
     transition: 0.5s;
@@ -239,7 +245,7 @@ form.sign-in-form {
     font-weight: bold;
     color: var(--color-blanco);
     transition: 0.4s;
-    border-radius: 50px;
+    border-radius: var(--border-radius-botones);
     margin: 20px;
     transition: 0.5s;
     cursor: pointer;
