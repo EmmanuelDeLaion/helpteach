@@ -67,6 +67,8 @@ html {
 }
 
 /* secciones  */
+
+/* PORTADA HOME */
 .portada-home {
     background-image: url("/images/home/portada-home.png");
     background-size: cover;
@@ -88,6 +90,7 @@ html {
     opacity: 0.8;
 }
 
+/* PORTADA CURSOS  */
 .portada-cursos {
     background-image: url("/images/cursos/portada-cursos.jpg");
     background-size: cover;
@@ -105,6 +108,28 @@ html {
     background: linear-gradient(transparent, var(--color-primario));
     width: 100%;
     height: 100vh;
+    position: absolute;
+    opacity: 0.8;
+}
+
+/* PORTADA BLOGS  */
+.portada-blogs {
+    background-image: url("/images/home/contenido-acceso-gratis.jpg");
+    background-size: cover;
+    background-position-y: 60%;
+    /* background: linear-gradient(to bottom right, #003A99, #0E77E2); */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 60vh;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.portada-blogs::before {
+    content: "";
+    background: linear-gradient(transparent, var(--color-primario));
+    width: 100%;
+    height: 60vh;
     position: absolute;
     opacity: 0.8;
 }
