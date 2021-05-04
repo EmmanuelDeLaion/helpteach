@@ -85,7 +85,7 @@ html {
 }
 
 .portada-cursos {
-    background-image: url("/images/home/contenido-facil-usar.jpg");
+    background-image: url("/images/cursos/portada-cursos.jpg");
     background-size: cover;
     background-position-y: 60%;
     /* background: linear-gradient(to bottom right, #003A99, #0E77E2); */
