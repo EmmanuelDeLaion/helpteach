@@ -228,8 +228,11 @@
 
                 @endforeach
 
+            </div>
 
-
+            <div class="flex justify-center">
+                <button onclick="location.href='{{ route('courses.index') }}'" class="btn-secundario"> Ver más
+                    cursos</button>
             </div>
         </section>
 
@@ -239,7 +242,8 @@
                 <div class="contenido-alumnos">
                     <h1 class="titulo-alumnos-instructores">Alumnos Instructores</h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, qui?</p>
-                    <button onclick="location.href='{{ route('about.index') }}'" class="btn-primario">Más información</button>
+                    <button onclick="location.href='{{ route('about.index') }}'" class="btn-primario">Más
+                        información</button>
                 </div>
             </div>
         </section>
