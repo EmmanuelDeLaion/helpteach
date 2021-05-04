@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,6 @@ Route::get('about', function () {
 Route::get('cursos/{course}', function ($course) {
     return "Aqui se muestra el curso: $course ";
 })->name('courses.show');
+
+
+Route::get('blog', [BlogController::class,'index'])->name('blogs.index');
