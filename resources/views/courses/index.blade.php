@@ -53,7 +53,10 @@
             </div>
         </section>
 
- 
+
+        @livewire('course-index')
+
+
 
 
         <section class="contenedor-fondo-animado">
@@ -182,7 +185,6 @@
         </footer>
 
 
-
         <div class="bottom">
             <center class="center">
                 <span class="credit">Created By <a target="_blanck"
@@ -194,8 +196,6 @@
     </x-app-layout>
 
 
-    <script type="text/javascript" src="{{ asset('js/funciones-home.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/contadores-home.js') }}"></script>
 
 </body>
 
