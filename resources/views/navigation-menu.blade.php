@@ -9,7 +9,7 @@ $nav_links = [
 @endphp
 
 
-<nav x-data="{ open: false }" class=" bg-white border-b border-gray-100 shadow  ">
+<nav x-data="{ open: false }" class=" bg-white border-b z-50 fixed w-full border-gray-100 shadow  ">
 
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
@@ -25,7 +25,7 @@ $nav_links = [
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     @foreach ($nav_links as $nav_link)
-                    
+
                         <x-jet-nav-link href="{{ $nav_link['route'] }}" :active="$nav_link['active']">
                             {{ $nav_link['name'] }}
                         </x-jet-nav-link>
@@ -146,7 +146,7 @@ $nav_links = [
                                     @csrf
 
                                     <x-jet-dropdown-link href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                    this.closest('form').submit();">
+                                                        this.closest('form').submit();">
                                         {{ __('Log Out') }}
                                     </x-jet-dropdown-link>
                                 </form>
@@ -236,7 +236,7 @@ $nav_links = [
                         @csrf
 
                         <x-jet-responsive-nav-link href="{{ route('logout') }}" onclick="event.preventDefault();
-                                        this.closest('form').submit();">
+                                            this.closest('form').submit();">
                             {{ __('Log Out') }}
                         </x-jet-responsive-nav-link>
                     </form>
