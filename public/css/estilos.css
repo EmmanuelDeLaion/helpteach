@@ -434,9 +434,6 @@ span.cuatro {
     color: var(--color-primario);
 }
 
-.filtros {
-}
-
 /* ***************************** */
 /* loader  */
 .loading {
@@ -454,7 +451,7 @@ span.cuatro {
     position: absolute;
     top: 50%;
     left: 50%;
-   
+
     transform: translate(-50%, -50%);
     /* animation: animacion-loading;
     animation-iteration-count: infinite;
