@@ -24,6 +24,10 @@
 
 <body class="body">
 
+    <div class="loading">
+        <img class="logo-loader" src="{{ asset('/images/logo.png') }}" alt="">
+    </div>
+
     <x-app-layout>
 
         <section class="portada-home">
@@ -97,7 +101,7 @@
 
 
         <section class="seccion-conteiner">
-            <h1 class="text-center mb-12 mt-6  h1-titulo-enseñar">Contenido</h1>
+            <h1 class="text-center mb-12   h1-titulo-enseñar">Contenido</h1>
             <div
                 class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-3 gap-6  ">
                 <div class="card">
@@ -118,7 +122,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="flex justify-center">
-                            <img class="img-card-header" src="{{ asset('/images/home/ilustracion-libreta.png') }}" />
+                            <img class="img-card-header" src="{{ asset('/images/home/ilustracion-manos.png') }}" />
                         </div>
                         <h3 class="titulo-card mt-2">Acceso gratis</h3>
                     </div>
@@ -135,7 +139,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="flex justify-center">
-                            <img class="img-card-header" src="{{ asset('/images/home/ilustracion-home.png') }}" />
+                            <img class="img-card-header" src="{{ asset('/images/home/ilustracion-manos.png') }}" />
                         </div>
                         <h3 class="titulo-card mt-2">Alumnos instructores</h3>
                     </div>
@@ -168,7 +172,7 @@
                 @foreach ($courses as $course)
 
                     {{-- {{ Storage::url($course->image->url) }} --}}
-                    <article class="card-cursos mb-12">
+                    <article class="card-cursos  mb-12">
                         <div class="card-info-hover">
                             <svg class="card-like" viewBox="0 0 24 24">
                                 <path fill="#000000"
@@ -189,7 +193,6 @@
                             <h3 class="card-title"> {{ $course->title }} </h3>
                             <span class="card-by">De: <a href="#" class="card-author" title="author">
                                     {{ $course->teacher->name }} </a></span>
-
 
                             <div class="flex justify-between">
                                 <ul class="rating flex text-sm">
@@ -257,6 +260,8 @@
                     ahora</button>
             </div>
         </section>
+
+
 
 
         <section class="contenedor-fondo-animado">
@@ -399,6 +404,8 @@
 
     <script type="text/javascript" src="{{ asset('js/funciones-home.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/contadores-home.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/cargar-loading.js') }}"></script>
+
 
 </body>
 

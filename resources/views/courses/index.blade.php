@@ -24,6 +24,12 @@
 
 <body class="body">
 
+
+    <div class="loading">
+        <img class="logo-loader" src="{{ asset('/images/logo.png') }}" alt="">
+    </div>
+
+
     <x-app-layout>
 
         <section class="portada-cursos">
@@ -196,6 +202,7 @@
     </x-app-layout>
 
 
+    <script type="text/javascript" src="{{ asset('js/cargar-loading.js') }}"></script>
 
 </body>
 

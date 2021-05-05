@@ -3,7 +3,6 @@
 .btn-primario-outline,
 .btn-primario-outline-blanco,
 .btn-primario,
-.btn-ver-curso,
 .btn-secundario,
 .btn-secundario-outline {
     padding: 7px 30px 7px 30px;
@@ -82,6 +81,10 @@
     background-color: transparent;
     color: var(--color-primario);
     z-index: 20;
+    padding: 7px 30px 7px 30px;
+    transition: 0.4s;
+    border-radius: var(--border-radius-botones);
+    margin: 5px;
 }
 .btn-ver-curso:focus {
     outline: none;

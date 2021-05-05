@@ -48,10 +48,11 @@
             right: 0;
             opacity: 0;
             visibility: hidden;
-            z-index: 3;
+            z-index: 30;
             transition: opacity 0.2s linear, visibility 0.2s linear;
             color: var(--color-primario);
             cursor: pointer;
+            border: 1px solid var(--color-primario)
         }
 
         .dropdown-list-item {
@@ -66,7 +67,7 @@
 
     </style>
 
-    <div class="py-4 filtros">
+    <div class="py-4 filtros mt-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex">
 
 
@@ -84,7 +85,7 @@
                     <i class="fa fa-caret-down icon"></i>
                 </div>
 
-                <div class="dropdown-list">
+                <div class="dropdown-list shadow-lg">
                     <div class="dropdown-list-item">Prueba</div>
                     <div class="dropdown-list-item">Prueba</div>
                     <div class="dropdown-list-item">Prueba</div>
@@ -131,7 +132,6 @@
         class="grid gap-4 grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 gap-x-6 gap-y-8 mt-6">
 
         @foreach ($courses as $course)
-            {{-- {{ Storage::url($course->image->url) }} --}}
             <article class="card-cursos mb-12">
                 <div class="card-info-hover">
                     <svg class="card-like" viewBox="0 0 24 24">
