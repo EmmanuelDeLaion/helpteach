@@ -73,7 +73,7 @@
 
             <div class="dropdown mr-4">
                 <div class="dropdown-select">
-                    <span class="select mr-4"> <i class="fas fa-list-alt"></i> Todos los cursos</span>
+                    <a class="select mr-4"> <i class="fas fa-list-alt"></i> Todos los cursos</a>
                 </div>
 
             </div>
@@ -86,10 +86,11 @@
                 </div>
 
                 <div class="dropdown-list shadow-lg">
-                    <div class="dropdown-list-item">Prueba</div>
-                    <div class="dropdown-list-item">Prueba</div>
-                    <div class="dropdown-list-item">Prueba</div>
-                    <div class="dropdown-list-item">Prueba</div>
+
+                    @foreach ($categories as $category)
+                        <div class="dropdown-list-item"> <a href=""> {{ $category->name }} </a> </div>
+                    @endforeach
+
                 </div>
             </div>
 
@@ -101,26 +102,23 @@
                 </div>
 
                 <div class="dropdown-list">
-                    <div class="dropdown-list-item">Prueba</div>
-                    <div class="dropdown-list-item">Prueba</div>
-                    <div class="dropdown-list-item">Prueba</div>
-                    <div class="dropdown-list-item">Prueba</div>
+                    @foreach ($levels as $level)
+                        <div class="dropdown-list-item"> <a href=""> {{ $level->name }} </a> </div>
+                    @endforeach
                 </div>
             </div>
 
 
-
             <div class="dropdown">
                 <div class="dropdown-select">
-                    <span class="select mr-4"> <i class="fas fa-question-circle"></i> Estado</span>
+                    <span class="select mr-4"> <i class="fas fa-question-circle"></i> Plataformas</span>
                     <i class="fa fa-caret-down icon"></i>
                 </div>
 
                 <div class="dropdown-list">
-                    <div class="dropdown-list-item">Prueba</div>
-                    <div class="dropdown-list-item">Prueba</div>
-                    <div class="dropdown-list-item">Prueba</div>
-                    <div class="dropdown-list-item">Prueba</div>
+                    @foreach ($platforms as $platform)
+                        <div class="dropdown-list-item"> <a href=""> {{ $platform->name }} </a> </div>
+                    @endforeach
                 </div>
             </div>
 
@@ -177,7 +175,6 @@
                     </button>
                 </div>
             </article>
-
 
         @endforeach
     </div>

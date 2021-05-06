@@ -25,17 +25,17 @@
       
 
         <style>
-            body{
-                /* --color-blanco:#F7F8FC;  */
+            /* .body{
+                --color-blanco:#EFF3F5; 
                 font-family: 'Poppins', sans-serif;
-                /* background-color: var(--color-blanco); */
-             }
+                background-color: var(--color-blanco);
+             } */
         </style>
 
     </head>
 
 
-    <body class="antialiased">
+    <body class="body">
         <x-jet-banner />
 
         <div class="min-h-screen bg-white">

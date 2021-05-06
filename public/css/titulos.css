@@ -13,6 +13,9 @@
     color: var(--color-negro);
     font-weight: bold;
 }
+.span-primario{
+    color: var(--color-primario);
+}
 .text-home {
     position: relative;
     z-index: 10;
@@ -23,6 +26,10 @@
     color: var(--color-blanco);
 }
 
+
+.textos{
+    color: var(--color-texto);
+}
 /* seccion enseñar */
 .titulos-enseñar {
     position: absolute;
@@ -49,6 +56,14 @@
     font-weight: bold;
     color: var(--color-negro);
     line-height: 80%;
+}
+
+/* titulos secciones  */
+.titulo-secciones{
+    font-size: var(--texto-titulos-secciones);
+    color: var(--color-negro);
+    line-height: 80%;
+    font-weight: bold;
 }
 
 /* seccion numeros plataforma  */

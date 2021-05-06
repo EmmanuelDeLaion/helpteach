@@ -30,7 +30,7 @@
 
     <x-app-layout>
 
-        <section class="portada-home">
+        <section class="portada-about">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-36">
                 <div class=" text-home w-full md:w-3/4 lg:w-1/2">
                     <h1 class="h1-titulo-home">¿Quienes somos? </h1>
@@ -46,7 +46,7 @@
         @livewire('section-see-courses')
         @livewire('footer')
 
-        
+
     </x-app-layout>
 
 

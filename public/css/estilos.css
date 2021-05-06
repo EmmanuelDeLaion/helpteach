@@ -21,7 +21,7 @@
 
 :root {
     /* colores  */
-    --color-blanco-fondo: #f7f8fc;
+    --color-blanco-fondo: #eff3f5;
     --color-primario: #1da1f2;
     --color-negro: #22292f;
     --color-negro-primario: #151515;
@@ -32,6 +32,8 @@
     --color-gris: #9da9b2;
     --color-blanco: #fff;
 
+    /* colores textos  */
+    --color-texto: #697477;
     /* tamaños  */
     --texto-portada: 70px;
     --texto-titulos-secciones: 50px;
@@ -48,6 +50,10 @@ html {
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.body {
+    background-color: var(--color-blanco-fondo);
 }
 
 * {
@@ -135,6 +141,28 @@ html {
     opacity: 0.8;
 }
 
+/* PORTADA BLOGS  */
+.portada-about {
+    background-image: url("/images/home/portada-home-cursos.jpg");
+    background-size: cover;
+    background-position-y: 60%;
+    /* background: linear-gradient(to bottom right, #003A99, #0E77E2); */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 60vh;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.portada-about::before {
+    content: "";
+    background: linear-gradient(transparent, var(--color-primario));
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+    opacity: 0.8;
+}
+
 .ul-busquedas {
     width: auto;
     float: left;
@@ -200,6 +228,18 @@ html {
 .seccion-alumnos-instructores .contenido-alumnos {
     display: block;
     text-align: center;
+}
+ 
+.seccion-comentarios{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.img-comentarios{
+    width: 100%;
 }
 
 .seccion-numeros {
@@ -442,7 +482,7 @@ span.cuatro {
     width: 100%;
     height: 100%;
     transition: all 1.5s;
-    background-color: rgba(255, 255, 255, 0.849);
+    background-color: rgba(255, 255, 255, 0.924);
 }
 
 .loading .logo-loader {
