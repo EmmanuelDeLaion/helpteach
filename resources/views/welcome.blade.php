@@ -93,27 +93,14 @@
         </div>
 
 
-
-        <section class="seccion-conteiner">
-             <div
-                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-2 gap-6  ">
-                <div class="">
-                     
-                </div>
-                <div class="">
-                     
-                    
-                </div>
-                
-            </div>
-        </section>
-
-
         @livewire('show-courses-home')
         @livewire('students-instructor')
 
 
         @livewire('comments-students')
+
+        @livewire('ad')
+
         @livewire('section-start-now')
 
 
