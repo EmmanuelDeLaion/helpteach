@@ -65,7 +65,10 @@ html {
     color: var(--color-blanco);
 }
 
+
+/* *************************************************** */
 /* compartidos  */
+/* *************************************************** */
 .seccion {
     position: relative;
     height: 100vh;
@@ -73,9 +76,12 @@ html {
     overflow-y: hidden;
 }
 
+
 /* secciones  */
 
+/* *************************************************** */
 /* PORTADA HOME */
+/* *************************************************** */
 .portada-home {
     background-image: url("/images/home/portada-home.png");
     background-size: cover;
@@ -119,7 +125,9 @@ html {
     opacity: 0.8;
 }
 
+/* *************************************************** */
 /* PORTADA BLOGS  */
+/* *************************************************** */
 .portada-blogs {
     background-image: url("/images/home/contenido-acceso-gratis.jpg");
     background-size: cover;
@@ -141,7 +149,9 @@ html {
     opacity: 0.8;
 }
 
+/* *************************************************** */
 /* PORTADA BLOGS  */
+/* *************************************************** */
 .portada-about {
     background-image: url("/images/home/portada-home-cursos.jpg");
     background-size: cover;
@@ -197,7 +207,9 @@ html {
     min-height: 80vh;
 }
 
+/* *************************************************** */
 /* secion empezar */
+/* *************************************************** */
 .seccion-empezar {
     display: flex;
     align-items: center;
@@ -229,8 +241,11 @@ html {
     display: block;
     text-align: center;
 }
- 
-.seccion-comentarios{
+
+/* *************************************************** */
+/* seccion comentarios  */
+/* *************************************************** */
+.seccion-comentarios {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -238,10 +253,13 @@ html {
     align-items: center;
     overflow-x: hidden;
 }
-.img-comentarios{
+.img-comentarios {
     width: 100%;
 }
 
+/* *************************************************** */
+/* seccion numeros  */
+/* *************************************************** */
 .seccion-numeros {
     position: relative;
     display: flex;
@@ -289,13 +307,17 @@ html {
     padding: 20px 0;
 }
 
+/* *************************************************** */
 /* navbar  */
+/* *************************************************** */
 .navbar-jet {
     position: fixed;
     z-index: 999;
 }
 
+/* *************************************************** */
 /* ilustraciones  */
+/* *************************************************** */
 .ilustracion-h {
     z-index: 1;
     position: absolute;
@@ -348,8 +370,9 @@ html {
     position: absolute;
 }
 
+/* *************************************************** */
 /* seccion cual curso ver  */
-
+/* *************************************************** */
 .contenedor-fondo-animado {
     display: block;
     height: 50vh;
@@ -457,7 +480,9 @@ span.cuatro {
     animation-delay: 3s;
 }
 
+/* *************************************************** */
 /* footer  */
+/* *************************************************** */
 .bottom center {
     padding: 5px;
     font-size: 14px;
@@ -476,13 +501,14 @@ span.cuatro {
 
 /* ***************************** */
 /* loader  */
+/* *************************************************** */
 .loading {
     position: absolute;
     z-index: 1000;
     width: 100%;
     height: 100%;
-    transition: all 1.5s;
-    background-color: rgba(255, 255, 255, 0.924);
+    transition: all 0.8s;
+    background-color: rgba(255, 255, 255, 0.959);
 }
 
 .loading .logo-loader {
@@ -491,11 +517,40 @@ span.cuatro {
     position: absolute;
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%);
     /* animation: animacion-loading;
     animation-iteration-count: infinite;
     animation: animacion-loading infinite alternate 500ms; */
+}
+
+.ocultar {
+    opacity: 0;
+}
+
+.animar {
+    animation: aparecer 1.3s;
+}
+
+/* *************************************************** */
+/* keyframes */
+/* *************************************************** */
+@keyframes vuela {
+    from {
+        transform: rotate(0deg);
+        bottom: 0;
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    to {
+        transform: rotate(360deg);
+        bottom: calc(100% + 100px);
+        opacity: 0;
+    }
 }
 
 @keyframes animacion-loading {
@@ -520,35 +575,9 @@ span.cuatro {
     }
 }
 
-.ocultar {
-    opacity: 0;
-}
-
-.animar {
-    animation: aparecer 1.3s;
-}
-
 /* *************************************************** */
-
-@keyframes vuela {
-    from {
-        transform: rotate(0deg);
-        bottom: 0;
-        opacity: 0;
-    }
-    5% {
-        opacity: 1;
-    }
-    60% {
-        opacity: 1;
-    }
-    to {
-        transform: rotate(360deg);
-        bottom: calc(100% + 100px);
-        opacity: 0;
-    }
-}
-
+/* medias  */
+/* *************************************************** */
 @media screen and (max-width: 900px) {
     footer {
         position: relative;

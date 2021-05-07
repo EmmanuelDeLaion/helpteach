@@ -13,7 +13,7 @@
 :root {
     /* colores  */
     --color-blanco-fondo: #f7f8fc;
-    --color-primario: #1DA1F2;
+    --color-primario: #1da1f2;
     --color-negro: #22292f;
     /* color botones secundarios  */
     --color-blanco-primario: #f4f4f4;
@@ -26,8 +26,6 @@
     --texto-portada: 100px;
     --texto-titulos-secciones: 50px;
 
-
-    
     /* bordes  */
     --border-radius-botones: 5px;
     --border-radius-enlaces: 50px;
@@ -200,7 +198,7 @@ form.sign-in-form {
     transform: translateY(-50%);
     background-image: url("/images/home/contenido-instructores.jpg");
     background-size: cover;
-    background-position-x: 0;  
+    background-position-x: 0;
     transition: 1.8s ease-in-out;
     z-index: 6;
 }
@@ -371,6 +369,4 @@ form.sign-in-form {
         bottom: 28%;
         left: 50%;
     }
-
-    
 }

@@ -10,7 +10,6 @@
 
                 <button class="btn-primario-outline">Dejar un comentario</button>
             </div>
-
             <div>
                 <img class="img-comentarios" src="{{ asset('/images/home/comentarios-home.png') }}" alt="">
             </div>
