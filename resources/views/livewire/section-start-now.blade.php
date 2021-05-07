@@ -7,6 +7,4 @@
                 ahora</button>
         </div>
     </section>
-
-
 </div>

@@ -1,5 +1,4 @@
 <div>
-
     <section>
         <div class="seccion-alumnos-instructores">
             <div class="contenido-alumnos">
@@ -10,5 +9,4 @@
             </div>
         </div>
     </section>
-
 </div>

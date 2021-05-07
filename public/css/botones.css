@@ -1,5 +1,6 @@
+/* *************************************************** */
 /* botones  */
-
+/* *************************************************** */
 .btn-primario-outline,
 .btn-primario-outline-blanco,
 .btn-primario,
@@ -10,8 +11,9 @@
     border-radius: var(--border-radius-botones);
     margin: 20px;
 }
-
+/* *************************************************** */
 /* boton buscar en home  */
+/* *************************************************** */
 .btn-buscar-home {
     margin-top: 20px;
     border: 1px solid var(--color-primario);
@@ -27,7 +29,9 @@
     border: 1px solid var(--color-negro);
 }
 
+/* *************************************************** */
 /* boton primario azul */
+/* *************************************************** */
 .btn-primario {
     background-color: var(--color-primario);
     color: var(--color-blanco);
@@ -39,7 +43,9 @@
     box-shadow: 0px 0px 18px -6px rgba(0, 0, 0, 0.75);
 }
 
+/* *************************************************** */
 /* boton primario azul con borde  */
+/* *************************************************** */
 .btn-primario-outline {
     border: 1px solid var(--color-primario);
     background-color: transparent;
@@ -58,7 +64,9 @@
     outline: none;
 }
 
+/* *************************************************** */
 /* boton blanco con borde */
+/* *************************************************** */
 .btn-primario-outline-blanco {
     border: 1px solid var(--color-blanco);
     background-color: transparent;
@@ -75,7 +83,9 @@
     color: var(--color-negro);
 }
 
+/* *************************************************** */
 /* boton ver cursos con borde  */
+/* *************************************************** */
 .btn-ver-curso {
     border: 1px solid var(--color-primario);
     background-color: transparent;
@@ -109,7 +119,62 @@
     outline: none;
 }
 
+/* *************************************************** */
+/* boton secundario con borde  */
+/* *************************************************** */
 .btn-secundario-outline {
 }
 .btn-secundario-outline:hover {
+}
+
+/* *************************************************** */
+/* boton dropdown  */
+/* *************************************************** */
+.dropdown {
+    width: auto;
+    position: relative;
+}
+
+.dropdown:hover .dropdown-list {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-select {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: var(--color-primario);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--color-blanco);
+}
+
+.dropdown-list {
+    border-radius: 4px;
+    background-color: var(--color-blanco);
+    position: absolute;
+    top: 110%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 30;
+    transition: opacity 0.2s linear, visibility 0.2s linear;
+    color: var(--color-primario);
+    cursor: pointer;
+    border: 1px solid var(--color-primario);
+}
+
+.dropdown-list-item {
+    padding: 1rem;
+    font-size: 14px;
+}
+
+.dropdown-list-item:hover {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
 }
