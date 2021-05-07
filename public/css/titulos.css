@@ -66,6 +66,14 @@
     font-weight: bold;
 }
 
+/* titulos anuncios  */
+.titulo-anuncios{
+    font-size: var(--texto-titulos-secciones);
+    color: var(--color-blanco);
+    line-height: 90%;
+    font-weight: bold;
+} 
+
 /* seccion numeros plataforma  */
 .titulo-numeros {
     font-size: 20px;
