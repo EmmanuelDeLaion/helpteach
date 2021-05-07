@@ -2,8 +2,8 @@
     <section class=" mb-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="px-4 sm:px-6 w-full lg:w-1/2">
-                <h1 class="titulo-cursos-home">Obtén el conocimiento de los siguientes cursos</h1>
-                <p class="mt-2">Estos son los ultimos cursos que se han subido</p>
+                <h1 class="titulo-cursos-home">Cursos disponibles para ti</h1>
+                <p class="mt-2 textos">Estos son los ultimos cursos que se han subido</p>
             </div>
         </div>
 

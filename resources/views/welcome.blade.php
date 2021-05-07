@@ -95,56 +95,16 @@
 
 
         <section class="seccion-conteiner">
-            <h1 class="text-center mb-12   h1-titulo-enseñar">Contenido</h1>
-            <div
-                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-3 gap-6  ">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="flex justify-center">
-                            <img class="img-card-header" src="{{ asset('/images/home/ilustracion-manos.png') }}" />
-                        </div>
-                        <h3 class="titulo-card mt-2">Ayuda a enseñar</h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="p-card">Regístrate y crea cursos para las nuevas generaciones</p>
-
-                        <div class="flex justify-center">
-                            <button class="btn-secundario w-11/12">Ver más</button>
-                        </div>
-                    </div>
+             <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-2 gap-6  ">
+                <div class="">
+                     
                 </div>
-                <div class="card">
-                    <div class="card-header">
-                        <div class="flex justify-center">
-                            <img class="img-card-header" src="{{ asset('/images/home/ilustracion-manos.png') }}" />
-                        </div>
-                        <h3 class="titulo-card mt-2">Acceso gratis</h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="p-card">Regístrate e inicia sesión para poder tener acceso a los cursos disponibles
-                        </p>
-
-                        <div class="flex justify-center">
-                            <button class="btn-primario w-11/12"
-                                onclick="location.href='{{ route('register') }}'">Regístrate ahora</button>
-                        </div>
-                    </div>
+                <div class="">
+                     
+                    
                 </div>
-                <div class="card">
-                    <div class="card-header">
-                        <div class="flex justify-center">
-                            <img class="img-card-header" src="{{ asset('/images/home/ilustracion-manos.png') }}" />
-                        </div>
-                        <h3 class="titulo-card mt-2">Alumnos instructores</h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="p-card">Cursos creados por alumnos para alumnos</p>
-
-                        <div class="flex justify-center">
-                            <button class="btn-secundario w-11/12">Ver más</button>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </section>
 
@@ -157,14 +117,13 @@
         @livewire('section-start-now')
 
 
-        {{-- Footer  --}}
+        {{-- Footer --}}
         @livewire('section-see-courses')
         @livewire('footer')
 
     </x-app-layout>
 
 
-    <script type="text/javascript" src="{{ asset('js/funciones-home.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/contadores-home.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/cargar-loading.js') }}"></script>
 

@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("/fonts/RadioGrotesk-Regular.otf");
 @import url("botones.css");
 @import url("cards-cursos.css");
 @import url("titulos.css");
@@ -7,18 +6,8 @@
 @import url("footer.css");
 @import url("loader.css");
 
-/* KGBlankSpaceSolid.ttf */
-
-@font-face {
-    font-family: radioGrotesk;
-    src: url("/fonts/RadioGrotesk-Regular.otf");
-}
-
-@font-face {
-    font-family: kgBlankSpaceSolid;
-    src: url("/fonts/KGBlankSpaceSolid.ttf");
-}
-
+  
+ 
 :root {
     /* colores  */
     --color-blanco-fondo: #eff3f5;
@@ -201,11 +190,7 @@ html {
     background-color: var(--color-blanco);
     color: var(--color-negro);
 }
-
-.seccion-conteiner {
-    position: relative;
-    min-height: 80vh;
-}
+ 
 
 /* *************************************************** */
 /* secion empezar */
