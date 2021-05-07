@@ -517,6 +517,30 @@ span.cuatro {
 }
 
 /* *************************************************** */
+/* anuncios  */
+/* *************************************************** */
+.anuncio{
+    width: 100%;
+    height: 70vh;
+    position: relative; 
+}
+.anuncio .container-anuncio{
+    background-color: var(--color-primario);
+    height: 50vh;
+    width: 100%;
+    position: relative;
+}
+.img-anuncio{
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    right: 20%;
+    width: 300px;
+}
+
+
+
+/* *************************************************** */
 /* keyframes */
 /* *************************************************** */
 @keyframes vuela {
