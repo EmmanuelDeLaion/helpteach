@@ -35,14 +35,14 @@
     top: 0;
 }
 .card-cursos {
-    margin-right: 25px;
     transition: all 0.7s cubic-bezier(0.175, 0.885, 0, 1);
     background-color: #fff;
     width: 100%;
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-
+    flex: 1;
+    margin: 0 10px;
     -webkit-box-shadow: 0px 0px 34px -25px rgba(0, 0, 0, 0.705);
     -moz-box-shadow: 0px 0px 34px -25px rgba(0, 0, 0, 0.61);
     box-shadow: 0px 0px 34px -25px rgba(0, 0, 0, 0.705);
