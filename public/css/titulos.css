@@ -109,3 +109,18 @@
     font-weight: bold;
     line-height: 90%;
 }
+
+
+
+/* titlos show courses  */
+.titulo-titulo-course{
+    color: var(--color-negro);
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 90%;
+}
+
+.p-description-course{
+
+}
+

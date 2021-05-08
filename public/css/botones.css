@@ -9,7 +9,7 @@
     padding: 7px 30px 7px 30px;
     transition: 0.4s;
     border-radius: var(--border-radius-botones);
-    margin: 20px;
+    margin-top: 10px;
 }
 /* *************************************************** */
 /* boton buscar en home  */

@@ -66,7 +66,6 @@
         @livewire('show-courses-category')
 
         @livewire('comments-students')
-        @livewire('section-see-courses')
         @livewire('footer')
 
 
