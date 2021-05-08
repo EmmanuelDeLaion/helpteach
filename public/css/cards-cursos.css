@@ -87,24 +87,41 @@
     color: var(--color-primario);
 }
 
-.card-cursos:hover .card-img-hover {
-    height: 100%;
-    opacity: 0.3;
-}
-
-.card-cursos:hover .card-info {
-    background-color: transparent;
-    position: relative;
-}
-
-.card-cursos:hover .card-info-hover {
-    opacity: 1;
-}
-
 .rating {
     z-index: 20;
 }
 
 .icon-students {
     color: #747474;
+}
+
+@media screen and (max-width: 500px) {
+    .card-info {
+        padding: 5px 5px 10px 5px;
+    }
+
+    .boton-curso {
+        display: none;
+    }
+
+    .card-img {
+        visibility: hidden;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 80px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+    .card-img-hover {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 80px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        top: 0;
+    }
 }

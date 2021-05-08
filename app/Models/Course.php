@@ -28,9 +28,23 @@ class Course extends Model
         if ($this->reviews_count) {
             // se redondea el rating 
             return round($this->reviews->avg('rating'), 1);
-        }
-        else{
+        } else {
             return 5;
+        }
+    }
+
+
+    // query scope 
+    public function scopeCategory($query, $category_id){
+        if ($category_id) {
+            return $query->where('category_id', $category_id);
+        }
+    }
+
+    // query scope 
+    public function scopeLevel($query, $level_id){
+        if ($level_id) {
+            return $query->where('category_id', $level_id);
         }
     }
 
