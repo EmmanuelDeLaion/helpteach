@@ -15,7 +15,7 @@
                 <article class="card-cursos  mb-12">
                     <div class="card-info-hover">
                     </div>
-                    <div class="card-img" style="background-image: url('{{ Storage::url($course->image->url) }}')">
+                    <div class="card-img" >
                     </div>
                     <a class="card-link">
                         <div class="card-img-hover"
