@@ -6,6 +6,9 @@
 @import url("footer.css");
 @import url("loader.css");
 
+/* estilos show courses   */
+@import url('estilos-show-course.css');
+
 :root {
     /* colores  */
     --color-blanco-fondo: #eff3f5;

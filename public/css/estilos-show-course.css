@@ -1,0 +1,18 @@
+
+
+.portada-show-course{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--color-blanco);
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+.img-show-course{
+    margin-top: 5rem;
+    width: 100%;
+    height: 450px;
+    position: relative;
+    border-radius: 10px;
+}
