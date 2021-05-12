@@ -8,7 +8,7 @@
         </div>
 
         <div
-            class="grid gap-4 grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 gap-x-6 gap-y-8">
+            class="grid gap-4 grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2 max-w-7xl mx-auto px-4 xs:px-2 sm:px-6 lg:px-8 gap-x-6 gap-y-8">
 
             @foreach ($courses as $course)
                 {{-- {{ Storage::url($course->image->url) }} --}}
@@ -24,7 +24,7 @@
                     </a>
                     <div class="card-info">
                         <span class="card-category">Desarrollo web</span>
-                        <h3 class="card-title"> {{ $course->title }} </h3>
+                        <h3 class="card-title textos"> {{ $course->title }} </h3>
                         <span class="card-by">De: <a href="#" class="card-author" title="author">
                                 {{ $course->teacher->name }} </a></span>
                         <div class="flex justify-between">

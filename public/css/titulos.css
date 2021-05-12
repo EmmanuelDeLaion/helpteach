@@ -4,7 +4,6 @@
     font-size: var(--texto-portada);
     color: var(--color-blanco);
     line-height: 90%;
- 
 }
 .p-subtitulo-home {
     margin-top: 14px;
@@ -14,9 +13,25 @@
     color: var(--color-negro);
     font-weight: bold;
 }
-.span-primario{
+.span-blanco{
+    color: var(--color-blanco);
+}
+
+.span-background-primario {
+    background-color: var(--color-primario);
+}
+.span-primario {
     color: var(--color-primario);
 }
+
+.span-background-negro {
+    background-color: var(--color-negro);
+}
+
+.span-negro {
+    color: var(--color-negro-primario);
+}
+
 .text-home {
     position: relative;
     z-index: 10;
@@ -27,8 +42,7 @@
     color: var(--color-blanco);
 }
 
-
-.textos{
+.textos {
     color: var(--color-texto);
 }
 /* seccion enseñar */
@@ -60,20 +74,26 @@
 }
 
 /* titulos secciones  */
-.titulo-secciones{
+.titulo-secciones {
     font-size: var(--texto-titulos-secciones);
     color: var(--color-negro);
     line-height: 80%;
     font-weight: bold;
 }
 
+.title-see-courses {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--color-blanco);
+}
+
 /* titulos anuncios  */
-.titulo-anuncios{
+.titulo-anuncios {
     font-size: var(--texto-titulos-secciones);
     color: var(--color-blanco);
     line-height: 90%;
     font-weight: bold;
-} 
+}
 
 /* seccion numeros plataforma  */
 .titulo-numeros {
@@ -111,17 +131,13 @@
     line-height: 90%;
 }
 
-
-
 /* titlos show courses  */
-.titulo-titulo-course{
+.titulo-titulo-course {
     color: var(--color-negro);
     font-weight: bold;
     font-size: 50px;
     line-height: 90%;
 }
 
-.p-description-course{
-
+.p-description-course {
 }
-

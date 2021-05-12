@@ -19,6 +19,10 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
 
+    {{-- AOS SCROLL --}}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
 </head>
 
@@ -35,7 +39,7 @@
     <x-app-layout>
 
         <section class="portada-home" style="background-image: url({{ asset('/images/home/background.jpg') }})">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
                 <div class=" text-home w-full md:w-3/4 lg:w-1/2">
                     <h1 class="h1-titulo-home">Cursa o crea un <span class="span"> curso</span> </h1>
                     <p class="p-subtitulo-home text-lg ">En <span class="span"> HelpTeach </span> podrás encontrar
@@ -47,58 +51,88 @@
                         <button type="submit" class="btn-buscar-home absolute right-0 top-0 mt-2 ">
                             buscar
                         </button>
-                        
+
                     </div>
                 </div>
             </div>
         </section>
 
- 
 
-        <div class="seccion-numeros">
-            <img class="puntos-derecha" src="{{ asset('/images/home/puntos.png') }}" alt="ilustracion puntos">
-            <img class="puntos-izquierda" src="{{ asset('/images/home/puntos.png') }}" alt="ilustracion puntos">
-            <div class="container-num">
-                <h1 class="text-center mt-6 titulo-numeros"> Estudia y practica en <span class="span-numeros">
-                        HelpTeach</span> </h1>
-                <div
-                    class="justify-center mx-auto grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 px-4 mt-2">
-                    <div class="contador">
-                        <h1 class="text-center titulos-numeros contador_cantidad" id="cont1" data-cantidad-total="105">
-                            0</h1>
-                        <p class="text-center descripcion-numeros">Alumnos inscritos</p>
-                    </div>
-                    <div class="contador">
-                        <h1 class="text-center titulos-numeros contador_cantidad" id="cont2" data-cantidad-total="20">0
-                        </h1>
-                        <p class="text-center descripcion-numeros">Alumnos instructores</p>
-                    </div>
-                    <div class="contador">
-                        <h1 class="text-center titulos-numeros contador_cantidad" id="cont3" data-cantidad-total="70">0
-                        </h1>
-                        <p class="text-center descripcion-numeros">Cursos disponibles</p>
-                    </div>
-                    <div class="flex justify-center items-center">
-                        <button class="btn-primario-outline">Ver más </button>
+        <div data-aos="fade-up">
+
+            <div class="seccion-numeros">
+                <img class="puntos-derecha" src="{{ asset('/images/home/puntos.png') }}" alt="ilustracion puntos">
+                <img class="puntos-izquierda" src="{{ asset('/images/home/puntos.png') }}" alt="ilustracion puntos">
+                <div class="container-num">
+                    <h1 class="text-center mt-6 titulo-numeros"> Estudia y practica en <span class="span-numeros">
+                            HelpTeach</span> </h1>
+                    <div
+                        class="justify-center mx-auto grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 px-4 mt-2">
+                        <div class="contador">
+                            <h1 class="text-center titulos-numeros contador_cantidad" id="cont1"
+                                data-cantidad-total="105">
+                                0</h1>
+                            <p class="text-center descripcion-numeros">Alumnos inscritos</p>
+                        </div>
+                        <div class="contador">
+                            <h1 class="text-center titulos-numeros contador_cantidad" id="cont2"
+                                data-cantidad-total="20">0
+                            </h1>
+                            <p class="text-center descripcion-numeros">Alumnos instructores</p>
+                        </div>
+                        <div class="contador">
+                            <h1 class="text-center titulos-numeros contador_cantidad" id="cont3"
+                                data-cantidad-total="70">0
+                            </h1>
+                            <p class="text-center descripcion-numeros">Cursos disponibles</p>
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <button class="btn-primario-outline">Ver más </button>
+                        </div>
                     </div>
                 </div>
             </div>
+
+
         </div>
 
 
-        @livewire('show-courses-home')
-        @livewire('students-instructor')
+        <div data-aos="fade-up">
+            @livewire('show-courses-home')
+        </div>
 
 
-        @livewire('comments-students')
+        <div data-aos="fade-up">
+            @livewire('students-instructor')
+        </div>
 
-        @livewire('ad')
 
-        @livewire('section-start-now')
+        <div data-aos="fade-up">
+            @livewire('comments-students')
+        </div>
+
+        <div data-aos="fade-up">
+            @livewire('teach')
+        </div>
+
+
+        <div data-aos="fade-up">
+            @livewire('ad')
+
+        </div>
+
+        <div data-aos="fade-up">
+            @livewire('section-start-now')
+        </div>
+
+
+        <div data-aos="fade-up">
+            @livewire('section-see-courses')
+        </div>
+
 
 
         {{-- Footer --}}
-        @livewire('section-see-courses')
         @livewire('footer')
 
     </x-app-layout>
@@ -106,6 +140,16 @@
 
     <script type="text/javascript" src="{{ asset('js/contadores-home.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/cargar-loading.js') }}"></script>
+
+
+    {{-- AOS SCROLL --}}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script>
+        AOS.init();
+
+    </script>
 
 
 </body>
