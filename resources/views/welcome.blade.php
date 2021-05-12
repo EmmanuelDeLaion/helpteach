@@ -97,36 +97,36 @@
         </div>
 
 
-        <div data-aos="fade-up">
+        <div data-aos="fade-up" data-aos-duration="1000">
             @livewire('show-courses-home')
         </div>
 
 
-        <div data-aos="fade-up">
+        <div data-aos="fade-up" data-aos-duration="1000">
             @livewire('students-instructor')
         </div>
 
 
-        <div data-aos="fade-up">
+        <div data-aos="fade-up" data-aos-duration="1000">
             @livewire('comments-students')
         </div>
 
-        <div data-aos="fade-up">
+        <div data-aos="fade-up" data-aos-duration="2000">
             @livewire('teach')
         </div>
 
 
-        <div data-aos="fade-up">
+        <div data-aos="fade-up" data-aos-duration="1000">
             @livewire('ad')
 
         </div>
 
-        <div data-aos="fade-up">
+        <div data-aos="fade-up" data-aos-duration="1000">
             @livewire('section-start-now')
         </div>
 
 
-        <div data-aos="fade-up">
+        <div data-aos="fade-up" data-aos-duration="1000">
             @livewire('section-see-courses')
         </div>
 

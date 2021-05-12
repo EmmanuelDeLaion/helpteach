@@ -15,6 +15,11 @@ $nav_links = [
         'route' => route('blogs.index'),
         'active' => request()->routeIs('blogs.index'),
     ],
+    [
+        'name' => '¿Quienes somos?',
+        'route' => route('about.index'),
+        'active' => request()->routeIs('about.index'),
+    ],
 ];
 @endphp
 
@@ -156,7 +161,7 @@ $nav_links = [
                                     @csrf
 
                                     <x-jet-dropdown-link href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                            this.closest('form').submit();">
+                                                                this.closest('form').submit();">
                                         {{ __('Log Out') }}
                                     </x-jet-dropdown-link>
                                 </form>
@@ -246,7 +251,7 @@ $nav_links = [
                         @csrf
 
                         <x-jet-responsive-nav-link href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                this.closest('form').submit();">
+                                                    this.closest('form').submit();">
                             {{ __('Log Out') }}
                         </x-jet-responsive-nav-link>
                     </form>

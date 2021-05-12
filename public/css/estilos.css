@@ -236,6 +236,14 @@ html {
     width: 100%;
 }
 
+.formas-colors{
+    width: 200px;
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    opacity: 0.2;
+}
+
 /* *************************************************** */
 /* seccion numeros  */
 /* *************************************************** */
@@ -284,6 +292,21 @@ html {
 .numeros-estadisticas > .item {
     text-align: center;
     padding: 20px 0;
+}
+
+/* *************************************************** */
+/* seccion dudas  */
+/* *************************************************** */
+.avatars-doubts{
+    margin: 20px;
+    width: 300px;
+    filter: grayscale(100);
+    transition: 0.5s;
+}
+
+.avatars-doubts:hover{
+    filter: grayscale(0);
+    cursor: pointer;
 }
 
 /* *************************************************** */
@@ -348,6 +371,7 @@ html {
     z-index: 3;
     position: absolute;
 }
+
 
 /* *************************************************** */
 /* seccion cual curso ver  */
