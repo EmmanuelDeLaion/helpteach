@@ -18,6 +18,11 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
+
+    {{-- AOS SCROLL --}}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
 </head>
 
@@ -32,7 +37,7 @@
     <x-app-layout>
 
         <section class="portada-cursos">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-36">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
                 <div class=" text-home w-full md:w-3/4 lg:w-1/2">
                     <h1 class="h1-titulo-home">Empieza por buscar un <span class="span"> curso</span> </h1>
                     <p class="p-subtitulo-home text-lg ">En <span class="span"> HelpTeach </span> podrás encontrar
@@ -45,25 +50,26 @@
                             buscar
                         </button>
 
-                        <nav class="nav-busquedas">
-                            <ul class="ul-busquedas">
-                                <li class="li-busquedas"> <a class="a-busquedas" href="">Diseño web</a></li>
-                                <li class="li-busquedas"> <a class="a-busquedas" href="">Programación</a></li>
-                                <li class="li-busquedas"> <a class="a-busquedas" href="">Calculo</a></li>
-                                <li class="li-busquedas"><a class="a-busquedas" href="">Ingles</a></li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
             </div>
         </section>
 
+        <div data-aos="fade-up">
+            @livewire('course-index')
+        </div>
 
-        @livewire('course-index')
+        <div data-aos="fade-up">
+            @livewire('ad')
+        </div>
 
-        @livewire('ad')
+        <div data-aos="fade-up">
+            @livewire('comments-students')
+        </div>
 
-        @livewire('comments-students')
+
+
+
         @livewire('footer')
 
 
@@ -71,6 +77,18 @@
 
 
     <script type="text/javascript" src="{{ asset('js/cargar-loading.js') }}"></script>
+
+
+
+    {{-- AOS SCROLL --}}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script>
+        AOS.init();
+
+    </script>
+
 
 </body>
 
