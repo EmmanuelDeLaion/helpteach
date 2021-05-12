@@ -34,8 +34,8 @@
 
     <x-app-layout>
 
-        <section class="portada-home" style="background-image: url({{ asset('/images/home/portada-home.png') }})">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-36">
+        <section class="portada-home" style="background-image: url({{ asset('/images/home/background.jpg') }})">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-40">
                 <div class=" text-home w-full md:w-3/4 lg:w-1/2">
                     <h1 class="h1-titulo-home">Cursa o crea un <span class="span"> curso</span> </h1>
                     <p class="p-subtitulo-home text-lg ">En <span class="span"> HelpTeach </span> podrás encontrar
@@ -47,20 +47,13 @@
                         <button type="submit" class="btn-buscar-home absolute right-0 top-0 mt-2 ">
                             buscar
                         </button>
-                        <nav class="nav-busquedas">
-                            <ul class="ul-busquedas">
-                                <li class="li-busquedas"> <a class="a-busquedas" href="">Diseño web</a></li>
-                                <li class="li-busquedas"> <a class="a-busquedas" href="">Programación</a></li>
-                                <li class="li-busquedas"> <a class="a-busquedas" href="">Calculo</a></li>
-                                <li class="li-busquedas"><a class="a-busquedas" href="">Ingles</a></li>
-                            </ul>
-                        </nav>
+                        
                     </div>
                 </div>
             </div>
         </section>
 
-
+ 
 
         <div class="seccion-numeros">
             <img class="puntos-derecha" src="{{ asset('/images/home/puntos.png') }}" alt="ilustracion puntos">

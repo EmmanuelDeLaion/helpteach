@@ -63,8 +63,6 @@
 
         @livewire('ad')
 
-        @livewire('show-courses-category')
-
         @livewire('comments-students')
         @livewire('footer')
 
