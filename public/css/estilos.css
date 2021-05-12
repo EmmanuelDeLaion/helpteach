@@ -7,7 +7,7 @@
 @import url("loader.css");
 
 /* estilos show courses   */
-@import url('estilos-show-course.css');
+@import url("estilos-show-course.css");
 
 :root {
     /* colores  */
@@ -71,20 +71,18 @@ html {
 /* PORTADA HOME */
 /* *************************************************** */
 .portada-home {
-    background-image: url("/images/home/portada-home.png");
-    background-size: cover;
-    background-position-y: 60%;
-    /* background: linear-gradient(to bottom right, #003A99, #0E77E2); */
     overflow-x: hidden;
     overflow-y: hidden;
+    background-color: var(--color-blanco);
     height: 100vh;
     position: relative;
-    background-attachment: fixed;
+    background-position-y: 30%;
+    background-size: cover;
 }
 
 .portada-home::before {
     content: "";
-    background: linear-gradient(transparent, var(--color-primario));
+    background: linear-gradient( transparent , var(--color-primario));
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -514,15 +512,14 @@ span.cuatro {
     animation: aparecer 1.3s;
 }
 
-
 /* *************************************************** */
 /* slider cursos  */
 /* *************************************************** */
-.carousel-courses{
+.carousel-courses {
     display: grid;
     place-items: center;
 }
-.slider{
+.slider {
     width: 100%;
     display: flex;
 }

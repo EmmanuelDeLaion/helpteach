@@ -4,9 +4,10 @@
     font-size: var(--texto-portada);
     color: var(--color-blanco);
     line-height: 90%;
+ 
 }
 .p-subtitulo-home {
-    margin-top: 20px;
+    margin-top: 14px;
     color: var(--color-blanco);
 }
 .span {
