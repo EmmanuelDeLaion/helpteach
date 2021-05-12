@@ -59,10 +59,7 @@
             @livewire('course-index')
         </div>
 
-        <div data-aos="fade-up">
-            @livewire('ad')
-        </div>
-
+        
         <div data-aos="fade-up">
             @livewire('comments-students')
         </div>
