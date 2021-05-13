@@ -65,19 +65,31 @@ html {
     overflow-y: hidden;
 }
 
-.container{
-    @apply max-w-7xl mx-auto px-4;
+/* *************************************************** */
+/* container  */
+/* *************************************************** */
+.container {
+    max-width: 80rem;
+    padding: 10px;
 }
 
-@media(min-width: 640px){
-    .container{
-        @apply px-6;
+@media (max-width: 200px) {
+    .container {
+    }
+}
+@media (max-width: 375px) {
+    .container {
+        max-width: 100%;
     }
 }
 
-@media(min-width: 1024px){
-    .container{
-        @apply px-8;
+@media (max-width: 640px) {
+    .container {
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
     }
 }
 

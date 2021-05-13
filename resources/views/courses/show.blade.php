@@ -32,9 +32,16 @@
     <x-app-layout>
 
         <section class="portada-show-course">
+
+            <div class="w-full container flex  md:hidden lg:hidden xl:hidden  ">
+                <img class="img-show-course-top" src="{{ Storage::url($course->image->url) }}" alt="">
+            </div>
+
             <div
-                class="mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 px-4 mt-2 ">
-                <div class=" mx-auto px-4 sm:px-6 lg:px-8 py-24 titulos-show-courses">
+                class="container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1   mt-2 ">
+
+                {{-- columna de la información --}}
+                <div class=" mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-6 md:py-24 lg:py-24 titulos-show-courses">
                     <h1 class="titulo-titulo-course"> {{ $course->title }} </h1>
                     <p class="textos mt-6"> {{ $course->subtitle }} </p>
                     <p> {{ $course->description }} </p>
@@ -77,7 +84,6 @@
                     <button class="btn-primario">Inscribirte al curso</button>
                     <button onclick="location.href='#info-curso'" class="btn-primario-outline">Ver temario</button>
 
-                    
                     <p class="text-sm mt-6">Comparte: </p>
                     <div class="social-shared">
                         <a class="shared-fb" target="_blanck"
@@ -92,14 +98,12 @@
                                 class="fab fa-linkedin-in"></i></a>
                         <a class="shared-copy" target="_blanck" href=""><i class="fas fa-copy"></i></a>
                     </div>
-
-                    
                 </div>
 
-                <div class="w-full">
+
+                {{-- columna de la imagen --}}
+                <div class="w-full hidden  md:flex lg:flex xl:flex  ">
                     <img class="img-show-course" src="{{ Storage::url($course->image->url) }}" alt="">
-
-
                 </div>
 
 
@@ -107,11 +111,11 @@
         </section>
 
 
-        <div style="background-color: var(--color-blanco-secundario); padding-top:20px; padding-bottom:20px;">
+        <div style="background-color: var(--color-blanco-secundario); ">
             {{-- temario /info del curso --}}
-            <div id="info-curso" class="container grid grid-cols-3  gap-4">
+            <div id="info-curso"
+                class="container grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 xs:grid-cols-1 gap-3  ">
                 <div class="col-span-2">
-
                     {{-- contenedor metas del curso --}}
                     <div
                         class="border-l-4 border-blue-400 w-full mx-auto rounded-lg bg-white shadow-lg px-5 pt-5 pb-5 text-gray-800">
@@ -134,7 +138,6 @@
                             <section class="shadow bg-white mt-2 mb-2" @if ($loop->first) x-data="{ open: true }"
 @else
                             x-data="{ open: false }" @endif>
-
 
                                 <article class="border-b">
                                     <div class="border-l-2 border-transparent">
