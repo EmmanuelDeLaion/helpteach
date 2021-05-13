@@ -44,7 +44,7 @@ class Course extends Model
     // query scope 
     public function scopeLevel($query, $level_id){
         if ($level_id) {
-            return $query->where('category_id', $level_id);
+            return $query->where('level_id', $level_id);
         }
     }
 
