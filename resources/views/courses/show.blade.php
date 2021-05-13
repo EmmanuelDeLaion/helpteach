@@ -76,10 +76,33 @@
                     </div>
                     <button class="btn-primario">Inscribirte al curso</button>
                     <button onclick="location.href='#info-curso'" class="btn-primario-outline">Ver temario</button>
+
+                    
+                    <p class="text-sm mt-6">Comparte: </p>
+                    <div class="social-shared">
+                        <a class="shared-fb" target="_blanck"
+                            href="https://web.facebook.com/jesusemmanuel.lerma/?_rdc=1&_rdr"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="shared-tw" target="_blanck" href="https://twitter.com/ElMonoDl"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="shared-ig" target="_blanck" href="https://www.instagram.com/emmanueldelaion/"><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="shared-li" target="_blanck"
+                            href="https://www.linkedin.com/in/jesus-emmanuel-de-leon-lerma-0903071b7/"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a class="shared-copy" target="_blanck" href=""><i class="fas fa-copy"></i></a>
+                    </div>
+
+                    
                 </div>
+
                 <div class="w-full">
                     <img class="img-show-course" src="{{ Storage::url($course->image->url) }}" alt="">
+
+
                 </div>
+
+
             </div>
         </section>
 
@@ -188,9 +211,7 @@
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-gray-700 mt-10">Otros cursos</h3>
-
-
+                    <h3 class="text-2xl font-bold text-gray-700 mt-10">Cursos recomendados</h3>
                     {{-- apartado otros cursos --}}
                     @foreach ($recomendados as $recomendado)
                         <div class=" w-full bg-white  p-5 rounded-md shadow-lg mt-2 mb-2">
@@ -198,7 +219,8 @@
                                 <img onclick="location.href='{{ route('courses.show', $recomendado) }}'"
                                     alt="mountain" class="w-24 object-cover rounded-md border-gray-300 cursor-pointer"
                                     src=" {{ Storage::url($recomendado->image->url) }} " />
-                                <div class="flex flex-col ml-5">
+                                <div class="flex flex-col
+                                 ml-5">
                                     <a href="{{ route('courses.show', $recomendado) }}"
                                         class="text-sm font-semibold"> {{ $recomendado->title }} </a>
                                     <p class=" text-gray-500 text-sm">{{ $recomendado->category->name }}</p>
