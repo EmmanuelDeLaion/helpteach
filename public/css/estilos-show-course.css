@@ -15,4 +15,6 @@
     height: 450px;
     position: relative;
     border-radius: 10px;
+    background-size: cover;
+    object-fit: cover;
 }
