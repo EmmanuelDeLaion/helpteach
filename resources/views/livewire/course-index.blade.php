@@ -37,15 +37,61 @@
         </div>
     </div>
 
-    {{-- <p>category_id: {{ $category_id }}</p>
-    <p>level_id: {{ $level_id }}</p> --}}
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex">
+        <p class="mr-2 text-sm">Categoria: <span class="span-primario">
+                <?php switch ($category_id) {
+                case 1:
+                echo 'Desarrollo web';
+                break;
+
+                case 2:
+                echo 'Diseño web';
+                break;
+
+                case 3:
+                echo 'Programación';
+                break;
+
+                case '':
+                echo 'Todas las categorias';
+
+                default:
+                'Todos';
+                } ?>
+            </span></p>
+
+        <p class="mr-2 text-sm">Nivel: <span class="span-primario">
+                <?php switch ($level_id) {
+                case 1:
+                echo 'Nivel básico';
+                break;
+
+                case 2:
+                echo 'Nivel intermedio';
+                break;
+
+                case 3:
+                echo 'Nivel avanzado';
+                break;
+
+                case '':
+                echo 'Todos los niveles';
+
+                default:
+                'Todos';
+                } ?>
+            </span></p>
+
+    </div>
+
+
 
 
     <div
         class="grid  grid-cols-2  lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2 max-w-7xl mx-auto px-4 flex   sm:px-6 lg:px-8   gap-x-6 gap-y-6 mt-6">
 
         @foreach ($courses as $course)
-        {{-- componente del card de los cursos  --}}
+            {{-- componente del card de los cursos --}}
             <x-course-card :course="$course" />
         @endforeach
 
