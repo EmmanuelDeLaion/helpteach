@@ -32,13 +32,12 @@
                     @endforeach
                 </div>
             </div>
-
-
         </div>
     </div>
 
+    {{-- indicadores de filtrados en cursos  --}}
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex">
-        <p class="mr-2 text-sm">Categoria: <span class="span-primario">
+        <p class="mr-2 text-sm"> <i class="fas fa-list-ul"></i> Categoria: <span class="span-primario">
                 <?php switch ($category_id) {
                 case 1:
                 echo 'Desarrollo web';
@@ -52,15 +51,12 @@
                 echo 'Programación';
                 break;
 
-                case '':
-                echo 'Todas las categorias';
-
                 default:
-                'Todos';
+                echo 'Todas las categorias';
                 } ?>
             </span></p>
 
-        <p class="mr-2 text-sm">Nivel: <span class="span-primario">
+        <p class="mr-2 text-sm"> <i class="fas fa-sort-numeric-up-alt"></i> Nivel: <span class="span-primario">
                 <?php switch ($level_id) {
                 case 1:
                 echo 'Nivel básico';
@@ -74,14 +70,10 @@
                 echo 'Nivel avanzado';
                 break;
 
-                case '':
-                echo 'Todos los niveles';
-
                 default:
-                'Todos';
+                echo 'Todos los niveles';
                 } ?>
             </span></p>
-
     </div>
 
 
