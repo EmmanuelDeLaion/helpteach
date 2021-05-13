@@ -73,14 +73,10 @@
                             <li> <i class="fas fa-star text-{{ $course->rating >= 5 ? 'yellow' : 'gray' }}-400 "></i>
                             </li>
                         </ul>
-
                     </div>
-
                     <button class="btn-primario">Inscribirte al curso</button>
                     <button onclick="location.href='#info-curso'" class="btn-primario-outline">Ver temario</button>
-
                 </div>
-
                 <div class="w-full">
                     <img class="img-show-course" src="{{ Storage::url($course->image->url) }}" alt="">
                 </div>
@@ -89,36 +85,106 @@
 
         {{-- temario /info del curso --}}
         <div id="info-curso" class="container grid grid-cols-3  gap-4">
-
             <div class="col-span-2">
-                <div class="w-full mx-auto rounded-lg bg-white shadow-lg px-5 pt-5 pb-10 text-gray-800">
+
+                {{-- contenedor metas del curso --}}
+                <div class="w-full mx-auto rounded-lg bg-white shadow-lg px-5 pt-5 pb-5 text-gray-800">
                     <div class="w-full mb-10">
                         <h3 class="text-lg font-bold text-gray-700 mt-2">Acerca de este curso</h3>
-
                         <ul class="grid grid-cols-2 gap-x-6 gap-y-2 mt-2">
                             @foreach ($course->goals as $goal)
                                 <li class="text-sm text-gray-700"> <span class="span-primario"> <i
                                             class="fas fa-check-circle"></i> </span> {{ $goal->name }}</li>
                             @endforeach
                         </ul>
-
-
                     </div>
                 </div>
+
+                {{-- temario del curso --}}
+                <section>
+                    <h3 class="text-2xl font-bold text-gray-700 mt-10">Temario del curso</h3>
+                    @foreach ($course->sections as $section)
+
+                        <section class="shadow mt-2 mb-2">
+                            <article class="border-b">
+                                <div class="border-l-2 border-transparent">
+                                    <header
+                                        class="flex justify-between items-center p-5 pl-8 pr-8 cursor-pointer select-none">
+                                        <span class="text-grey-500 text-xl">
+                                            {{ $section->name }}
+                                        </span>
+                                        <div
+                                            class="rounded-full border border-grey w-7 h-7 flex items-center justify-center">
+                                            <!-- icon by feathericons.com -->
+                                            <svg aria-hidden="true" class="" data-reactid="266" fill="none" height="24"
+                                                stroke="#606F7B" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" viewbox="0 0 24 24" width="24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <polyline points="6 9 12 15 18 9">
+                                                </polyline>
+                                            </svg>
+                                        </div>
+                                    </header>
+                                </div>
+                            </article>
+
+                            <article class="border-b">
+                                <div class="border-l-2 bg-grey-lightest border-indigo">
+                                    <header
+                                        class="flex justify-between items-center p-5 pl-8 pr-8 cursor-pointer select-none">
+                                        <span class="text-indigo text-md">
+                                            Temas
+                                        </span>
+                                        <div
+                                            class="rounded-full border border border-indigo w-7 h-7 flex items-center justify-center bg-indigo">
+                                            <!-- icon by feathericons.com -->
+                                            <svg aria-hidden="true" data-reactid="281" fill="none" height="24"
+                                                stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" viewbox="0 0 24 24" width="24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <polyline points="18 15 12 9 6 15">
+                                                </polyline>
+                                            </svg>
+                                        </div>
+                                    </header>
+                                    <div>
+                                        <div class="pl-8 pr-8 pb-5 text-grey-darkest">
+                                            <ul class="pl-4">
+
+                                                @foreach ($section->lessons as $lesson)
+                                                    <li class="text-sm text-gray-700 pb-2">
+                                                        {{ $lesson->name }}
+                                                    </li>
+                                                @endforeach
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </section>
+                    @endforeach
+
+
+
+
+
+                </section>
+
+
             </div>
 
             <div class="col-span-1">
                 <div
                     class="flex flex-col relative items-center w-full mx-auto rounded-lg bg-white shadow-lg px-5 pb-10 text-gray-800 mb-10  ">
-
                     <img class="rounded-full w-20"
                         src="https://scontent.frex1-1.fna.fbcdn.net/v/t1.6435-9/36627150_1027414267428172_7736275383397384192_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHLuCwTVUl9H2FWF_U0mo1jUZxsY2u4sI9RnGxja7iwj5aCv90Q9aOgIdZLWSj5atQiTpHXbaMMmaVhqwv7cDzD&_nc_ohc=crarL7eG8GUAX_TLEt2&_nc_ht=scontent.frex1-1.fna&oh=e5d7fa623f95883213f3f853920e5a7f&oe=60C06431"
                         alt="">
-
                     <p class="span-primario text-sm font-bold">Instructor del curso</p>
                     <h4 class="text-gray-700 text-sm">Jesus Emmanuel De León Lerma</h4>
-                    <button class="btn-primario-outline">Ver perfil</button>
-
+                    <button class="btn-secundario">Ver perfil</button>
                     <div class="py-4 flex justify-center items-center w-full divide-x divide-gray-400 divide-solid">
                         <span class="text-center px-2"><span class="font-bold text-gray-700">56</span><span
                                 class="text-gray-600"> Cursos</span></span><span class="text-center px-2"><span
@@ -128,13 +194,8 @@
                                 repos</span></span>
                     </div>
                 </div>
-
-
             </div>
-
-
         </div>
-
         </div>
 
 
