@@ -129,7 +129,7 @@
                             </article>
 
                             <article class="border-b">
-                                <div class="border-l-2 bg-grey-lightest border-indigo">
+                                <div class="border-l-4 border-blue-400 rounded-md">
                                     <header
                                         class="flex justify-between items-center p-5 pl-8 pr-8 cursor-pointer select-none">
                                         <span class="text-indigo text-md">
@@ -194,6 +194,43 @@
                                 repos</span></span>
                     </div>
                 </div>
+
+                <h3 class="text-2xl font-bold text-gray-700 mt-10">Otros cursos</h3>
+
+
+                {{-- apartado otros cursos --}}
+                <div class=" w-full bg-white  p-5 rounded-md shadow-lg">
+                    <div id="header" class="flex">
+                        <img alt="mountain" class="w-24  object-cover	 rounded-md border-gray-300"
+                            src="https://nerade.com/media/pages/blog/programacion-web-a-medida/2022067010-1600522743/servicios-de-programacion-web-a-medida.jpg" />
+                        <div id="body" class="flex flex-col ml-5">
+                            <h4 id="name" class="text-xl font-semibold mb-2">Lorem ipsum dolor sit amet</h4>
+                            <p id="job" class="text-gray-800 mt-2">Ut enim ad minim veniam, quis nostrud
+                                exercitati </p>
+                            <div class="flex mt-5">
+                                <button class="btn-primario">Ir al curso</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 {{-- apartado otros cursos --}}
+                 <div class=" w-full bg-white  p-5 rounded-md shadow-lg mt-2">
+                    <div id="header" class="flex">
+                        <img alt="mountain" class="w-24  object-cover	 rounded-md border-gray-300"
+                            src="https://www.mejorconweb.com/images/programacion-web-barcelona.jpg" />
+                        <div id="body" class="flex flex-col ml-5">
+                            <h4 id="name" class="text-xl font-semibold mb-2">Lorem ipsum dolor sit amet</h4>
+                            <p id="job" class="text-gray-800 mt-2">Ut enim ad minim veniam, quis nostrud
+                                exercitati </p>
+                            <div class="flex mt-5">
+                                <button class="btn-primario">Ir al curso</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
         </div>
