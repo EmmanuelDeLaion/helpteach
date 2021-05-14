@@ -81,8 +81,25 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="btn-primario">Inscribirte al curso</button>
-                    <button onclick="location.href='#info-curso'" class="btn-primario-outline">Ver temario</button>
+                    <div class="flex">
+
+                        @can('enrolled', $course)
+                            {{-- si el usuario ya esta registrado le aparece este boton que dice continuar --}}
+                            <button onclick="location.href='{{ route('course.status', $course) }}'"
+                                class="btn-primario">Continuar con el curso</button>
+
+                        @else
+                            {{-- si el usuario no esta registrado en el curso le aparece el boton para poder registrarse al curso --}}
+                            <form action="{{ route('courses.enrolled', $course) }}" method="post">
+                                @csrf
+                                <button type="submit" class="btn-primario">Inscribirte al curso</button>
+                            </form>
+                        @endcan
+
+                        <button onclick="location.href='#info-curso'" class="ml-2 btn-primario-outline">Ver
+                            temario</button>
+
+                    </div>
 
                     <p class="text-sm mt-6">Comparte: </p>
                     <div class="social-shared">
@@ -111,7 +128,7 @@
         </section>
 
 
-        <div style="background-color: var(--color-blanco-secundario); ">
+        <div style="background-color: var(--color-blanco-secundario); padding-top: 10px; padding-bottom: 10px; ">
             {{-- temario /info del curso --}}
             <div id="info-curso"
                 class="container grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 xs:grid-cols-1 gap-3  ">
@@ -121,7 +138,8 @@
                         class="border-l-4 border-blue-400 w-full mx-auto rounded-lg bg-white shadow-lg px-5 pt-5 pb-5 text-gray-800">
                         <div class="w-full mb-10">
                             <h3 class="text-lg font-bold text-gray-700 mt-2">Acerca de este curso</h3>
-                            <ul class="grid grid-cols-2 gap-x-6 gap-y-2 mt-2">
+                            <ul
+                                class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2  gap-x-6 gap-y-2 mt-2">
                                 @foreach ($course->goals as $goal)
                                     <li class="text-sm text-gray-700"> <span class="span-primario"> <i
                                                 class="fas fa-check-circle"></i> </span> {{ $goal->name }}</li>
@@ -196,7 +214,7 @@
 
                 <div class="col-span-1">
                     <div
-                        class="border-l-4 border-blue-400 flex flex-col relative items-center w-full mx-auto rounded-lg bg-white shadow-lg px-5 pb-10 text-gray-800 mb-10  ">
+                        class="border-l-4 border-blue-400 flex flex-col relative items-center w-full rounded-lg bg-white shadow-lg pb-5 text-gray-800 mb-10">
                         <img class="rounded-full mt-6 w-20" src="{{ $course->teacher->profile_photo_url }}" alt="">
                         <p class="span-primario text-sm font-bold"> <i class="fas fa-chalkboard-teacher"></i> Instructor
                             del curso</p>
@@ -213,49 +231,63 @@
                                     repos</span></span>
                         </div>
                     </div>
-
                     <h3 class="text-2xl font-bold text-gray-700 mt-10">Cursos recomendados</h3>
                     {{-- apartado otros cursos --}}
                     @foreach ($recomendados as $recomendado)
-                        <div class=" w-full bg-white  p-5 rounded-md shadow-lg mt-2 mb-2">
-                            <div class="flex">
-                                <img onclick="location.href='{{ route('courses.show', $recomendado) }}'"
-                                    alt="mountain" class="w-24 object-cover rounded-md border-gray-300 cursor-pointer"
-                                    src=" {{ Storage::url($recomendado->image->url) }} " />
-                                <div class="flex flex-col
-                                 ml-5">
-                                    <a href="{{ route('courses.show', $recomendado) }}"
-                                        class="text-sm font-semibold"> {{ $recomendado->title }} </a>
-                                    <p class=" text-gray-500 text-sm">{{ $recomendado->category->name }}</p>
-                                    <p class="text-gray-800 text-sm "><i class="fas fa-chalkboard-teacher"></i>
-                                        Instructor <span class="span-primario">{{ $recomendado->teacher->name }}
-                                        </span> </p>
+                        <div class="hover-recomendados w-full bg-white p-5 rounded-md shadow-lg mt-4 mb-4">
+                            <div class="flex grid grid-cols-2">
+                                <div class="col-span-1">
+                                    <img onclick="location.href='{{ route('courses.show', $recomendado) }}'"
+                                        alt="mountain"
+                                        class="w-full object-cover rounded-md border-gray-300 cursor-pointer"
+                                        src=" {{ Storage::url($recomendado->image->url) }} " />
+                                </div>
 
-                                    <div class="flex justify-between mt-2">
-                                        <ul class="rating flex text-sm">
-                                            <li> <i
-                                                    class="fas fa-star text-{{ $recomendado->rating >= 1 ? 'yellow' : 'gray' }}-400 "></i>
-                                            </li>
-                                            <li> <i
-                                                    class="fas fa-star text-{{ $recomendado->rating >= 2 ? 'yellow' : 'gray' }}-400 "></i>
-                                            </li>
-                                            <li> <i
-                                                    class="fas fa-star text-{{ $recomendado->rating >= 3 ? 'yellow' : 'gray' }}-400 "></i>
-                                            </li>
-                                            <li> <i
-                                                    class="fas fa-star text-{{ $recomendado->rating >= 4 ? 'yellow' : 'gray' }}-400 "></i>
-                                            </li>
-                                            <li> <i
-                                                    class="fas fa-star text-{{ $recomendado->rating >= 5 ? 'yellow' : 'gray' }}-400 "></i>
-                                            </li>
-                                        </ul>
+                                <div class="col-span-1">
+                                    <div class="flex flex-col
+                                    ml-5">
+                                        <a href="{{ route('courses.show', $recomendado) }}"
+                                            class="text-sm font-semibold"> {{ $recomendado->title }} </a>
+                                        {{-- <p class=" text-gray-500 text-sm">{{ $recomendado->category->name }}</p> --}}
 
-                                        <p class="text-sm text-gray">
-                                            <i class=" icon-students fas fa-chalkboard-teacher"></i>
-                                            ({{ $recomendado->students_count }})
-                                        </p>
+                                        <div class="flex items-center">
+                                            <img width="30" class="rounded-full"
+                                                src="{{ $recomendado->teacher->profile_photo_url }}"
+                                                alt="imagen de perfil del instructor">
+                                            <p class="text-gray-800 text-xs ml-2"> <span
+                                                    class="span-primario">{{ $recomendado->teacher->name }}
+                                                </span> </p>
+                                        </div>
+
+
+                                        <div class="flex justify-between mt-2">
+                                            <ul class="rating flex text-sm">
+                                                <li> <i
+                                                        class="fas fa-star text-{{ $recomendado->rating >= 1 ? 'yellow' : 'gray' }}-400 "></i>
+                                                </li>
+                                                <li> <i
+                                                        class="fas fa-star text-{{ $recomendado->rating >= 2 ? 'yellow' : 'gray' }}-400 "></i>
+                                                </li>
+                                                <li> <i
+                                                        class="fas fa-star text-{{ $recomendado->rating >= 3 ? 'yellow' : 'gray' }}-400 "></i>
+                                                </li>
+                                                <li> <i
+                                                        class="fas fa-star text-{{ $recomendado->rating >= 4 ? 'yellow' : 'gray' }}-400 "></i>
+                                                </li>
+                                                <li> <i
+                                                        class="fas fa-star text-{{ $recomendado->rating >= 5 ? 'yellow' : 'gray' }}-400 "></i>
+                                                </li>
+                                            </ul>
+
+                                            <p class="text-sm text-gray">
+                                                <i class=" icon-students fas fa-chalkboard-teacher"></i>
+                                                ({{ $recomendado->students_count }})
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
+
+
                             </div>
                         </div>
                     @endforeach
