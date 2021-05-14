@@ -25,10 +25,17 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('cursos', [CourseController::class, 'index'])->name('courses.index');
 
 
-Route::get('cursos/{course}',[CourseController::class,'show' ])->name('courses.show');
+Route::get('cursos/{course}', [CourseController::class, 'show'])->name('courses.show');
 
 
-Route::get('blog', [BlogController::class,'index'])->name('blogs.index');
- 
+Route::get('blog', [BlogController::class, 'index'])->name('blogs.index');
+
 
 Route::get('about', [AboutController::class, 'index'])->name('about.index');
+
+Route::post('courses/{course}/enrolled', [CourseController::class, 'enrolled'])->middleware('auth')->name('courses.enrolled');
+
+
+Route::get('course-status/{course}', function ($course) {
+    return "Aqui llevas de control de tu avance";
+})->name('course.status');
