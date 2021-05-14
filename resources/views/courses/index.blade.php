@@ -42,15 +42,7 @@
                     <h1 class="h1-titulo-home">Empieza por buscar un <span class="span"> curso</span> </h1>
                     <p class="p-subtitulo-home text-lg ">En <span class="span"> HelpTeach </span> podrás encontrar
                         cursos creados por alumnos totalmente gratuitos </p>
-                    <div class="pt-2 relative mx-auto text-gray-600">
-                        <input
-                            class="w-full border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
-                            type="search" name="search" placeholder="¿Que deseas aprender?">
-                        <button type="submit" class="btn-buscar-home absolute right-0 top-0 mt-2 ">
-                            buscar
-                        </button>
-
-                    </div>
+                    @livewire('search')
                 </div>
             </div>
         </section>
@@ -60,7 +52,7 @@
         </div>
 
         @livewire('doubts')
-        
+
         <div data-aos="fade-up">
             @livewire('comments-students')
         </div>
