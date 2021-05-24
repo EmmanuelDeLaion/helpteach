@@ -1,11 +1,11 @@
 @props(['course'])
 
-<article class="card-cursos mb-12">
+<article onclick="location.href='{{ route('courses.show', $course) }}'" class="card-cursos mb-12">
     <div class="card-info-hover">
     </div>
     <div class="card-img">
     </div>
-    <a class="card-link">
+    <a href="{{ route('courses.show', $course) }}" class="card-link">
         <div class="card-img-hover" style="background-image: url('{{ Storage::url($course->image->url) }}')">
         </div>
     </a>
@@ -40,5 +40,3 @@
         </button>
     </div>
 </article>
-
-

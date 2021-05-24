@@ -30,18 +30,13 @@
 
 
     <x-app-layout>
-
         <section class="portada-show-course">
-
             <div class="w-full container flex  md:hidden lg:hidden xl:hidden  ">
                 <img class="img-show-course-top" src="{{ Storage::url($course->image->url) }}" alt="">
             </div>
-
             <div
-                class="container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1   mt-2 ">
-
-                {{-- columna de la información --}}
-                <div class=" mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-6 md:py-24 lg:py-24 titulos-show-courses">
+                class="container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 mt-2 ">
+                <div class="container py-6 sm:py-6 md:py-24 lg:py-24 titulos-show-courses">
                     <h1 class="titulo-titulo-course"> {{ $course->title }} </h1>
                     <p class="textos mt-6"> {{ $course->subtitle }} </p>
                     <p> {{ $course->description }} </p>
@@ -66,7 +61,6 @@
                                     {{ $course->created_at }} </span> </p>
                         </li>
                     </ul>
-
                     <div class="flex justify-between mt-2">
                         <ul class="rating flex text-sm">
                             <li> <i class="fas fa-star text-{{ $course->rating >= 1 ? 'yellow' : 'gray' }}-400 "></i>
@@ -82,12 +76,10 @@
                         </ul>
                     </div>
                     <div class="flex">
-
                         @can('enrolled', $course)
                             {{-- si el usuario ya esta registrado le aparece este boton que dice continuar --}}
                             <button onclick="location.href='{{ route('course.status', $course) }}'"
                                 class="btn-primario">Continuar con el curso</button>
-
                         @else
                             {{-- si el usuario no esta registrado en el curso le aparece el boton para poder registrarse al curso --}}
                             <form action="{{ route('courses.enrolled', $course) }}" method="post">
@@ -95,12 +87,9 @@
                                 <button type="submit" class="btn-primario">Inscribirte al curso</button>
                             </form>
                         @endcan
-
                         <button onclick="location.href='#info-curso'" class="ml-2 btn-primario-outline">Ver
                             temario</button>
-
                     </div>
-
                     <p class="text-sm mt-6">Comparte: </p>
                     <div class="social-shared">
                         <a class="shared-fb" target="_blanck"
@@ -116,14 +105,10 @@
                         <a class="shared-copy" target="_blanck" href=""><i class="fas fa-copy"></i></a>
                     </div>
                 </div>
-
-
                 {{-- columna de la imagen --}}
                 <div class="w-full hidden  md:flex lg:flex xl:flex  ">
                     <img class="img-show-course" src="{{ Storage::url($course->image->url) }}" alt="">
                 </div>
-
-
             </div>
         </section>
 

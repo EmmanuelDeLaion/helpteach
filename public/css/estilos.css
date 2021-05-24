@@ -12,9 +12,12 @@
 :root {
     /* colores  */
     --color-blanco-fondo: #eff3f5;
-    --color-primario: #1da1f2;
-    --color-negro: #22292f;
+    --color-primario: #00adff;
+    --color-amarillo: #ecb709;
+    --color-negro: #151515;
+    --color-negro-suabe: #1e2747;
     --color-negro-primario: #151515;
+    --color-texto-titulos-curso: #8596b2;
     /* color botones secundarios  */
     --color-blanco-primario: #f4f4f4;
     --color-blanco-secundario: #fdf9f9;
@@ -117,8 +120,9 @@ html {
     position: absolute;
     opacity: 0.8;
 }
-
+/* *************************************************** */
 /* PORTADA CURSOS  */
+/* *************************************************** */
 .portada-cursos {
     background-image: url("/images/home/portada-home-cursos.jpg");
     background-size: cover;
@@ -137,6 +141,8 @@ html {
     position: absolute;
     opacity: 0.8;
 }
+
+ 
 
 /* *************************************************** */
 /* PORTADA BLOGS  */
@@ -588,12 +594,40 @@ span.cuatro {
     width: 100%;
     position: relative;
 }
+.anuncio .container-anuncio .content-anuncio {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    left: 10%;
+}
+
 .img-anuncio {
     position: absolute;
     z-index: 2;
     bottom: 0;
-    right: 10%;
+    right: 5%;
     width: 450px;
+}
+
+@media screen and (max-width: 1020px) {
+    .img-anuncio {
+        position: absolute;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 638px) {
+    .img-anuncio {
+        position: absolute;
+        z-index: 1;
+    }
+    .anuncio .container-anuncio .content-anuncio {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
 }
 
 /* *************************************************** */
@@ -671,10 +705,5 @@ span.cuatro {
         left: 0px;
         top: 0px;
         opacity: 0.2;
-    }
-
-    .filtros {
-        overflow-y: hidden;
-        overflow-x: scroll;
     }
 }

@@ -1,12 +1,15 @@
 <div>
+    {{-- filtros --}}
     <div class="py-4 filtros mt-6">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex">
+        <div class="container flex">
+            {{-- todos los cursos --}}
             <div class="dropdown mr-4">
                 <div class="dropdown-select">
                     <a wire:click="resetFilters" class="select mr-4"> <i class="fas fa-list-alt"></i> Todos los
                         cursos</a>
                 </div>
             </div>
+            {{-- por categorias --}}
             <div class="dropdown mr-4">
                 <div class="dropdown-select">
                     <span class="select mr-4"> <i class="fas fa-list-ul"></i> Categorias</span>
@@ -19,7 +22,7 @@
                     @endforeach
                 </div>
             </div>
-
+            {{-- por niveles --}}
             <div class="dropdown mr-4">
                 <div class="dropdown-select">
                     <span class="select mr-4"> <i class="fas fa-sort-numeric-up-alt"></i> Niveles</span>
@@ -35,8 +38,8 @@
         </div>
     </div>
 
-    {{-- indicadores de filtrados en cursos  --}}
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex">
+    {{-- indicadores de filtrados en cursos --}}
+    <div class="container flex">
         <p class="mr-2 text-sm"> <i class="fas fa-list-ul"></i> Categoria: <span class="span-primario">
                 <?php switch ($category_id) {
                 case 1:
@@ -77,19 +80,17 @@
     </div>
 
 
-
-
+    {{-- lista de cursos --}}
     <div
-        class="grid  grid-cols-2  lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2 max-w-7xl mx-auto px-4 flex   sm:px-6 lg:px-8   gap-x-6 gap-y-6 mt-6">
-
+        class="grid  grid-cols-2  lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2 container flex gap-x-4 mt-6">
         @foreach ($courses as $course)
             {{-- componente del card de los cursos --}}
             <x-course-card :course="$course" />
         @endforeach
-
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    {{-- paginacion de los cursos --}}
+    <div class="container mb-12">
         {{ $courses->links() }}
     </div>
 
