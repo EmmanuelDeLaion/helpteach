@@ -42,13 +42,9 @@
     border-radius: 12px;
     overflow: hidden;
     flex: 1;
-    margin: 0 10px;
     -webkit-box-shadow: 0px 0px 34px -25px rgba(0, 0, 0, 0.705);
     -moz-box-shadow: 0px 0px 34px -25px rgba(0, 0, 0, 0.61);
     box-shadow: 0px 0px 34px -25px rgba(0, 0, 0, 0.705);
-
-    /* box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1); */
-    /* border: 1px solid var(--color-primario); */
 }
 
 .card-cursos:hover {
@@ -88,11 +84,16 @@
 }
 
 .rating {
-    z-index: 20;
+    z-index: 10;
 }
 
 .icon-students {
     color: #747474;
+}
+
+
+/* boton mas info en card cursos  */
+.boton-curso{
 }
 
 @media screen and (max-width: 500px) {

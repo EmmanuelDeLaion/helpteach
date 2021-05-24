@@ -136,6 +136,8 @@
 }
 
 .dropdown:hover .dropdown-list {
+    position: absolute;
+    z-index: 30;
     opacity: 1;
     visibility: visible;
 }

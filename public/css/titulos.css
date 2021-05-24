@@ -13,7 +13,7 @@
     color: var(--color-negro);
     font-weight: bold;
 }
-.span-blanco{
+.span-blanco {
     color: var(--color-blanco);
 }
 
@@ -95,6 +95,30 @@
     font-weight: bold;
 }
 
+.subtitulo-anuncio {
+}
+
+@media screen and (max-width: 640px) {
+    .titulo-anuncios {
+        font-size:40px ;
+        line-height: 100%;
+    }
+
+    .subtitulo-anuncio {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 302px) {
+    .titulo-anuncios {
+        font-size:20px ;
+    }
+
+    .subtitulo-anuncio {
+        font-size: 12px;
+    }
+}
+
 /* seccion numeros plataforma  */
 .titulo-numeros {
     font-size: 20px;
@@ -140,7 +164,7 @@
 }
 
 /* seccion dudas  */
-.subtitle-doubts{
+.subtitle-doubts {
     font-size: 30px;
     font-weight: bold;
     color: var(--color-primario);
