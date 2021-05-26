@@ -13,6 +13,12 @@ class Lesson extends Model
     protected $guarded = ['id'];
 
 
+    public function getCompletedAttribute(){
+        // retorna un valor boleano, si es el usario retorna true 
+        return $this->users->contains(auth()->user()->id);
+    }
+
+
     //***************************//
     //                           //
     //    RELACION DE 1 A 1      //
