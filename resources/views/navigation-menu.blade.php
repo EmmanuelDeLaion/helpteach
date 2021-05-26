@@ -23,6 +23,8 @@ $nav_links = [
 ];
 @endphp
 
+<link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
+
 
 <nav x-data="{ open: false }" class=" bg-white border-b z-50 fixed w-full border-gray-100 shadow  ">
 

@@ -9,6 +9,8 @@
 /* estilos show courses   */
 @import url("estilos-show-course.css");
 
+ 
+
 :root {
     /* colores  */
     --color-blanco-fondo: #eff3f5;
@@ -220,6 +222,30 @@ html {
     background-color: var(--color-blanco);
     color: var(--color-negro);
 }
+
+/* PORTADA CURSOS STATUS  */
+.portada-cursos-status{
+    background-image: url("/images/home/contenido-acceso-gratis.jpg");
+    background-size: cover;
+    background-position-y: 60%;
+    /* background: linear-gradient(to bottom right, #003A99, #0E77E2); */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 17vh;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.portada-cursos-status::before {
+    content: "";
+    background: linear-gradient(var(--color-primario), var(--color-primario));
+    width: 100%;
+    height: 17vh;
+    position: absolute;
+    opacity: 0.8;
+}
+
+
 
 /* *************************************************** */
 /* secion empezar */

@@ -48,12 +48,10 @@
             </div>
         </section>
 
-
-
         <div class="container grid gird-cols-1 sm:grid-cols-1 xs:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 mt-6 gap-4 mb-6">
 
             <div class="col-span-3 xs:col-span-3 sm:col-span-3 md:col-span-2 lg:col-span-2">
-                <div class="  w-full">
+                <div class="w-full">
                     <div class="bg-white w-full shadow-2xl rounded-lg mb-6 tracking-wide">
                         <div class="md:flex-shrink-0">
                             <img src="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg"
