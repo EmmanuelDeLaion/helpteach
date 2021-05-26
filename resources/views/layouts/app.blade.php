@@ -4,9 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-
         <title>{{ config('app.name', 'Laravel') }}</title>
-
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -14,26 +12,11 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         @livewireStyles
-
-       
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
- 
           <!-- iconos font Awoesome  -->
         <script src="https://kit.fontawesome.com/0dd7a6f868.js" crossorigin="anonymous"></script>
-
-      
-
-        <style>
-            /* .body{
-                --color-blanco:#EFF3F5; 
-                font-family: 'Poppins', sans-serif;
-                background-color: var(--color-blanco);
-             } */
-        </style>
-
     </head>
-
 
     <body class="body">
         <x-jet-banner />
@@ -46,10 +29,7 @@
             <main>
                 {{ $slot }}
             </main>
-
-            
         </div>
-
 
         @stack('modals')
 

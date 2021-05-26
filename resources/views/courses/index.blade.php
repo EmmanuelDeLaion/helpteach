@@ -52,23 +52,14 @@
         </div>
 
         @livewire('doubts')
-
         <div data-aos="fade-up">
             @livewire('comments-students')
         </div>
-
-
-
-
+        
         @livewire('footer')
-
-
     </x-app-layout>
 
-
     <script type="text/javascript" src="{{ asset('js/cargar-loading.js') }}"></script>
-
-
 
     {{-- AOS SCROLL --}}
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

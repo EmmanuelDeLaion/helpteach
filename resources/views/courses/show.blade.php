@@ -78,7 +78,7 @@
                     <div class="flex">
                         @can('enrolled', $course)
                             {{-- si el usuario ya esta registrado le aparece este boton que dice continuar --}}
-                            <button onclick="location.href='{{ route('course.status', $course) }}'"
+                            <button onclick="location.href='{{ route('courses.status', $course) }}'"
                                 class="btn-primario">Continuar con el curso</button>
                         @else
                             {{-- si el usuario no esta registrado en el curso le aparece el boton para poder registrarse al curso --}}
