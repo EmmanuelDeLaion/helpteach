@@ -13,13 +13,28 @@
 
     <div class="container grid grid-cols-3 gap-8  	">
         <div class="col-span-2 mt-6">
-            {!! $current->frame !!}
-            {{ $current->name }}
+            
+            <div class="w-full">
+                {!! $current->frame !!}
+            </div>
+
+            <p class="mt-6 date-lesson-course">{{ $current->created_at }}</p>
+            <h3 class="title-lesson-course">{{ $current->name }} </h3>
+
+
             <p>inidice: {{ $index }} </p>
+            
+            <p>previous: 
+            @if($previous)
+            {{ $previous->id }}
+            @endif
+            </p>
 
-            <p>previous: {{ $previous->id }}</p>
-
-            <p>next: {{ $next->id }}</p>
+            <p>next:  
+                @if($next)
+                {{ $next->id }}
+                @endif
+            </p>
         </div>
         <div class="col-span-1 mt-6">
             <div

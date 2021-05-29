@@ -78,11 +78,11 @@
                 } ?>
             </span></p>
     </div>
-
+<br>
 
     {{-- lista de cursos --}}
     <div
-        class="grid  grid-cols-2  lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2 container flex gap-x-4 mt-6">
+        class="grid grid-cols-2  lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2 container flex gap-x-4">
         @foreach ($courses as $course)
             {{-- componente del card de los cursos --}}
             <x-course-card :course="$course" />

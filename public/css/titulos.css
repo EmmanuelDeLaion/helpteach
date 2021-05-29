@@ -175,6 +175,11 @@
 
 
 /* seccion status del curso  */
-.titulo-curso-status{
-    
+.title-lesson-course{
+    font-size: 20px;
+    font-weight: bold;
+}
+.date-lesson-course{
+    font-weight: 300;
+    font-size: 12px;
 }
