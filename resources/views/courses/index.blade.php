@@ -47,14 +47,14 @@
             </div>
         </section>
 
-        <div data-aos="fade-up">
+      
             @livewire('course-index')
-        </div>
+      
 
         @livewire('doubts')
-        <div data-aos="fade-up">
+ 
             @livewire('comments-students')
-        </div>
+       
         
         @livewire('footer')
     </x-app-layout>

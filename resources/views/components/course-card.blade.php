@@ -33,9 +33,9 @@
             </p>
         </div>
     </div>
-    <div class="flex justify-center ">
+    <div class="flex justify-center mb-3">
         <button onclick="location.href='{{ route('courses.show', $course) }}'" type="submit"
-            class="boton-curso w-11/12 btn-ver-curso mb-6 text-center">
+            class="boton-curso w-11/12 btn-ver-curso text-center">
             Más información
         </button>
     </div>

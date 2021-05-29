@@ -1,6 +1,6 @@
 <div>
 
-    <div class="content-doubts">
+    <div class="content-doubts mt-6">
         <h1 class="titulo-secciones text-center">¿Tienes dudas?</h1>
         <p class="subtitle-doubts text-center">Contacta a los instructores</p>
         <div class="flex justify-center">

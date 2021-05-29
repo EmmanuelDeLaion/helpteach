@@ -1,12 +1,12 @@
 <div>
     <section class="mb-24 mt-12">
 
-        <div class="container mt-6 mb-6">
+        <div class="container">
             <h1 class="titulo-cursos-home">Cursos disponibles para ti</h1>
-            <p class="mt-2 textos">Estos son los ultimos cursos que se han subido</p>
+            <p class="mt-3 textos">Estos son los ultimos cursos que se han subido</p>
         </div>
 
-
+        <br>
         <div
             class="container grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2 gap-4 gap-x-6 gap-y-8">
 
@@ -51,7 +51,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="flex justify-center">
+                    <div class="flex justify-center mb-3">
                         <button onclick="location.href='{{ route('courses.show', $course) }}'" type="submit"
                             class="w-11/12 btn-ver-curso mb-6 text-center">
                             Más información
@@ -62,8 +62,8 @@
             @endforeach
         </div>
 
-        <div class="flex justify-center">
-            <button onclick="location.href='{{ route('courses.index') }}'" class="btn-secundario"> Ver más
+        <div class="flex justify-center ">
+            <button onclick="location.href='{{ route('courses.index') }}'" class="btn-secundario  "> Ver más
                 cursos</button>
         </div>
     </section>

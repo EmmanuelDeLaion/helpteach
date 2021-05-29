@@ -27,6 +27,7 @@ class CourseStatus extends Component
                 // encuentra el registro que coincida y devuelve el indice 
                 $this->index = $course->lessons->search($lesson);
 
+
                 $this->previous = $course->lessons[$this->index - 1];
                 $this->next = $course->lessons[$this->index + 1];
 
@@ -35,12 +36,25 @@ class CourseStatus extends Component
         }
     }
 
-    public function render()
-    {
+    public function render(){
         return view('livewire.course-status');
     }
 
     public function changeLesson(Lesson $lesson){
         $this->current = $lesson;
+        $this->index = $this->course->lessons->pluck('id')->search($lesson->id);
+        
+        // si el valor del index es 0 entonces no se resta el valor del index para la leccion anterior 
+        if($this->index == 0){
+            $this->previous = null;
+        }else{
+            $this->previous = $this->course->lessons[$this->index - 1];
+        }
+        // si el valor del index es el ultimo no se suma el valor del index para el next de la leccion siguiente 
+        if($this->index == $this->course->lessons->count() - 1){
+            $this->next = null;
+        }else{
+            $this->next = $this->course->lessons[$this->index + 1];
+        }
     }
 }
