@@ -14,10 +14,15 @@
 :root {
     /* colores  */
     --color-blanco-fondo: #eff3f5;
-    --color-primario: #00adff;
+    --color-primario: #705DF2;
+    --color-secundario: #150C21;
     --color-amarillo: #ecb709;
-    --color-negro: #151515;
-    --color-negro-suabe: #1e2747;
+    --color-negro: #000000;
+
+    --color-fondo-primario: #E7DEFF;
+    --color-fondo-secundario: #F1F1F1;
+     
+    
     --color-negro-primario: #151515;
     --color-texto-titulos-curso: #8596b2;
     /* color botones secundarios  */
@@ -635,6 +640,25 @@ span.cuatro {
     right: 5%;
     width: 450px;
 }
+
+/* *************************************************** */
+/* responsive del video  */
+/* *************************************************** */
+.embed-responsive{
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.embed-responsive iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 
 @media screen and (max-width: 1020px) {
     .img-anuncio {

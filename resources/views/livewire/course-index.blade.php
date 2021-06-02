@@ -78,16 +78,15 @@
                 } ?>
             </span></p>
     </div>
-<br>
+    <br>
 
     {{-- lista de cursos --}}
-    <div
-        class="grid grid-cols-2  lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2 container flex gap-x-4">
+    <ul class="cards">
         @foreach ($courses as $course)
             {{-- componente del card de los cursos --}}
             <x-course-card :course="$course" />
         @endforeach
-    </div>
+    </ul>
 
     {{-- paginacion de los cursos --}}
     <div class="container mb-12">

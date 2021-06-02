@@ -1,128 +1,107 @@
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+}
 .cards {
-    width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
 }
 
-.card-img {
-    visibility: hidden;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 150px;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-}
-
-.card-info-hover {
-    position: absolute;
-    padding: 16px;
-    width: 100%;
-    opacity: 0;
-    top: 0;
-}
-
-.card-img-hover {
-    transition: 0.2s all ease-out;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    position: absolute;
-    height: 150px;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    top: 0;
-}
-.card-cursos {
-    transition: all 0.7s cubic-bezier(0.175, 0.885, 0, 1);
-    background-color: #fff;
-    width: 100%;
+.card {
     position: relative;
-    border-radius: 12px;
+    display: block;
+    height: 100%;
+    border-radius: calc(var(--curve) * 1px);
     overflow: hidden;
-    flex: 1;
-    -webkit-box-shadow: 0px 0px 34px -25px rgba(0, 0, 0, 0.705);
-    -moz-box-shadow: 0px 0px 34px -25px rgba(0, 0, 0, 0.61);
-    box-shadow: 0px 0px 34px -25px rgba(0, 0, 0, 0.705);
-}
-
-.card-cursos:hover {
-    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
-    transform: scale(1.02, 1.02);
-}
-
-.card-info {
-    z-index: 2;
-    background-color: #fff;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    padding: 16px 24px 24px 24px;
-}
-
-.card-category {
-    font-size: 12px;
-    font-weight: 500;
-    color: #868686;
-}
-
-.card-title {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-.card-by {
-    font-size: 12px;
-    font-weight: 500;
-}
-
-.card-author {
-    font-weight: 600;
     text-decoration: none;
-    color: var(--color-primario);
 }
 
-.rating {
-    z-index: 10;
+.card__image {
+    width: 100%;
+    height: auto;
 }
 
-.icon-students {
-    color: #747474;
+.card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: calc(var(--curve) * 1px);
+    background-color: var(--color-primario);
+    transform: translateY(100%);
+    transition: 0.2s ease-in-out;
 }
 
-
-/* boton mas info en card cursos  */
-.boton-curso{
+.card:hover .card__overlay {
+    transform: translateY(0);
 }
 
-@media screen and (max-width: 500px) {
-    .card-info {
-        padding: 5px 5px 10px 5px;
-    }
+.card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;
+    background-color: var(--color-primario);
+    transform: translateY(-100%);
+    transition: 0.2s ease-in-out;
+}
 
-    .boton-curso {
-        display: none;
-    }
+.card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 1;
+}
 
-    .card-img {
-        visibility: hidden;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 80px;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
-    }
-    .card-img-hover {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 80px;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
-        top: 0;
-    }
+.card__arc path {
+    fill: var(--color-primario);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}
+
+.card:hover .card__header {
+    transform: translateY(0);
+}
+
+.card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.card__title {
+    font-size: 1em;
+    margin: 0 0 0.3em;
+    color: var(--color-blanco);
+}
+
+.card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-size: 0.8em;
+    color: var(--color-blanco);
+}
+
+.card__status {
+    font-size: 0.8em;
+    color: var(--color-blanco);
+}
+
+.card__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: var(--color-blanco);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
