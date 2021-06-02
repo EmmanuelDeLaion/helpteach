@@ -1,106 +1,56 @@
-/* seccion portada  */
-.h1-titulo-home {
-    font-weight: bold;
-    font-size: var(--texto-portada);
-    color: var(--color-blanco);
-    line-height: 90%;
-}
-.p-subtitulo-home {
-    margin-top: 14px;
-    color: var(--color-blanco);
-}
-.span {
-    color: var(--color-negro);
-    font-weight: bold;
-}
-.span-blanco {
-    color: var(--color-blanco);
+/* ----------------------------------------------------- */
+/* NUEVOS TITULOS  */
+/* ----------------------------------------------------- */
+.title-home-1 {
+    font-size: 50px;
+    color: blueviolet;
 }
 
-.span-background-primario {
-    background-color: var(--color-primario);
-}
-.span-primario {
-    color: var(--color-primario);
-}
+ 
+ 
 
-.span-background-negro {
-    background-color: var(--color-negro);
-}
-
-.span-negro {
-    color: var(--color-negro-primario);
-}
-
-.text-home {
-    position: relative;
-    z-index: 10;
-}
-
-.p-typing {
-    font-size: 14px;
-    color: var(--color-blanco);
-}
-
-.textos {
-    color: var(--color-texto);
-}
-/* seccion enseñar */
-.titulos-enseñar {
-    position: absolute;
-    top: 35%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-}
-.h1-titulo-enseñar {
-    font-size: var(--texto-titulos-secciones);
-    color: var(--color-negro);
-    line-height: 80%;
-    font-weight: bold;
-}
-
-.h1-titulo-enseñar {
-    font-size: var(--texto-titulos-secciones);
-    color: var(--color-negro);
-    line-height: 80%;
-    font-weight: bold;
-}
-
-.titulo-cursos-home {
-    font-size: 40px;
-    font-weight: bold;
-    color: var(--color-negro);
-    line-height: 80%;
-}
-
-/* titulos secciones  */
-.titulo-secciones {
-    font-size: var(--texto-titulos-secciones);
-    color: var(--color-negro);
-    line-height: 80%;
-    font-weight: bold;
-}
-
-.title-see-courses {
-    font-size: 30px;
-    font-weight: bold;
-    color: var(--color-blanco);
-}
-
+/* ----------------------------------------- */
 /* titulos anuncios  */
+/* ----------------------------------------- */
 .titulo-anuncios {
     font-size: var(--texto-titulos-secciones);
     color: var(--color-blanco);
     line-height: 90%;
     font-weight: bold;
 }
+ 
+ 
 
-.subtitulo-anuncio {
+/* ----------------------------------------- */
+/* titlos show courses  */
+/* ----------------------------------------- */
+.titulo-titulo-course {
+    color: var(--color-negro);
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 90%;
 }
+
+
+
+/* ----------------------------------------- */
+/* seccion status del curso  */
+/* ----------------------------------------- */
+.title-lesson-course {
+    font-size: 20px;
+    font-weight: bold;
+}
+.date-lesson-course {
+    font-weight: 300;
+    font-size: 12px;
+}
+
+
+
 
 @media screen and (max-width: 640px) {
     .titulo-anuncios {
-        font-size:40px ;
+        font-size: 40px;
         line-height: 100%;
     }
 
@@ -111,75 +61,10 @@
 
 @media screen and (max-width: 302px) {
     .titulo-anuncios {
-        font-size:20px ;
+        font-size: 20px;
     }
 
     .subtitulo-anuncio {
         font-size: 12px;
     }
-}
-
-/* seccion numeros plataforma  */
-.titulo-numeros {
-    font-size: 20px;
-    font-weight: bold;
-}
-.span-numeros {
-    color: var(--color-primario);
-}
-.titulos-numeros {
-    color: var(--color-primario);
-    font-weight: bold;
-    font-size: 50px;
-}
-.descripcion-numeros {
-    font-size: 12px;
-    color: var(--color-gris);
-}
-
-/* seccion alumnos instructores  */
-
-.seccion-alumnos-instructores .contenido-alumnos .titulo-alumnos-instructores {
-    font-size: 40px;
-    font-weight: bold;
-    color: var(--color-negro);
-    margin-top: 10%;
-    line-height: 90%;
-}
-
-/* seccion empezar  */
-
-.seccion-empezar .contenido-empezar .titulo-empezar {
-    font-size: 40px;
-    font-weight: bold;
-    line-height: 90%;
-}
-
-/* titlos show courses  */
-.titulo-titulo-course {
-    color: var(--color-negro);
-    font-weight: bold;
-    font-size: 50px;
-    line-height: 90%;
-}
-
-/* seccion dudas  */
-.subtitle-doubts {
-    font-size: 30px;
-    font-weight: bold;
-    color: var(--color-primario);
-}
-
-.p-description-course {
-}
-
-
-/* seccion status del curso  */
-.title-lesson-course{
-    font-size: 20px;
-    font-weight: bold;
-}
-.date-lesson-course{
-    font-weight: 300;
-    font-size: 12px;
 }

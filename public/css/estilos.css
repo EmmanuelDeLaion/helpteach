@@ -9,20 +9,19 @@
 /* estilos show courses   */
 @import url("estilos-show-course.css");
 
- 
-
 :root {
     /* colores  */
     --color-blanco-fondo: #eff3f5;
-    --color-primario: #705DF2;
-    --color-secundario: #150C21;
+    --color-primario: #705df2;
+    --color-secundario: #150c21;
     --color-amarillo: #ecb709;
     --color-negro: #000000;
 
-    --color-fondo-primario: #E7DEFF;
-    --color-fondo-secundario: #F1F1F1;
-     
-    
+    --color-fondo-primario: #e7deff;
+    --color-fondo-secundario: #f1f1f1;
+
+
+
     --color-negro-primario: #151515;
     --color-texto-titulos-curso: #8596b2;
     /* color botones secundarios  */
@@ -39,7 +38,7 @@
     --texto-titulos-secciones: 50px;
 
     /* bordes  */
-    --border-radius-botones: 5px;
+    --border-radius-botones: 50px;
     --border-radius-enlaces: 50px;
 
     scroll-behavior: smooth;
@@ -103,12 +102,66 @@ html {
     .container {
     }
 }
-
-/* secciones  */
-
+ 
 /* *************************************************** */
 /* PORTADA HOME */
 /* *************************************************** */
+.portada-home {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: var(--color-fondo-secundario);
+    height: 100vh;
+    position: relative;
+}
+
+.content-home{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.content-text-home .title-portadas{
+    font-size: 50px;
+    line-height: 100%;
+    font-weight: bolder;
+}
+.input{
+    border: none;
+    margin: 10px 0 0 0;
+    border-radius: 100px;
+    width: 100%;
+}
+
+.img-portada-home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.img-persona-home{
+    position: absolute;
+    width: 450px;
+    bottom: 0;
+}
+
+.frase-home{
+    position: absolute;
+    bottom: 20px;
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--color-gris);
+}
+
+
+/* SECCION OBTEN EL CONOCIMIENTO  */
+.section-dark{
+    background-color: var(--color-negro);
+}
+
+/* 
 .portada-home {
     overflow-x: hidden;
     overflow-y: hidden;
@@ -126,7 +179,8 @@ html {
     height: 80vh;
     position: absolute;
     opacity: 0.8;
-}
+} */
+
 /* *************************************************** */
 /* PORTADA CURSOS  */
 /* *************************************************** */
@@ -148,8 +202,6 @@ html {
     position: absolute;
     opacity: 0.8;
 }
-
- 
 
 /* *************************************************** */
 /* PORTADA BLOGS  */
@@ -174,83 +226,7 @@ html {
     position: absolute;
     opacity: 0.8;
 }
-
-/* *************************************************** */
-/* PORTADA BLOGS  */
-/* *************************************************** */
-.portada-about {
-    background-image: url("/images/home/portada-home-cursos.jpg");
-    background-size: cover;
-    background-position-y: 60%;
-    /* background: linear-gradient(to bottom right, #003A99, #0E77E2); */
-    overflow-x: hidden;
-    overflow-y: hidden;
-    height: 60vh;
-    position: relative;
-    background-attachment: fixed;
-}
-
-.portada-about::before {
-    content: "";
-    background: linear-gradient(var(--color-primario), var(--color-primario));
-    width: 100%;
-    height: 60vh;
-    position: absolute;
-    opacity: 0.8;
-}
-
-.ul-busquedas {
-    width: auto;
-    float: left;
-    margin-top: 8px;
-}
-
-.li-busquedas {
-    display: inline-block;
-    padding: 15px 5px;
-}
-
-.a-busquedas {
-    text-decoration: none;
-    text-align: center;
-    color: var(--color-blanco);
-    border: 1px solid transparent;
-    padding: 0 15px 0 15px;
-    font-size: 14px;
-    border: 1px solid var(--color-blanco);
-    border-radius: var(--border-radius-enlaces);
-    transition: 0.25s;
-}
-
-.a-busquedas:hover {
-    border: 1px solid var(--color-blanco);
-    background-color: var(--color-blanco);
-    color: var(--color-negro);
-}
-
-/* PORTADA CURSOS STATUS  */
-.portada-cursos-status{
-    background-image: url("/images/home/contenido-acceso-gratis.jpg");
-    background-size: cover;
-    background-position-y: 60%;
-    /* background: linear-gradient(to bottom right, #003A99, #0E77E2); */
-    overflow-x: hidden;
-    overflow-y: hidden;
-    height: 17vh;
-    position: relative;
-    background-attachment: fixed;
-}
-
-.portada-cursos-status::before {
-    content: "";
-    background: linear-gradient(var(--color-primario), var(--color-primario));
-    width: 100%;
-    height: 17vh;
-    position: absolute;
-    opacity: 0.8;
-}
-
-
+  
 
 /* *************************************************** */
 /* secion empezar */
@@ -382,61 +358,7 @@ html {
     position: fixed;
     z-index: 999;
 }
-
-/* *************************************************** */
-/* ilustraciones  */
-/* *************************************************** */
-.ilustracion-h {
-    z-index: 1;
-    position: absolute;
-    top: 35%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    transition: 0.5s;
-}
-.ilustracion-h:hover {
-    filter: grayscale(100%);
-}
-.ilustracion-manos-enseñar {
-    position: absolute;
-    top: 40%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    transition: 0.5s;
-}
-.ilustracion-manos-enseñar:hover {
-    filter: grayscale(100%);
-}
-
-.ilustracion-camino {
-    position: absolute;
-    top: 55%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-    width: 500px;
-    transition: 0.5s;
-}
-.ilustracion-camino:hover {
-    filter: grayscale(100%);
-}
-
-.ilustracion-planeta {
-    position: absolute;
-    top: 13%;
-    left: 9%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    transition: 0.5s;
-    opacity: 80%;
-}
-
-.svg-index {
-    top: 0;
-    z-index: 3;
-    position: absolute;
-}
+ 
 
 /* *************************************************** */
 /* seccion cual curso ver  */
@@ -599,18 +521,7 @@ span.cuatro {
     animation: aparecer 1.3s;
 }
 
-/* *************************************************** */
-/* slider cursos  */
-/* *************************************************** */
-.carousel-courses {
-    display: grid;
-    place-items: center;
-}
-.slider {
-    width: 100%;
-    display: flex;
-}
-
+ 
 /* *************************************************** */
 /* anuncios  */
 /* *************************************************** */
@@ -644,13 +555,13 @@ span.cuatro {
 /* *************************************************** */
 /* responsive del video  */
 /* *************************************************** */
-.embed-responsive{
+.embed-responsive {
     position: relative;
     overflow: hidden;
     padding-top: 56.25%;
 }
 
-.embed-responsive iframe{
+.embed-responsive iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -658,6 +569,7 @@ span.cuatro {
     height: 100%;
     border: 0;
 }
+
 
 
 @media screen and (max-width: 1020px) {
