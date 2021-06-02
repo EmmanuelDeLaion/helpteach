@@ -3,10 +3,9 @@
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
 
     <section class="portada-cursos-status">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div class=" text-home w-full md:w-3/4 lg:w-1/2">
-                <p class="p-subtitulo-home text-lg "> {{ $course->title }}</p>
-            </div>
+             </div>
         </div>
     </section>
 

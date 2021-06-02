@@ -38,7 +38,7 @@
 
     <x-app-layout>
 
-        <section class="portada-home" style="background-image: url({{ asset('/images/home/background.jpg') }})">
+        {{-- <section class="portada-home" style="background-image: url({{ asset('/images/home/background.jpg') }})">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
                 <div class=" text-home w-full md:w-3/4 lg:w-1/2">
                     <h1 class="h1-titulo-home">Cursa o crea un <span class="span"> curso</span> </h1>
@@ -47,15 +47,49 @@
                     @livewire('search')
                 </div>
             </div>
+        </section> --}}
+
+        <section class="portada-home">
+            <div class="container">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+
+                    <div class="col-span-1">
+                        <div class="content-home">
+                            <div class="content-text-home">
+                                <h1 class="title-portadas">Encuentra <span class="span-primario"> cursos</span> <br>
+                                    gratuitos para ti</h1>
+                                <input class="input" placeholder="¿Qué estas buscando?" type="text">
+                                <button class="btn-primario">Buscar</button>
+                            </div>
+                            <p class="frase-home">“Unirse es el comienzo, estar juntos es el
+                                progreso, trabajar juntos es el éxito.”</p>
+                        </div>
+                    </div>
+
+                    <div class="col-span-1">
+                        <div class="img-portada-home">
+                            <img class="img-persona-home" src="{{ asset('/images/persona1.png') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
 
-        <div data-aos="fade-up">
+        <div class="mt-6" data-aos="fade-up">
             @livewire('statistics')
         </div>
 
 
-        
+        <div class="section-dark">
+            <h1 class="text-center titulo-secciones">Obtiene el conocimiento de nuestros <br> 
+               <span class="span-primario">alumnos instructores</span> 
+            </h1>
+
+            <p class="text-center">Incribete a uno de los cursos creados por los mismos alumnos de la institución</p>
+        </div>
+
+
 
 
 
@@ -92,7 +126,7 @@
             @livewire('section-see-courses')
         </div>
 
- 
+
 
 
         {{-- Footer --}}
