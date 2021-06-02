@@ -55,6 +55,10 @@
         </div>
 
 
+        
+
+
+
         <div data-aos="fade-up" data-aos-duration="500">
             @livewire('show-courses-home')
         </div>
@@ -88,6 +92,7 @@
             @livewire('section-see-courses')
         </div>
 
+ 
 
 
         {{-- Footer --}}
