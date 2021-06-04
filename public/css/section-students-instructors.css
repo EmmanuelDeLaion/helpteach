@@ -1,0 +1,20 @@
+/* *************************************************** */
+/* secion alumnos instructores */
+/* *************************************************** */
+.seccion-alumnos-instructores {
+    background-image: url("/images/home/contenido-instructores.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    /* margin: 50px 0 100px 0; */
+}
+
+.seccion-alumnos-instructores .contenido-alumnos {
+    display: block;
+    text-align: center;
+}

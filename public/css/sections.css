@@ -1,0 +1,17 @@
+/* *************************************************** */
+/* compartidos  */
+/* *************************************************** */
+.seccion {
+    position: relative;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* colores secciones  */
+.section-dark {
+    background-color: var(--color-negro);
+}
+.section-light {
+    background-color: var(--color-blanco-secundario);
+}

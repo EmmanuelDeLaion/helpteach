@@ -2,7 +2,7 @@
     <section class="mb-24 mt-12">
 
         <div class="container">
-            <h1 class="titulo-cursos-home">Cursos disponibles para ti</h1>
+            <h1 class="title-section">Cursos disponibles para ti</h1>
             <p class="mt-3 textos">Estos son los ultimos cursos que se han subido</p>
         </div>
 

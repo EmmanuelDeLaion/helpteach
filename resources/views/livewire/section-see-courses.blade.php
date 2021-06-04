@@ -19,7 +19,7 @@
         </div>
         <div class="seccion-contenido">
             <div class="contenido">
-                <h1 class="title-see-courses">¿No sabes cual curso ver?</h1>
+                <h1 class="title-section">¿No sabes cual curso ver?</h1>
                 <p class="text-sm text-center text-white-500">Puedes buscar más cursos en el apartado de todos los
                     cursos</p>
                 <button onclick="location.href='{{ route('courses.index') }}'" type="submit"

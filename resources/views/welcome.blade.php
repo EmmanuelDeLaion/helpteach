@@ -56,7 +56,7 @@
                     <div class="col-span-1">
                         <div class="content-home">
                             <div class="content-text-home">
-                                <h1 class="title-portadas">Encuentra <span class="span-primario"> cursos</span> <br>
+                                <h1 class="title-portada">Encuentra <span class="span-primario"> cursos</span> <br>
                                     gratuitos para ti</h1>
                                 <input class="input" placeholder="¿Qué estas buscando?" type="text">
                                 <button class="btn-primario">Buscar</button>
@@ -81,18 +81,7 @@
         </div>
 
 
-        <div class="section-dark">
-            <h1 class="text-center titulo-secciones">Obtiene el conocimiento de nuestros <br> 
-               <span class="span-primario">alumnos instructores</span> 
-            </h1>
-
-            <p class="text-center">Incribete a uno de los cursos creados por los mismos alumnos de la institución</p>
-        </div>
-
-
-
-
-
+   
         <div data-aos="fade-up" data-aos-duration="500">
             @livewire('show-courses-home')
         </div>

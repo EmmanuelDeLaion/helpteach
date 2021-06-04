@@ -1,0 +1,22 @@
+/* *************************************************** */
+/* seccion comentarios  */
+/* *************************************************** */
+.seccion-comentarios {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.img-comentarios {
+    width: 100%;
+}
+
+.formas-colors {
+    width: 200px;
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    opacity: 0.2;
+}

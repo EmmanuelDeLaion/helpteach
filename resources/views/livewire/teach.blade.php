@@ -6,8 +6,8 @@
                 <img class="img-comentarios" src="{{ asset('/images/home/teach.jpg') }}" alt="">
             </div>
             <div class="pt-36">
-                <h1 class="titulo-secciones">Enseña en Help<span class="span-primario">Teach</span> </h1>
-                <p class="textos mt-6">Crea un curso para poder ayudar en el desarrollo del aprendizaje 
+                <h1 class="title-section">Enseña en Help<span class="span-primario">Teach</span> </h1>
+                <p class="p mt-6">Crea un curso para poder ayudar en el desarrollo del aprendizaje 
                     de la comunidad  de estudiantes del <span class="span-primario"> Instituto Tecnológico Superior de El Mante </span>   </p>
 
                 <button class="btn-primario-outline">Empezar a enseñar</button>
