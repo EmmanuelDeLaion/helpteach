@@ -36,26 +36,41 @@
 
     <x-app-layout>
 
-        <section class="portada-cursos">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-                <div class=" text-home w-full md:w-3/4 lg:w-1/2">
-                    <h1 class="h1-titulo-home">Empieza por buscar un <span class="span"> curso</span> </h1>
-                    <p class="p-subtitulo-home text-lg ">En <span class="span"> HelpTeach </span> podrás encontrar
-                        cursos creados por alumnos totalmente gratuitos </p>
-                    @livewire('search')
+        <section class="portada-home">
+            <div class="container">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+
+                    <div class="col-span-1">
+                        <div class="content-home">
+                            <div class="content-text-home">
+                                <h1 class="title-portada">Encuentra <span class="span-primario"> cursos</span> <br>
+                                    gratuitos para ti</h1>
+                                @livewire('search')
+                            </div>
+                            <p class="frase-home">“Unirse es el comienzo, estar juntos es el
+                                progreso, trabajar juntos es el éxito.”</p>
+                        </div>
+                    </div>
+
+                    <div class="col-span-1">
+                        <div class="img-portada-home">
+                            <img class="img-persona-home" src="{{ asset('/images/persona1.png') }}" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-      
-            @livewire('course-index')
-      
+
+
+        @livewire('course-index')
+
 
         @livewire('doubts')
- 
-            @livewire('comments-students')
-       
-        
+
+        @livewire('comments-students')
+
+
         @livewire('footer')
     </x-app-layout>
 
