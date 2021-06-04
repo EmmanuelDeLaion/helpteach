@@ -3,7 +3,7 @@
         <div
             class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-2 gap-6  ">
             <div>
-                <img class="img-comentarios" src="{{ asset('/images/home/teach.jpg') }}" alt="">
+                <img class="img-comentarios" src="{{ asset('/images/home/teach1.png') }}" alt="">
             </div>
             <div class="pt-36">
                 <h1 class="title-section">Enseña en Help<span class="span-primario">Teach</span> </h1>
@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <img class="formas-colors" src="{{ asset('/images/home/puntos.png') }}" alt="">
+        <img class="formas-colors" src="{{ asset('/images/home/puntos-color.png') }}" alt="">
     </section>
 
  </div>
