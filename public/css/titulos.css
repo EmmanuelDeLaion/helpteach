@@ -1,48 +1,56 @@
-/* ----------------------------------------------------- */
-/* NUEVOS TITULOS  */
-/* ----------------------------------------------------- */
-.title-home-1 {
-    font-size: 50px;
-    color: blueviolet;
+:root {
+    /* tamaños  */
+    --size-p: 16px;
+    --size-title-section: 40px;
+    --size-title-portada: 50px;
+    --size-title-show-course: 20px;
+    --size-title-date-show-course: 12px;
 }
 
- 
- 
-
-/* ----------------------------------------- */
-/* titulos anuncios  */
-/* ----------------------------------------- */
-.titulo-anuncios {
-    font-size: var(--texto-titulos-secciones);
-    color: var(--color-blanco);
-    line-height: 90%;
+.title-portada {
+    font-size: var(--size-title-portada);
     font-weight: bold;
-}
- 
- 
-
-/* ----------------------------------------- */
-/* titlos show courses  */
-/* ----------------------------------------- */
-.titulo-titulo-course {
-    color: var(--color-negro);
-    font-weight: bold;
-    font-size: 50px;
     line-height: 90%;
 }
 
+.p {
+    font-size: var(--size-p);
+}
 
+.title-section{
+    font-size: var(--size-title-section);
+    font-weight: bold;
+    line-height: 90%;
+}
 
 /* ----------------------------------------- */
 /* seccion status del curso  */
 /* ----------------------------------------- */
 .title-lesson-course {
-    font-size: 20px;
+    font-size: var(--size-title-show-course);
     font-weight: bold;
 }
 .date-lesson-course {
     font-weight: 300;
-    font-size: 12px;
+    font-size: var(--size-title-date-show-course);
+}
+
+/* ----------------------------------------- */
+/* colores span  */
+/* ----------------------------------------- */
+.span-primario {
+    color: var(--color-primario);
+}
+.span-background-primario{
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+.span-secundario {
+    color: var(--color-secundario);
+}
+.span-background-secundario{
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
 }
 
 

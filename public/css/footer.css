@@ -86,6 +86,22 @@ ul {
 	cursor: pointer;
 }
 
+.bottom center {
+	padding: 5px;
+	font-size: 14px;
+	background: var(--color-negro);
+}
+.bottom center span {
+	color: #656565;
+}
+.bottom center a {
+	color: var(--color-blanco);
+	text-decoration: none;
+}
+.bottom center a:hover {
+	color: var(--color-primario);
+}
+
 /*responsive*/
 @media (max-width: 767px) {
 	.footer-col {

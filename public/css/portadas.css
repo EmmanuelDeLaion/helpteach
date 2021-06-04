@@ -1,0 +1,51 @@
+/* *************************************************** */
+/* PORTADA HOME */
+/* *************************************************** */
+.portada-home {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: var(--color-fondo-secundario);
+    height: 100vh;
+    position: relative;
+}
+
+.content-home {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.content-text-home .title-portadas {
+    font-size: 50px;
+    line-height: 100%;
+    font-weight: bolder;
+}
+.input {
+    border: none;
+    margin: 10px 0 0 0;
+    border-radius: 100px;
+    width: 100%;
+}
+
+.img-portada-home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.img-persona-home {
+    position: absolute;
+    width: 450px;
+    bottom: 0;
+}
+
+.frase-home {
+    position: absolute;
+    bottom: 20px;
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--color-gris);
+}
