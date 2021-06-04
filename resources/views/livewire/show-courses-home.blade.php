@@ -59,7 +59,7 @@
 
 
         <div class="flex justify-center ">
-            <button onclick="location.href='{{ route('courses.index') }}'" class="btn-secundario  "> Ver más
+            <button onclick="location.href='{{ route('courses.index') }}'" class="btn-primario-outline  "><i class="fas fa-book-reader"></i> Ver más
                 cursos</button>
         </div>
     </section>

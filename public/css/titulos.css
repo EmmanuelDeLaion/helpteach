@@ -7,6 +7,9 @@
     --size-title-date-show-course: 12px;
 }
 
+/* ----------------------------------------- */
+/* titulos compartidos  */
+/* ----------------------------------------- */
 .title-portada {
     font-size: var(--size-title-portada);
     font-weight: bold;
@@ -17,7 +20,7 @@
     font-size: var(--size-p);
 }
 
-.title-section{
+.title-section {
     font-size: var(--size-title-section);
     font-weight: bold;
     line-height: 90%;
@@ -41,19 +44,31 @@
 .span-primario {
     color: var(--color-primario);
 }
-.span-background-primario{
+.span-background-primario {
     background-color: var(--color-primario);
     color: var(--color-secundario);
 }
 .span-secundario {
     color: var(--color-secundario);
 }
-.span-background-secundario{
+.span-background-secundario {
     background-color: var(--color-secundario);
     color: var(--color-blanco);
 }
 
+/* ----------------------------------------- */
+/* seccion numeros home  */
+/* ----------------------------------------- */
+.title-statistics{
+    font-size: 20px;
+    font-weight: bold;
+}
 
+.title-numbers{
+    font-size: var(--size-title-section);
+    font-weight: bold;
+    color: var(--color-primario);
+}
 
 
 @media screen and (max-width: 640px) {

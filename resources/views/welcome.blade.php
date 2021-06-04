@@ -58,8 +58,7 @@
                             <div class="content-text-home">
                                 <h1 class="title-portada">Encuentra <span class="span-primario"> cursos</span> <br>
                                     gratuitos para ti</h1>
-                                <input class="input" placeholder="¿Qué estas buscando?" type="text">
-                                <button class="btn-primario">Buscar</button>
+                                @livewire('search')
                             </div>
                             <p class="frase-home">“Unirse es el comienzo, estar juntos es el
                                 progreso, trabajar juntos es el éxito.”</p>
@@ -81,7 +80,7 @@
         </div>
 
 
-   
+
         <div data-aos="fade-up" data-aos-duration="500">
             @livewire('show-courses-home')
         </div>

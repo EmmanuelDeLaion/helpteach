@@ -45,25 +45,25 @@ span.uno {
 span.uno {
     width: 100px;
     height: 100px;
-    background-color: #1388d1;
+    background-color: #584ca8;
     bottom: -100px;
 }
 span.dos {
     width: 70px;
     height: 70px;
-    background-color: var(--color-negro);
+    background-color: var(--color-secundario);
     bottom: -70px;
 }
 span.tres {
     width: 50px;
     height: 50px;
-    background-color: #2681b9;
+    background-color: #9488dd;
     bottom: -50px;
 }
 span.cuatro {
     width: 20px;
     height: 20px;
-    background-color: #67f3d4;
+    background-color:var(--color-secundario);
     bottom: -20px;
 }
 
