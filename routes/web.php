@@ -35,4 +35,4 @@ Route::get('about', [AboutController::class, 'index'])->name('about.index');
 
 Route::post('courses/{course}/enrolled', [CourseController::class, 'enrolled'])->middleware('auth')->name('courses.enrolled');
 
-Route::get('course-status/{course}', CourseStatus::class)->name('courses.status');
+Route::get('course-status/{course}', CourseStatus::class)->name('courses.status')->middleware('auth');

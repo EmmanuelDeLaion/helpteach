@@ -187,7 +187,6 @@ html {
     position: absolute;
     content:'';
     background-color: var(--color-primario);
-    width: 50px;
     height: 10px;
     border-radius: 10px;
 }
