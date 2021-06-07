@@ -27,12 +27,17 @@
                 </div>
             @endif
 
-            <div class="flex items-center mt-4 cursor-pointer">
-                <i class="fas fa-toggle-off text-2xl text-gray-600"></i>
-                <p class="text-sm">¿Terminaste esta lección? marcala como terminada</p>
+            <div class="flex items-center mt-4 cursor-pointer" wire:click="completed">
+                @if ($current->completed)
+                    <i class="fas fa-check-square text-purple-500 text-3xl"></i>
+                @else
+                    <i class="far fa-square text-purple-500 text-3xl"></i>
+
+                @endif
+                <p class="text-sm ml-2 hover:text-purple-500">Marcar como terminada</p>
             </div>
 
-            <div class="flex">
+            <div class="flex mt-2">
                 @if ($this->previous)
                     <button wire:click="changeLesson({{ $this->previous }})" class="btn-primario-outline"><i
                             class="fas fa-chevron-left"></i> Anterior</button>
@@ -68,9 +73,9 @@
                 </a>
                 <br>
 
-
+                <p class="text-center bold text-purple-500">{{ $this->advance }}% completado</p>
                 <div class="progress bg-gray-300">
-                    <div class="porcentaje"></div>
+                    <div style="width: {{ $this->advance }}%" class="porcentaje"></div>
                 </div>
 
 
