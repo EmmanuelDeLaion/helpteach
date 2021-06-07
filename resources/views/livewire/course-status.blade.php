@@ -2,15 +2,12 @@
 
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
 
-
-
     <section class="portada-cursos-status">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div class=" text-home w-full md:w-3/4 lg:w-1/2">
             </div>
         </div>
     </section>
-
 
     <div class="container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3  gap-8">
         <div class="col-span-1 xs:col-span sm:col-span-1 md:col-span-2 lg:col-span-2 mt-2">

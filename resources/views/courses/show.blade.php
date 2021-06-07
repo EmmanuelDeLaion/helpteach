@@ -118,7 +118,7 @@
                 <div class="col-span-2">
                     {{-- contenedor metas del curso --}}
                     <div
-                        class="border-l-4 border-blue-400 w-full mx-auto rounded-lg bg-white shadow-lg px-5 pt-5 pb-5 text-gray-800">
+                        class="border-l-4 border-purple-500 w-full mx-auto rounded-lg bg-white shadow-lg px-5 pt-5 pb-5 text-gray-800">
                         <div class="w-full mb-10">
                             <h3 class="text-lg font-bold text-gray-700 mt-2">Acerca de este curso</h3>
                             <ul
@@ -163,7 +163,7 @@
                                 </article>
 
                                 <article class="border-b" x-show="open">
-                                    <div class="border-l-4 border-blue-400 rounded-md">
+                                    <div class="border-l-4 border-purple-500 rounded-md">
                                         <header
                                             class="flex justify-between items-center p-5 pl-8 pr-8 cursor-pointer select-none">
                                             <span class="text-indigo text-md">
@@ -197,7 +197,7 @@
 
                 <div class="col-span-1">
                     <div
-                        class="border-l-4 border-blue-400 flex flex-col relative items-center w-full rounded-lg bg-white shadow-lg pb-5 text-gray-800 mb-10">
+                        class="border-l-4 border-purple-500 flex flex-col relative items-center w-full rounded-lg bg-white shadow-lg pb-5 text-gray-800 mb-10">
                         <img class="rounded-full mt-6 w-20" src="{{ $course->teacher->profile_photo_url }}" alt="">
                         <p class="span-primario text-sm font-bold"> <i class="fas fa-chalkboard-teacher"></i> Instructor
                             del curso</p>

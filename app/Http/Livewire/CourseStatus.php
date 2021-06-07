@@ -4,10 +4,14 @@ namespace App\Http\Livewire;
 
 use App\Models\Course;
 use App\Models\Lesson;
+use Illuminate\Auth\Middleware\Authorize;
 use Livewire\Component;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class CourseStatus extends Component
 {
+    use AuthorizesRequests;
+
     public $course;
     public $current;
 
@@ -27,6 +31,9 @@ class CourseStatus extends Component
         if(!$this->current){
             $this->current = $course->lessons->last();
         }
+
+        $this->authorize('enrolled', $course);
+        
     }
 
     public function render(){
