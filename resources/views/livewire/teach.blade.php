@@ -14,6 +14,7 @@
             </div>
         </div>
 
+        
         <img class="formas-colors" src="{{ asset('/images/home/puntos-color.png') }}" alt="">
     </section>
 

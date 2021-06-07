@@ -1,7 +1,7 @@
 <div>
 
     <div class="content-doubts mt-6">
-        <h1 class="titulo-secciones text-center">¿Tienes dudas?</h1>
+        <h1 class="title-section text-center"> ¿Tienes <span class="span-primario">dudas? </span> </h1>
         <p class="subtitle-doubts text-center">Contacta a los instructores</p>
         <div class="flex justify-center">
             <img class="avatars-doubts" src="{{ asset('/images/cursos/avatars-instructores.png') }}" alt="">

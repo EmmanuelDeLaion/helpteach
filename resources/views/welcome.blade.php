@@ -26,28 +26,17 @@
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
 </head>
 
+
+<div class="loading">
+    <img class="logo-loader" src="{{ asset('/images/logo.png') }}" alt="">
+</div>
+
 <body class="body">
-
-
-
-    <div class="loading">
-        <img class="logo-loader" src="{{ asset('/images/logo.png') }}" alt="">
-    </div>
-
 
 
     <x-app-layout>
 
-        {{-- <section class="portada-home" style="background-image: url({{ asset('/images/home/background.jpg') }})">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-                <div class=" text-home w-full md:w-3/4 lg:w-1/2">
-                    <h1 class="h1-titulo-home">Cursa o crea un <span class="span"> curso</span> </h1>
-                    <p class="p-subtitulo-home text-sm ">En <span class="span"> HelpTeach </span> podrás encontrar
-                        cursos creados por alumnos totalmente gratuitos </p>
-                    @livewire('search')
-                </div>
-            </div>
-        </section> --}}
+
 
         <section class="portada-home">
             <div class="container">
@@ -73,6 +62,7 @@
                 </div>
             </div>
         </section>
+
 
 
         <div class="mt-6" data-aos="fade-up">
