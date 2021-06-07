@@ -16,6 +16,10 @@
     line-height: 90%;
 }
 
+.bold{
+    font-weight: bolder;   
+}
+
 .p {
     font-size: var(--size-p);
 }

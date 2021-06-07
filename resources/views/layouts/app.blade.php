@@ -18,7 +18,9 @@
         <script src="https://kit.fontawesome.com/0dd7a6f868.js" crossorigin="anonymous"></script>
     </head>
 
+     
     <body class="body">
+
         <x-jet-banner />
 
         <div class="min-h-screen bg-white">

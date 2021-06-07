@@ -172,9 +172,9 @@ $nav_links = [
 
                     @else
                         <a href="{{ route('login') }}"
-                            class="text-sm text-blue-500 bg-transparent hover:bg-blue-500  font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded-md">Iniciar
+                            class="text-sm text-purple-500 bg-transparent hover:bg-purple-500  font-semibold hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent rounded-md">Iniciar
                             Sesión</a>
-                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 ">Registrarse</a>
+                        <a href="{{ route('register') }}" class="text-sm text-white bg-purple-500 hover:bg-purple-600  font-semibold hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent rounded-md">Registrarse</a>
                     @endauth
 
 

@@ -21,13 +21,11 @@
 
 </head>
 
+<div class="loading">
+    <img class="logo-loader" src="{{ asset('/images/logo.png') }}" alt="">
+</div>
+
 <body class="body">
-
-
-    <div class="loading">
-        <img class="logo-loader" src="{{ asset('/images/logo.png') }}" alt="">
-    </div>
-
 
     <x-app-layout>
         <section class="portada-show-course">
@@ -37,7 +35,7 @@
             <div
                 class="container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 mt-2 ">
                 <div class="container py-6 sm:py-6 md:py-24 lg:py-24 titulos-show-courses">
-                    <h1 class="titulo-titulo-course"> {{ $course->title }} </h1>
+                    <h1 class="title-section"> {{ $course->title }} </h1>
                     <p class="textos mt-6"> {{ $course->subtitle }} </p>
                     <p> {{ $course->description }} </p>
                     <ul class="mt-6">

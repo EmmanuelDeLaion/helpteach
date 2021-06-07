@@ -2,10 +2,12 @@
 
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
 
+
+
     <section class="portada-cursos-status">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div class=" text-home w-full md:w-3/4 lg:w-1/2">
-             </div>
+            </div>
         </div>
     </section>
 
@@ -32,11 +34,13 @@
 
             <div class="flex">
                 @if ($this->previous)
-                    <button wire:click="changeLesson({{ $this->previous }})" class="btn-primario-outline"><i class="fas fa-chevron-left"></i> Anterior</button>
+                    <button wire:click="changeLesson({{ $this->previous }})" class="btn-primario-outline"><i
+                            class="fas fa-chevron-left"></i> Anterior</button>
                 @endif
 
-                @if($this->next)
-                <button wire:click="changeLesson({{ $this->next }})" class="ml-auto btn-primario-outline">Siguiente <i class="fas fa-chevron-right"></i> </button>
+                @if ($this->next)
+                    <button wire:click="changeLesson({{ $this->next }})"
+                        class="ml-auto btn-primario-outline">Siguiente <i class="fas fa-chevron-right"></i> </button>
                 @endif
 
             </div>
@@ -64,25 +68,63 @@
                 </a>
                 <br>
 
+
+                <div class="progress bg-gray-300">
+                    <div class="porcentaje"></div>
+                </div>
+
+
+
                 <div class="px-5">
                     <ul>
                         @foreach ($course->sections as $section)
                             <li>
-                                <a class="font-bold">{{ $section->name }}</a>
+                                <a class="font-bold inline-block mb-2 mt-2">{{ $section->name }}</a>
                                 <ul>
                                     @foreach ($section->lessons as $lesson)
-                                        <li>
-                                            <a class="cursor-pointer"
-                                                wire:click="changeLesson({{ $lesson }})">{{ $lesson->name }}
-                                                {{-- si el valor booleano es true imprime como completado si es falso no se imprime nada --}}
+                                        <li class="flex mb-1">
+                                            <div>
                                                 @if ($lesson->completed)
-                                                    (Completado)
+                                                    @if ($current->id == $lesson->id)
+                                                        <span
+                                                            class="relative inline-block w-5 h-5 border-2 border-purple-500 rounded-full mr-2 mt-1">
+                                                            <i class=" absolute fas fa-check text-purple-500"></i>
+                                                        </span>
+                                                    @else
+                                                        <span
+                                                            class="relative inline-block w-5 h-5 border-2 border-purple-500 bg-purple-500 rounded-full mr-2 mt-1">
+                                                            <i class="absolute fas fa-check text-white"></i>
+                                                        </span>
+                                                    @endif
+                                                @else
+                                                    @if ($current->id == $lesson->id)
+                                                        <span
+                                                            class="inline-block w-5 h-5 border-2 border-purple-500 bg-gray-300 rounded-full mr-2 mt-1"></span>
+                                                    @else
+                                                        <span
+                                                            class="inline-block w-5 h-5 bg-gray-300 rounded-full mr-2 mt-1"></span>
+                                                    @endif
+
                                                 @endif
-                                            </a>
+                                            </div>
+
+                                            @if ($current->id == $lesson->id)
+                                                <a class="cursor-pointer text-sm text-purple-500 bold hover:text-purple-600"
+                                                    wire:click="changeLesson({{ $lesson }})">{{ $lesson->name }}
+                                                </a>
+                                            @else
+                                                <a class="cursor-pointer text-sm text-gray-500 hover:text-purple-500"
+                                                    wire:click="changeLesson({{ $lesson }})">{{ $lesson->name }}
+                                                    {{-- si el valor booleano es true imprime como completado si es falso no se imprime nada --}}
+                                                </a>
+                                            @endif
+
+
                                         </li>
                                     @endforeach
                                 </ul>
                             </li>
+
                         @endforeach
                     </ul>
                 </div>
@@ -96,6 +138,7 @@
 
 
     @livewire('footer')
+
 
 
 </div>

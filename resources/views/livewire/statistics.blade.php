@@ -24,7 +24,8 @@
                     <p class="text-center p">Cursos disponibles</p>
                 </div>
                 <div class="flex justify-center items-center">
-                    <button class="btn-primario-outline">Ver más </button>
+                    <button onclick="location.href='{{ route('about.index') }}'" class="btn-primario-outline">Ver más
+                    </button>
                 </div>
             </div>
         </div>

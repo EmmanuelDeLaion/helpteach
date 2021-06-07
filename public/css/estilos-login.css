@@ -13,7 +13,7 @@
 :root {
     /* colores  */
     --color-blanco-fondo: #f7f8fc;
-    --color-primario: #1da1f2;
+    --color-primario: #705df2;
     --color-negro: #22292f;
     /* color botones secundarios  */
     --color-blanco-primario: #f4f4f4;
@@ -161,7 +161,7 @@ form.sign-in-form {
 }
 
 .btn:hover {
-    background-color: #4d84e2;
+    background-color: #5345af;
 }
 .panels-container {
     position: absolute;
