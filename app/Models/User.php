@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
@@ -17,6 +18,8 @@ class User extends Authenticatable
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    use HasRoles;
+
 
     /**
      * The attributes that are mass assignable.
@@ -60,13 +63,14 @@ class User extends Authenticatable
     ];
 
 
-    
+
     //***************************//
     //                           //
     //    RELACION DE 1 A 1      //
     //                           //
     //***************************//
-    public function profile(){
+    public function profile()
+    {
         return $this->hasOne('App\Models\Profile');
     }
 
@@ -76,19 +80,23 @@ class User extends Authenticatable
     //  RELACION DE 1 A MUCHOS     //
     //                             //
     //*****************************//    
-    public function courses_dictated(){
+    public function courses_dictated()
+    {
         return $this->hasMany('App\Models\Course');
     }
 
-    public function reviews(){
+    public function reviews()
+    {
         return $this->hasMany('App\Models\Review');
     }
 
-    public function comments(){
+    public function comments()
+    {
         return $this->hasMany('App\Models\Comment');
     }
 
-    public function reaction(){
+    public function reaction()
+    {
         return $this->hasMany('App\Models\Reaction');
     }
 
@@ -97,11 +105,13 @@ class User extends Authenticatable
     //  RELACION DE MUCHOS A MUCHOS     //
     //                                  //
     //**********************************//    
-    public function courses_enrolled(){
+    public function courses_enrolled()
+    {
         return $this->belongsToMany('App\Models\Course');
     }
 
-    public function lessons(){
+    public function lessons()
+    {
         return $this->belongsToMany('App\Models\Lesson');
     }
 }
