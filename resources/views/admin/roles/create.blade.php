@@ -17,8 +17,27 @@
             </div>
 
             @error('name')
-                
+
+
+                <!-- Modal -->
+                <div class="modal" tabindex="-1" id="ventana-modal">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Error</h5>
+                            </div>
+                            <div class="modal-body">
+                                <p>{{ $message }}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             @enderror
+
 
             <strong>Permisos</strong>
 
@@ -45,12 +64,13 @@
 
 @section('js')
     <script>
-        console.log('Hi!');
-        (function (){
+        console.log("hola");
+
+        (function() {
             $(function() {
-                $('#ventana-modal').modal();
+                $('#ventana-modal').modal()
             });
-        });
+        }());
 
     </script>
 @stop
