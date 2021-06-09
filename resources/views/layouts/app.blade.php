@@ -16,6 +16,7 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
           <!-- iconos font Awoesome  -->
         <script src="https://kit.fontawesome.com/0dd7a6f868.js" crossorigin="anonymous"></script>
+
     </head>
 
      
@@ -36,5 +37,6 @@
         @stack('modals')
 
         @livewireScripts
+ 
     </body>
 </html>
