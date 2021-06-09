@@ -7,6 +7,6 @@ use App\Http\Controllers\Admin\RoleController;
 
  
 
-Route::get('', [HomeController::class, 'index']);
+Route::get('', [HomeController::class, 'index'])->name('home');
 
-Route::resource('roles', RoleController::class)->names('admin.roles');
+Route::resource('roles', RoleController::class)->names('roles');
