@@ -49,6 +49,7 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::middleware('web', 'auth')
                 //Todas las rutas del archivo con prefijo admin
+                ->name('admin.')
                 ->prefix('admin')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/admin.php'));
