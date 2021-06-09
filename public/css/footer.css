@@ -82,6 +82,9 @@ ul {
 	background-color: #007bb6;
 }
 
+.logo-footer{
+	width: 100px;
+}
 .logo-footer:hover {
 	cursor: pointer;
 }

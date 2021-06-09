@@ -147,7 +147,11 @@ $nav_links = [
                                 </div>
 
                                 <x-jet-dropdown-link href="{{ route('profile.show') }}">
-                                    {{ __('Profile') }}
+                                    Perfil
+                                </x-jet-dropdown-link>
+
+                                <x-jet-dropdown-link href="{{ route('instructor.course.index') }}">
+                                    Instructor
                                 </x-jet-dropdown-link>
 
                                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
@@ -163,7 +167,7 @@ $nav_links = [
                                     @csrf
 
                                     <x-jet-dropdown-link href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                this.closest('form').submit();">
+                                                                        this.closest('form').submit();">
                                         {{ __('Log Out') }}
                                     </x-jet-dropdown-link>
                                 </form>
@@ -174,7 +178,8 @@ $nav_links = [
                         <a href="{{ route('login') }}"
                             class="text-sm text-purple-500 bg-transparent hover:bg-purple-500  font-semibold hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent rounded-md">Iniciar
                             Sesión</a>
-                        <a href="{{ route('register') }}" class="text-sm text-white bg-purple-500 hover:bg-purple-600  font-semibold hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent rounded-md">Registrarse</a>
+                        <a href="{{ route('register') }}"
+                            class="text-sm text-white bg-purple-500 hover:bg-purple-600  font-semibold hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent rounded-md">Registrarse</a>
                     @endauth
 
 
@@ -238,7 +243,12 @@ $nav_links = [
                     <!-- Account Management -->
                     <x-jet-responsive-nav-link href="{{ route('profile.show') }}"
                         :active="request()->routeIs('profile.show')">
-                        {{ __('Profile') }}
+                        Perfil
+                    </x-jet-responsive-nav-link>
+
+                    <x-jet-responsive-nav-link href="{{ route('instructor.course.index') }}"
+                        :active="request()->routeIs('instructor.course.index')">
+                        Instructor
                     </x-jet-responsive-nav-link>
 
                     @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
@@ -253,7 +263,7 @@ $nav_links = [
                         @csrf
 
                         <x-jet-responsive-nav-link href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                    this.closest('form').submit();">
+                                                            this.closest('form').submit();">
                             {{ __('Log Out') }}
                         </x-jet-responsive-nav-link>
                     </form>
