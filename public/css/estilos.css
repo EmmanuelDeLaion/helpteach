@@ -80,25 +80,7 @@ html {
     padding-right: 10px;
 }
 
-@media (max-width: 200px) {
-    .container {
-    }
-}
-@media (max-width: 375px) {
-    .container {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 640px) {
-    .container {
-    }
-}
-
-@media (max-width: 1024px) {
-    .container {
-    }
-}
+ 
 
 
 

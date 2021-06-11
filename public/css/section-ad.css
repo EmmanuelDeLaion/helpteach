@@ -3,7 +3,8 @@
 /* *************************************************** */
 .anuncio {
     width: 100%;
-    height: 50vh;
+    margin-top: 15rem;
+    /* height: 50vh; */
     position: relative;
 }
 .anuncio .container-anuncio {
@@ -39,6 +40,7 @@
     .img-anuncio {
         position: absolute;
         z-index: 1;
+        width: 200px;
     }
     .anuncio .container-anuncio .content-anuncio {
         position: absolute;
