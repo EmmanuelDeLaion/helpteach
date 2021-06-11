@@ -44,18 +44,20 @@
                     <div class="col-span-1">
                         <div class="content-home">
                             <div class="content-text-home">
-                                <h1 class="title-portada">Encuentra <span class="span-primario"> cursos</span> <br>
-                                    gratuitos para ti</h1>
+                                <h1 class="title-portada">Construyamos juntos <br>
+                                     tus    <span class="span-primario"> habilidades</span> 
+                                </h1>
                                 @livewire('search')
                             </div>
-                            <p class="frase-home">“Unirse es el comienzo, estar juntos es el
-                                progreso, trabajar juntos es el éxito.”</p>
+                            <p class="frase-home">“Hay que unirse, 
+                                no para estar juntos, 
+                                sino para hacer algo juntos.”</p>
                         </div>
                     </div>
 
                     <div class="col-span-1">
-                        <div class="img-portada-home">
-                            <img class="img-persona-home" src="{{ asset('/images/persona1.png') }}" alt="">
+                        <div class="img-portada-cursos">
+                            <img class="img-personas-cursos" src="{{ asset('/images/personas.png') }}" alt="">
                         </div>
                     </div>
                 </div>

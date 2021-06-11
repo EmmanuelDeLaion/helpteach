@@ -107,13 +107,14 @@ ul {
 .bottom center {
 	padding: 5px;
 	font-size: 14px;
-	background: var(--color-negro);
+	background: var(--color-blanco-fondo);
+	margin-bottom: 10px;
 }
 .bottom center span {
-	color: #656565;
+	font-size: 12px;
 }
 .bottom center a {
-	color: var(--color-blanco);
+	color: var(--color-primario);
 	text-decoration: none;
 }
 .bottom center a:hover {
