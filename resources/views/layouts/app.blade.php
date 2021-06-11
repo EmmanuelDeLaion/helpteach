@@ -27,6 +27,8 @@
         <div class="min-h-screen bg-white">
             {{-- Menu de Navegacion --}}
             @livewire('navigation-menu')
+            
+            <div style="width: 100%; height: 68px; background-color: #705df2; position: fixed; z-index: 2; opacity: 0.5;"></div>
 
             <!-- Contenido de la pagina -->
             <main>

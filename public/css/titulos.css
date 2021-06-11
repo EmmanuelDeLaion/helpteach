@@ -5,6 +5,8 @@
     --size-title-portada: 50px;
     --size-title-show-course: 20px;
     --size-title-date-show-course: 12px;
+
+    --size-title-portada-responsive: 40px;
 }
 
 /* ----------------------------------------- */
@@ -13,7 +15,7 @@
 .title-portada {
     font-size: var(--size-title-portada);
     font-weight: bold;
-    line-height: 90%;
+    line-height: 50px;
 }
 
 .bold{
@@ -83,6 +85,10 @@
 
     .subtitulo-anuncio {
         font-size: 12px;
+    }
+    .title-portada{
+        font-size: var(--size-title-portada-responsive);
+        line-height: 90%;
     }
 }
 

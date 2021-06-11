@@ -1,10 +1,24 @@
 <div>
     <section class="mb-24 mt-12">
 
-        <div class="container">
-            <h1 class="title-section">Cursos disponibles para ti</h1>
-            <p class="mt-3 textos">Estos son los ultimos cursos que se han subido</p>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between">
+                <div class="">
+                    <h1 class="title-section">Cursos disponibles para ti</h1>
+                    <p class="mt-3 p text-gray-500">Estos son los ultimos cursos que se han subido</p>
+                </div>
+                <div class="flex hidden md:block">
+                    <button onclick="location.href='{{ route('courses.index') }}'" class="btn-primario-outline  "><i
+                            class="fas fa-book-reader"></i> Ver todos
+                    </button>
+                </div>
+            </div>
         </div>
+
+
+
+
 
         <br>
 
@@ -52,15 +66,17 @@
                         </div>
                     </a>
                 </li>
- 
+
             @endforeach
         </ul>
 
 
 
-        <div class="flex justify-center ">
-            <button onclick="location.href='{{ route('courses.index') }}'" class="btn-primario-outline  "><i class="fas fa-book-reader"></i> Ver más
-                cursos</button>
+        <div class="flex justify-center md:hidden">
+            <button onclick="location.href='{{ route('courses.index') }}'" class="btn-primario-outline  "><i
+                    class="fas fa-book-reader"></i> Ver más
+                cursos
+            </button>
         </div>
     </section>
 

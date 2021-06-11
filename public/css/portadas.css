@@ -30,7 +30,7 @@
     width: 100%;
 }
 
-.img-portada-home {
+.img-portada-home, .img-portada-cursos {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -39,6 +39,11 @@
 .img-persona-home {
     position: absolute;
     width: 450px;
+    bottom: 0;
+}
+.img-personas-cursos{
+    position: absolute;
+    width: 600px;
     bottom: 0;
 }
 

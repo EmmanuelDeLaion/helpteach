@@ -60,9 +60,9 @@
 
     <div class="bottom">
         <center class="center">
-            <span class="credit">Created By <a target="_blanck"
+            <span class="text-gray-500">Created By <a target="_blanck"
                     href="http://emmanueldl.tecdevsmx.com/#/home">EmmanuelDL</a> | </span>
-            <span class="far fa-copyright"></span><span> 2021 All rights reserved.</span>
+            <span class="far fa-copyright text-gray-500"></span> <span class="text-gray-500"> 2021 All rights reserved.</span>
         </center>
     </div>
 
