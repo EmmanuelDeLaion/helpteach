@@ -5,26 +5,26 @@
                 <div class="footer-col">
                     <h4>HelpTeach</h4>
                     <ul>
-                        <li><a href="{{ route('about.index') }}">¿Quienes Somos?</a></li>
-                        <li><a href="">Políticas de privacidad</a></li>
+                        <li><a class="text-gray-500" href="{{ route('about.index') }}"> <i class="fas fa-users"></i> ¿Quienes Somos?</a></li>
+                        <li><a class="text-gray-500" href=""> <i class="fas fa-landmark"></i> Políticas de privacidad</a></li>
                     </ul>
                     <img onclick="location.href='#'" class="mt-6 logo-footer"
-                        src="{{ asset('/images/logo-blanco.png') }}" alt="">
+                        src="{{ asset('/images/logo.png') }}" alt="">
                 </div>
                 <div class="footer-col">
                     <h4>Ayuda</h4>
                     <ul>
-                        <li><a href="">Preguntas Frecuentes</a></li>
-                        <li><a href="">Opciones de pago</a></li>
-                        <li><a href="">Ser instructor</a></li>
-                        <li><a href="">Ser cursante</a></li>
+                        <li><a class="text-gray-500" href=""> <i class="fas fa-question-circle"></i> Preguntas Frecuentes</a></li>
+                        <li><a class="text-gray-500" href=""> <i class="fas fa-money-bill-wave"></i> Opciones de pago</a></li>
+                        <li><a class="text-gray-500" href=""> <i class="fas fa-chalkboard-teacher"></i> Ser instructor</a></li>
+                        <li><a class="text-gray-500" href=""> <i class="fas fa-user-graduate"></i> Ser cursante</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Otros servicios</h4>
                     <ul>
-                        <li><a href="">Sistemas Web Empresariales</a></li>
-                        <li><a href="">Sitios Web </a></li>
+                        <li><a class="text-gray-500" href=""> <i class="fas fa-briefcase"></i> Sistemas Web Empresariales</a></li>
+                        <li><a class="text-gray-500" href=""> <i class="fas fa-desktop"></i> Sitios Web </a></li>
                     </ul>
                     <button onclick="location.href='http://tecdevsmx.com/'" type="submit" class="btn-primario   ">
                         TecDevs
@@ -33,7 +33,7 @@
                 <div class="footer-col">
                     <h4>Contacto</h4>
                     <ul>
-                        <li><a href="#">emmanueldl@tecdevsmx.com</a></li>
+                        <li><a class="text-gray-500" href="#"> <i class="fas fa-envelope"></i> emmanueldl@tecdevsmx.com</a></li>
                     </ul>
                     <div class="social-links">
                         <a class="fb" target="_blanck"
@@ -49,7 +49,7 @@
                     </div>
 
                     <button onclick="location.href='{{ route('courses.index') }}'" type="submit"
-                        class="btn-primario-outline-blanco   ">
+                        class="btn-primario-outline   ">
                         Empieza Ahora
                     </button>
 

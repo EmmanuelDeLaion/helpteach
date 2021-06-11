@@ -76,33 +76,26 @@
         </div>
 
 
-        <div data-aos="fade-up" data-aos-duration="500">
-            @livewire('students-instructor')
-        </div>
+        @livewire('students-instructor')
 
 
-        <div data-aos="fade-up" data-aos-duration="500">
-            @livewire('comments-students')
-        </div>
+        @livewire('comments-students')
 
         <div data-aos="fade-up" data-aos-duration="500">
             @livewire('teach')
         </div>
 
 
-        <div data-aos="fade-up" data-aos-duration="500">
-            @livewire('ad')
+        @livewire('ad')
 
-        </div>
 
         <div data-aos="fade-up" data-aos-duration="500">
             @livewire('section-start-now')
         </div>
 
 
-        <div data-aos="fade-up" data-aos-duration="500">
-            @livewire('section-see-courses')
-        </div>
+        @livewire('section-see-courses')
+
 
 
 

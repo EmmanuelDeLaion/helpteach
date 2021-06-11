@@ -1,8 +1,8 @@
 <div>
 
     <div class="seccion-numeros relative">
-        <img class="puntos-derecha" src="{{ asset('/images/home/puntos.png') }}" alt="ilustracion puntos">
-        <img class="puntos-izquierda" src="{{ asset('/images/home/puntos.png') }}" alt="ilustracion puntos">
+        <img class="puntos-derecha" src="{{ asset('/images/home/puntos-color.png') }}" alt="ilustracion puntos">
+        <img class="puntos-izquierda" src="{{ asset('/images/home/puntos-color.png') }}" alt="ilustracion puntos">
         <div class="container-num">
             <h1 class="text-center mt-6 title-statistics"> Estudia y practica en <span class="span-numeros">
                     HelpTeach</span> </h1>
