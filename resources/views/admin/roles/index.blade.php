@@ -7,10 +7,24 @@
 @stop
 
 @section('content')
+
+    @if(session('info'))
+        <div class="alert alert-success alerta-info" role="alert">
+            <a href="#" class="alert-link">¡Creado correctamente!</a>. {{ session('info') }}
+        </div>
+    @endif
+
+    @if(session('info-delete'))
+        <div class="alert alert-danger alerta-info" role="alert">
+            <a href="#" class="alert-link">¡Eliminado correctamente!</a>. {{ session('info-delete') }}
+        </div>
+    @endif
+
+
+
     <div class="card">
         <div class="card-header">
-            <a class="btn btn-primary" href="{{ route('admin.roles.create') }}"><i class="fas fa-plus"></i> Crear
-                curso</a>
+            <a class="btn btn-primary" href="{{ route('admin.roles.create') }}"><i class="fas fa-plus"></i> Crear Rol</a>
         </div>
         <div class="card-body">
 
@@ -28,11 +42,11 @@
                         <tr>
                             <td>{{ $role->id }}</td>
                             <td>{{ $role->name }}</td>
-                            <td>
+                            <td width="10px">
                                 <a class="btn btn-info" href="{{ route('admin.roles.edit', $role) }}">Editar</a>
                             </td>
 
-                            <td>
+                            <td width="10px">
                                 <form action="{{ route('admin.roles.destroy', $role) }}" method="POST">
                                     @csrf
                                     @method('delete')
@@ -51,16 +65,19 @@
             </table>
 
         </div>
-    </div>
-@stop
+        </>
+    @stop
 
 @section('css')
-<link rel="stylesheet" href="/css/admin_custom.css">
+    <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 
 @section('js')
-<script>
-    console.log('Hi!');
-
-</script>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $(".alerta-info").fadeOut(1000); 
+            },3000);
+        });
+    </script>
 @stop
