@@ -43,6 +43,7 @@
                             <p class="textos"> <span class="span-primario"> <i class="fas fa-sort-numeric-up-alt"></i>
                                 </span> Nivel: <span class="span-primario"> {{ $course->level->name }}</span> </p>
                         </li>
+                        
                         <li>
                             <p class="textos"> <span class="span-primario"><i class="fas fa-list-ol"></i> </span>
                                 Categoria: <span class="span-primario">
