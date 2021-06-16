@@ -36,7 +36,7 @@
         </div>
         <div class="card-body">
 
-            <table class="table table-striped">
+            <table class="table table-striped table-responsive-sm table-responsive-md">
                 <thead>
                     <tr>
                         <td>ID</td>
