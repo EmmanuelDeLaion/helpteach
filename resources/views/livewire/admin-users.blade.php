@@ -8,7 +8,7 @@
         @if ($users->count())
 
             <div class="card-body">
-                <table class="table table-striped">
+                <table class="table table-striped table-responsive-sm table-responsive-md">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -33,7 +33,7 @@
                 </table>
             </div>
 
-            <div class="card-footer">
+            <div class="card-footer table-responsive-sm">
                 {{ $users->links() }}
             </div>
 
