@@ -10,13 +10,13 @@
         <div>
             @if (session('info'))
                 <div class="alert alert-success alerta-info" role="alert">
-                    <a href="#" class="alert-link">¡Creado correctamente!</a>. {{ session('info') }}
+                    <i class="fas fa-check"></i> <a href="#" class="alert-link">¡Creado correctamente!</a>. {{ session('info') }}
                 </div>
             @endif
 
             @if (session('info-delete'))
                 <div class="alert alert-danger alerta-info" role="alert">
-                    <a href="#" class="alert-link">¡Eliminado correctamente!</a>. {{ session('info-delete') }}
+                    <i class="fas fa-trash-alt"></i> <a href="#" class="alert-link">¡Eliminado correctamente!</a>. {{ session('info-delete') }}
                 </div>
             @endif
         </div>
@@ -50,15 +50,15 @@
                         <tr>
                             <td>{{ $role->id }}</td>
                             <td>{{ $role->name }}</td>
-                            <td width="10px">
-                                <a class="btn btn-info" href="{{ route('admin.roles.edit', $role) }}">Editar</a>
+                            <td width="15%">
+                                <a class="btn btn-info" href="{{ route('admin.roles.edit', $role) }}"><i class="fas fa-edit"></i> Editar</a>
                             </td>
 
-                            <td width="10px">
+                            <td width="15%">
                                 <form action="{{ route('admin.roles.destroy', $role) }}" method="POST">
                                     @csrf
                                     @method('delete')
-                                    <button class="btn btn-danger">Eliminar</button>
+                                    <button class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button>
                                 </form>
                             </td>
                         </tr>

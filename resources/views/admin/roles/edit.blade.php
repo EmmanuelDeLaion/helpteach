@@ -11,7 +11,7 @@
         <div>
             @if (session('info-edit'))
                 <div class="alert alert-success alerta-info" role="alert">
-                    <a href="#" class="alert-link">¡Actualizado correctamente!</a>. {{ session('info-edit') }}
+                    <i class="fas fa-check"></i> <a href="#" class="alert-link"> ¡Actualizado correctamente!</a>. {{ session('info-edit') }}
                 </div>
             @endif
         </div>
