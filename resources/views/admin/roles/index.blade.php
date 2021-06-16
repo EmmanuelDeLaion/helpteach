@@ -3,22 +3,30 @@
 @section('title', 'HelpTeach')
 
 @section('content_header')
-    <h1>Lista de roles</h1>
+    <div class="d-flex justify-content-between">
+        <div>
+            <h1>Lista de roles</h1>
+        </div>
+        <div>
+            @if (session('info'))
+                <div class="alert alert-success alerta-info" role="alert">
+                    <a href="#" class="alert-link">¡Creado correctamente!</a>. {{ session('info') }}
+                </div>
+            @endif
+
+            @if (session('info-delete'))
+                <div class="alert alert-danger alerta-info" role="alert">
+                    <a href="#" class="alert-link">¡Eliminado correctamente!</a>. {{ session('info-delete') }}
+                </div>
+            @endif
+        </div>
+    </div>
+
 @stop
 
 @section('content')
 
-    @if(session('info'))
-        <div class="alert alert-success alerta-info" role="alert">
-            <a href="#" class="alert-link">¡Creado correctamente!</a>. {{ session('info') }}
-        </div>
-    @endif
 
-    @if(session('info-delete'))
-        <div class="alert alert-danger alerta-info" role="alert">
-            <a href="#" class="alert-link">¡Eliminado correctamente!</a>. {{ session('info-delete') }}
-        </div>
-    @endif
 
 
 
@@ -74,10 +82,11 @@
 
 @section('js')
     <script>
-        $(document).ready(function () {
-            setTimeout(function () {
-                $(".alerta-info").fadeOut(1000); 
-            },3000);
+        $(document).ready(function() {
+            setTimeout(function() {
+                $(".alerta-info").fadeOut(1000);
+            }, 3000);
         });
+
     </script>
 @stop
