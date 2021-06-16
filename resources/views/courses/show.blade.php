@@ -36,14 +36,14 @@
                 class="container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 mt-2 ">
                 <div class="container py-6 sm:py-6 md:py-24 lg:py-24 titulos-show-courses">
                     <h1 class="title-section"> {{ $course->title }} </h1>
-                    <p class="textos mt-6"> {{ $course->subtitle }} </p>
-                    <p> {{ $course->description }} </p>
+                    <p class=" mt-6"> {{ $course->subtitle }} </p>
+                    <p class="p text-gray-500"> {{ $course->description }} </p>
                     <ul class="mt-6">
                         <li>
                             <p class="textos"> <span class="span-primario"> <i class="fas fa-sort-numeric-up-alt"></i>
                                 </span> Nivel: <span class="span-primario"> {{ $course->level->name }}</span> </p>
                         </li>
-                        
+
                         <li>
                             <p class="textos"> <span class="span-primario"><i class="fas fa-list-ol"></i> </span>
                                 Categoria: <span class="span-primario">
@@ -101,7 +101,8 @@
                         <a class="shared-li" target="_blanck"
                             href="https://www.linkedin.com/in/jesus-emmanuel-de-leon-lerma-0903071b7/"><i
                                 class="fab fa-linkedin-in"></i></a>
-                        <a class="shared-copy" target="_blanck" href=""><i class="fas fa-copy"></i></a>
+                        <a class="shared-li" target="_blanck"><i class="fab fa-whatsapp"></i></a>
+                        <a href="javascript:getlink();" class="shared-copy"><i class="fas fa-copy"></i></a>
                     </div>
                 </div>
                 {{-- columna de la imagen --}}
@@ -112,28 +113,45 @@
         </section>
 
 
-        <div style="background-color: var(--color-blanco-secundario); padding-top: 10px; padding-bottom: 10px; ">
+        <div>
             {{-- temario /info del curso --}}
-            <div id="info-curso"
-                class="container grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 xs:grid-cols-1 gap-3  ">
+            <div class="container grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 xs:grid-cols-1 gap-3  ">
                 <div class="col-span-2">
                     {{-- contenedor metas del curso --}}
                     <div
                         class="border-l-4 border-purple-500 w-full mx-auto rounded-lg bg-white shadow-lg px-5 pt-5 pb-5 text-gray-800">
                         <div class="w-full mb-10">
-                            <h3 class="text-lg font-bold text-gray-700 mt-2">Acerca de este curso</h3>
+                            <h3 class="text-lg font-bold text-gray-700 mt-2">Lo que aprenderás en este curso</h3>
                             <ul
                                 class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2  gap-x-6 gap-y-2 mt-2">
                                 @foreach ($course->goals as $goal)
-                                    <li class="text-sm text-gray-700"> <span class="span-primario"> <i
+                                    <li class="text-sm text-gray-500"> <span class="span-primario"> <i
                                                 class="fas fa-check-circle"></i> </span> {{ $goal->name }}</li>
                                 @endforeach
                             </ul>
                         </div>
                     </div>
 
-                    {{-- temario del curso --}}
+
                     <section>
+                        <h3 class="text-2xl font-bold text-gray-700 mt-10">Descripción del curso</h3>
+                        <p class="p text-gray-500">{{ $course->description }}</p>
+
+                    </section>
+
+                    <section>
+                        <h3 class="text-2xl font-bold text-gray-700 mt-10">Requisitos</h3>
+                        <ul>
+                            @foreach ($course->requirements as $requirement)
+                                <li class="text-sm text-gray-500"> <span class="span-primario"> <i
+                                            class="fas fa-clipboard-check"></i> </span>
+                                    {{ $requirement->name }}</li>
+                            @endforeach
+                        </ul>
+                    </section>
+
+                    {{-- temario del curso --}}
+                    <section id="info-curso">
                         <h3 class="text-2xl font-bold text-gray-700 mt-10">Temario del curso</h3>
                         @foreach ($course->sections as $section)
 
@@ -176,7 +194,7 @@
                                             <div class="pl-8 pr-8 pb-5 text-grey-darkest">
                                                 <ul class="pl-4">
                                                     @foreach ($section->lessons as $lesson)
-                                                        <li class="text-sm text-gray-700 pb-2">
+                                                        <li class="text-sm text-gray-500 pb-2">
                                                             <span class="span-primario"> <i
                                                                     class="fas fa-play-circle"></i>
                                                             </span> {{ $lesson->name }}
@@ -271,12 +289,9 @@
                                     </div>
                                 </div>
 
-
                             </div>
                         </div>
                     @endforeach
-
-
 
                 </div>
             </div>
@@ -287,12 +302,35 @@
 
         @livewire('footer')
 
-
-
     </x-app-layout>
 
-
     <script type="text/javascript" src="{{ asset('js/cargar-loading.js') }}"></script>
+
+    <script>
+        //<![CDATA[
+        function getlink() {
+            var aux = document.createElement("input");
+            aux.setAttribute("value", window.location.href.split("?")[0].split("#")[0]);
+            document.body.appendChild(aux);
+            aux.select();
+            document.execCommand("copy");
+            document.body.removeChild(aux);
+            var css = document.createElement("style");
+            var estilo = document.createTextNode(
+                "#aviso {position:fixed; z-index: 9999999; widht: 120px; top:50%;left:50%;margin-left: -60px;padding: 20px; background: #705df2;border-radius: 8px;font-size: 14px; color: #fff;}"
+            );
+            css.appendChild(estilo);
+            document.head.appendChild(css);
+            var aviso = document.createElement("div");
+            aviso.setAttribute("id", "aviso");
+            var contenido = document.createTextNode("URL copiada");
+            aviso.appendChild(contenido);
+            document.body.appendChild(aviso);
+            window.load = setTimeout("document.body.removeChild(aviso)", 1000);
+        }
+        //]]>
+
+    </script>
 
 </body>
 

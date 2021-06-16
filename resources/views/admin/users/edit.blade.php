@@ -11,7 +11,7 @@
         <div>
             @if (session('info-rol-asignado'))
                 <div class="alert alert-success alerta-info" role="alert">
-                    <a href="#" class="alert-link">¡Asignado correctamente!</a>. {{ session('info-rol-asignado') }}
+                    <i class="fas fa-check"></i> <a href="#" class="alert-link">¡Asignado correctamente!</a>. {{ session('info-rol-asignado') }}
                 </div>
             @endif
         </div>
