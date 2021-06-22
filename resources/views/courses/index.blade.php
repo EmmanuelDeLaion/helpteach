@@ -66,7 +66,7 @@
 
 
 
-        @livewire('course-index')
+        @livewire('courses-index')
 
 
         @livewire('doubts')
