@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Instructor;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 use App\Models\Course;
+use App\Models\Level;
+use App\Models\Price;
 
 class CourseController extends Controller
 {
@@ -27,7 +30,6 @@ class CourseController extends Controller
     public function create()
     {
         return view('instructor.courses.create');
-
     }
 
     /**
@@ -60,8 +62,10 @@ class CourseController extends Controller
      */
     public function edit(Course $course)
     {
-        return view('instructor.courses.edit', compact('course'));
-
+        $categories = Category::pluck('name', 'id');
+        $levels = Level::pluck('name', 'id');
+        $prices = Price::pluck('name', 'id');
+        return view('instructor.courses.edit', compact('course','categories','levels','prices'));
     }
 
     /**
