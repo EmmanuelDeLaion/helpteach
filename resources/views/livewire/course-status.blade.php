@@ -9,7 +9,7 @@
         </div>
     </section>
 
-    <div class="container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3  gap-8">
+    <div class="container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3  gap-8 ">
         <div class="col-span-1 xs:col-span sm:col-span-1 md:col-span-2 lg:col-span-2 mt-2">
             <div class="embed-responsive">
                 {!! $current->frame !!}
@@ -46,20 +46,9 @@
                 @endif
 
             </div>
-
-            <p>inidice: {{ $this->index }} </p>
-            <p>previous:
-                @if ($this->previous)
-                    {{ $this->previous->id }}
-                @endif
-            </p>
-            <p>next:
-                @if ($this->next)
-                    {{ $this->next->id }}
-                @endif
-            </p>
         </div>
-        <div class="col-span-1 xs:col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-1 mt-2">
+
+        <div class="col-span-1 xs:col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-1 mt-2 mb-6">
             <div
                 class="container flex flex-col relative items-center w-full rounded-lg bg-white shadow-lg pb-5 text-gray-800 mb-10">
                 <img class="rounded-full mt-6 w-20" src="{{ $course->teacher->profile_photo_url }}" alt="">
