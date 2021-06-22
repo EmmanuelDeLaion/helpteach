@@ -138,8 +138,9 @@
                         </td>
 
                         <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                            <button class="btn-primario">Editar</button>
+                            <button onclick="location.href='{{ route('instructor.courses.edit', $course) }}'" class="btn-primario">Editar</button>
                         </td>
+                        
 
                     </tr>
 
