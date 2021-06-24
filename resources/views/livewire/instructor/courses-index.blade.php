@@ -3,7 +3,7 @@
     <div class="flex items-center justify-between">
         <h2 class="text-2xl font-semibold leading-tight mt-24">Cursos creados</h2>
         <button onclick="location.href='{{ route('instructor.courses.create') }}'"
-            class="mt-24 bg-purple-500 text-white rounded-full py-2 px-2 focus:outline-none text-sm hover:bg-purple-700">
+            class="mt-24 px-5 bg-purple-500 text-white rounded-full py-2 px-2 focus:outline-none text-sm hover:bg-purple-700">
             <i class="fas fa-plus"></i>
             Crear un nuevo curso
         </button>
@@ -56,9 +56,17 @@
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                 <div class="flex items-center">
                                     <div class="flex-shrink-0 w-10 h-10">
-                                        <img class="w-full h-full rounded-full"
-                                            src="{{ Storage::url($course->image->url) }}"
-                                            alt="Portada del curso:  {{ $course->title }}" />
+                                        @isset($course->image)
+                                            <img class="w-full h-full rounded-full"
+                                                src="{{ Storage::url($course->image->url) }}"
+                                                alt="Portada del curso:  {{ $course->title }}" />
+                                        @else
+
+
+                                            <img class="w-full h-full rounded-full" src="{{ asset('images/logo.png') }}"
+                                                alt="Portada del curso:  {{ $course->title }}" />
+                                        @endisset
+
                                     </div>
                                     <div class="ml-3">
                                         <p class="text-gray-600 bold whitespace-no-wrap">
