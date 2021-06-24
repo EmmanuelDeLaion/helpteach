@@ -29,7 +29,11 @@ class CourseController extends Controller
      */
     public function create()
     {
-        return view('instructor.courses.create');
+        $categories = Category::pluck('name', 'id');
+        $levels = Level::pluck('name', 'id');
+        $prices = Price::pluck('name', 'id');
+
+        return view('instructor.courses.create', compact('categories', 'levels', 'prices',));
     }
 
     /**
@@ -65,6 +69,7 @@ class CourseController extends Controller
         $categories = Category::pluck('name', 'id');
         $levels = Level::pluck('name', 'id');
         $prices = Price::pluck('name', 'id');
+
         return view('instructor.courses.edit', compact('course','categories','levels','prices'));
     }
 
