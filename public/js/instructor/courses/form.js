@@ -60,3 +60,4 @@ function cambiarImagen(event) {
 
     reader.readAsDataURL(file);
 }
+
