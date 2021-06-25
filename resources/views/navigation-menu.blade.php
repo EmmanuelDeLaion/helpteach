@@ -42,11 +42,17 @@ $nav_links = [
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     @foreach ($nav_links as $nav_link)
-
                         <x-jet-nav-link href="{{ $nav_link['route'] }}" :active="$nav_link['active']">
                             {{ $nav_link['name'] }}
                         </x-jet-nav-link>
                     @endforeach
+
+                    @can('Leer cursos')
+                        <x-jet-nav-link href="{{ route('instructor.courses.index') }}"
+                            :active="request()->routeIs('instructor.courses.index')">
+                            Instructor
+                        </x-jet-nav-link>
+                    @endcan
                 </div>
 
 
@@ -150,11 +156,11 @@ $nav_links = [
                                     Perfil
                                 </x-jet-dropdown-link>
 
-                                @can('Leer cursos')
+                                {{-- @can('Leer cursos')
                                     <x-jet-dropdown-link href="{{ route('instructor.courses.index') }}">
                                         Instructor
                                     </x-jet-dropdown-link>
-                                @endcan
+                                @endcan --}}
 
                                 @can('Ver dashboard')
                                     <x-jet-dropdown-link href="{{ route('admin.home') }}">
@@ -175,8 +181,9 @@ $nav_links = [
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
 
-                                    <x-jet-dropdown-link href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                                this.closest('form').submit();">
+                                    <x-jet-dropdown-link href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                                                                this.closest('form').submit();">
                                         {{ __('Log Out') }}
                                     </x-jet-dropdown-link>
                                 </form>
@@ -226,6 +233,13 @@ $nav_links = [
                 </x-jet-responsive-nav-link>
             @endforeach
 
+            @can('Leer cursos')
+                <x-jet-responsive-nav-link href="{{ route('instructor.courses.index') }}"
+                    :active="request()->routeIs('instructor.courses.index')">
+                    Instructor
+                </x-jet-responsive-nav-link>
+            @endcan
+
 
 
         </div>
@@ -255,12 +269,7 @@ $nav_links = [
                         Perfil
                     </x-jet-responsive-nav-link>
 
-                    @can('Leer cursos')
-                        <x-jet-responsive-nav-link href="{{ route('instructor.courses.index') }}"
-                            :active="request()->routeIs('instructor.courses.index')">
-                            Instructor
-                        </x-jet-responsive-nav-link>
-                    @endcan
+
 
                     @can('Ver dashboard')
                         <x-jet-responsive-nav-link href="{{ route('admin.home') }}"
@@ -282,7 +291,7 @@ $nav_links = [
                         @csrf
 
                         <x-jet-responsive-nav-link href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                    this.closest('form').submit();">
+                                                                                    this.closest('form').submit();">
                             {{ __('Log Out') }}
                         </x-jet-responsive-nav-link>
                     </form>
