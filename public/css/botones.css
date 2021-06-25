@@ -5,12 +5,12 @@
 .btn-primario-outline-blanco,
 .btn-primario,
 .btn-secundario,
-.btn-secundario-outline {
+.btn-secundario-outline,
+.btn-primario-outline-red {
     padding: 7px 30px 7px 30px;
     border-radius: var(--border-radius-botones);
     margin-top: 10px;
 }
- 
 
 /* *************************************************** */
 /* boton primario azul */
@@ -21,12 +21,10 @@
 }
 .btn-primario:hover {
     background-color: #5345af;
-     
 }
 .btn-primario:focus {
     outline: none;
 }
-
 
 /* *************************************************** */
 /* boton primario azul con borde  */
@@ -45,7 +43,23 @@
     color: var(--color-blanco);
 }
 
+/* *************************************************** */
+/* boton primario rojo  */
+/* *************************************************** */
+.btn-primario-outline-red {
+    border: 1px solid var(--color-rojo);
+    background-color: transparent;
+    color: var(--color-rojo);
+}
 
+.btn-primario-outline-red:hover{
+    background-color: var(--color-rojo);
+    color: var(--color-blanco);
+}
+
+.btn-primario-outline-red:focus{
+    outline: none;
+}
 
 /* *************************************************** */
 /* boton blanco con borde */
@@ -65,8 +79,6 @@
     border: 1px solid var(--color-blanco);
     color: var(--color-negro);
 }
- 
-
 
 /* *************************************************** */
 /* boton dropdown  */
