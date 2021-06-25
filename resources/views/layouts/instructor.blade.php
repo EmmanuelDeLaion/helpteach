@@ -36,32 +36,23 @@
 
         <!-- Contenido de la pagina -->
         <div class="container py-24 grid grid-cols-5">
-            <aside>
+
+            <aside class="col-span-5 md:col-span-1">
                 <h1 class="title-section">Edición del curso</h1>
                 <ul class="mt-2">
-                    <li
-                    class="leading-7 mb-1  @routeIs('instructor.courses.edit', $course) border-l-4 border-purple-500 @else border-transparent @endif  pl-2">
-                        <a href="{{ route('instructor.courses.edit', $course) }}"
-                        class="@routeIs('instructor.courses.edit', $course) font-bold  @else font-normal @endif text-sm text-gray-500 hover:text-purple-500"
-                            href="">Información del
-                            curso</a>
+                    <li onclick="location.href='{{ route('instructor.courses.edit', $course) }}'"
+                    class="leading-7 mb-1  cursor-pointer  border-l-4 border-transparent pl-2  @routeIs('instructor.courses.edit', $course) font-bold bg-purple-500 text-white  rounded-sm @else text-gray-500 hover:bg-purple-100 rounded-sm font-normal @endif">
+                        <a class="text-sm" href="">Información del curso</a>
                     </li>
-                    <li
-                    class="leading-7 mb-1  @routeIs('instructor.courses.curriculum', $course) border-l-4 border-purple-500 @else border-transparent @endif pl-2">
-                        <a href="{{ route('instructor.courses.curriculum', $course) }}"
-                        class=" @routeIs('instructor.courses.curriculum', $course) font-bold  @else font-normal @endif text-sm text-gray-500 hover:text-purple-500"
-                            href="">Lecciones del curso</a>
+                    <li onclick="location.href='{{ route('instructor.courses.curriculum', $course) }}'"
+                    class="leading-7 mb-1  cursor-pointer  border-l-4 border-transparent pl-2  @routeIs('instructor.courses.curriculum', $course) font-bold bg-purple-500 text-white  rounded-sm @else text-gray-500 hover:bg-purple-100 rounded-sm font-normal @endif">
+                        <a class="text-sm">Lecciones del curso</a>
                     </li>
-                    <li class="leading-7 mb-1 border-l-4 border-transparent pl-2">
-                        <a class="text-sm text-gray-500 hover:text-purple-500" href="">Metas del curso</a>
-                    </li>
-                    <li class="leading-7 mb-1 border-l-4 border-transparent pl-2">
-                        <a class="text-sm text-gray-500 hover:text-purple-500" href="">Estudiantes</a>
-                    </li>
+
                 </ul>
             </aside>
 
-            <div class="col-span-4 shadow-sm rounded-md  ">
+            <div class="col-span-5 md:col-span-4 shadow-sm rounded-md  ">
                 <main class="container pb-6">
                     {{ $slot }}
                 </main>
