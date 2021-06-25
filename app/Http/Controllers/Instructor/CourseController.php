@@ -131,7 +131,7 @@ class CourseController extends Controller
                 ]);
             }
         }
-        return redirect()->route('instructor.courses.edit', $course);
+        return redirect()->route('instructor.courses.edit', $course)->with('info-update-course','El curso se actualizó correctamente');
     }
 
     /**
