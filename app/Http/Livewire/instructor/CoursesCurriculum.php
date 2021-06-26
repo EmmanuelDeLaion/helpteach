@@ -46,6 +46,8 @@ class CoursesCurriculum extends Component
         ]);
         $this->reset('name');
         $this->course = Course::find($this->course->id);
+
+ 
     }
 
     public function destroy(Section $section){
