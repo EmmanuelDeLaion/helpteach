@@ -53,6 +53,7 @@ $nav_links = [
                             Instructor
                         </x-jet-nav-link>
                     @endcan
+
                 </div>
 
 
