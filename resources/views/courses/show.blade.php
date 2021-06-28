@@ -36,8 +36,8 @@
                 class="container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 mt-2 ">
                 <div class="container py-6 sm:py-6 md:py-24 lg:py-24 titulos-show-courses">
                     <h1 class="title-section"> {{ $course->title }} </h1>
-                    <p class=" mt-6"> {{ $course->subtitle }} </p>
-                    <p class="p text-gray-500"> {{ $course->description }} </p>
+                    <p class=" mt-6 font-bold" > {{ $course->subtitle }} </p>
+                    <p class="p text-gray-500"> {!! $course->description !!} </p>
                     <ul class="mt-6">
                         <li>
                             <p class="textos"> <span class="span-primario"> <i class="fas fa-sort-numeric-up-alt"></i>
@@ -135,7 +135,7 @@
 
                     <section>
                         <h3 class="text-2xl font-bold text-gray-700 mt-10">Descripción del curso</h3>
-                        <p class="p text-gray-500">{{ $course->description }}</p>
+                        <p class="p text-gray-500 text-sm">{!! $course->description !!}</p>
 
                     </section>
 

@@ -5,7 +5,7 @@
             <hr class="my-2">
 
             @if ($lesson->id == $item->id)
-                <div>
+                <form wire:submit.prevent="update">
                     <div class="flex mt-1 items-center">
                         <label class="w-48" for="">Nombre de la lección: </label>
                         <input wire:model="lesson.name"
@@ -43,11 +43,11 @@
                     @enderror
 
                     <div class="mt-4 flex justify-end">
-                        <button wire:click="update" class="btn-primario ">Actualizar</button>
-                        <button wire:click="cancel" class="btn-primario-outline-red ml-1">Cancelar</button>
+                        <button type="submit" class="btn-primario ">Actualizar</button>
+                        <button wire:click="cancel" type="button" class="btn-primario-outline-red ml-1">Cancelar</button>
                     </div>
 
-                </div>
+                </form>
 
 
             @else

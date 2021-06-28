@@ -45,7 +45,12 @@
                     <div class="col-span-1">
                         <div class="content-home">
                             <div class="content-text-home">
-                                <h1 class="title-portada">Encuentra <span class="span-primario"> cursos</span> <br>
+                                @isset(Auth::user()->name)
+                                    <p class="text-sm text-gray-700">Hola, bienvenido</p>
+                                    <p class="text-2xl font-bold text-gray-700"> {{ Auth::user()->name }}</p>
+                                @endisset
+
+                                <h1 class="title-portada mt-2">Encuentra <span class="span-primario"> cursos</span> <br>
                                     gratuitos para ti</h1>
                                 @livewire('search')
                             </div>
@@ -116,7 +121,6 @@
 
     <script>
         AOS.init();
-
     </script>
 
 
