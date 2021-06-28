@@ -1,13 +1,17 @@
 <div>
     @foreach ($section->lessons as $item)
         <div class="bg-purple-100 p-2 m-2 rounded-sm mt-1">
-            <i class="fas fa-play-circle text-purple-500"></i> Lección: {{ $item->name }}
+            <h1>
+                <i class="fas fa-play-circle text-purple-500"></i>
+               <span class="font-bold"> Lección:</span>  {{ $item->name }}
+            </h1>
+            
             <hr class="my-2">
 
             @if ($lesson->id == $item->id)
                 <form wire:submit.prevent="update">
                     <div class="flex mt-1 items-center">
-                        <label class="w-48" for="">Nombre de la lección: </label>
+                        <label class="w-48 font-bold" for="">Nombre de la lección: </label>
                         <input wire:model="lesson.name"
                             class="w-full bg-white focus:outline-none text-sm text-gray-800 font-bold border rounded-sm"
                             placeholder="Ingrese el nombre de la lección" type="text">
@@ -18,7 +22,7 @@
                     @enderror
 
                     <div class="flex items-center mt-1">
-                        <label class="w-48">Plataforma:</label>
+                        <label class="w-48 font-bold">Plataforma:</label>
                         <div class="w-full  ">
                             <select wire:model="lesson.platform_id"
                                 class="block w-full bg-grey-lighter text-sm text-gray-800 font-bold border border-grey-lighter rounded-sm   md:w-full ">
@@ -32,7 +36,7 @@
                     </div>
 
                     <div class="flex mt-1 items-center">
-                        <label class="w-48" for="">URL: </label>
+                        <label class="w-48 font-bold" for="">URL: </label>
                         <input wire:model="lesson.url"
                             class="w-full bg-white focus:outline-none text-sm text-blue-400 font-bold border rounded-sm"
                             placeholder="Ingrese la URL del video" type="text">
@@ -52,13 +56,17 @@
 
             @else
 
-                <div class="">
+                <div class="my-2">
                     <p>Plataforma: {{ $item->platform->name }}</p>
                     <a href="{{ $item->url }}" target="_blanck">Enlace: <span class="text-blue-400">
                             {{ $item->url }}</span> </a>
-                    <div class="flex">
+                    <div class="flex my-2">
                         <button wire:click="edit({{ $item }})" class="btn-primario ">Editar</button>
                         <button wire:click="destroy({{ $item }})" class="btn-primario-outline-red ml-1">Eliminar</button>
+                    </div>
+
+                    <div>
+                        @livewire('instructor.lesson-description', ['lesson' => $item], key($item->id))
                     </div>
                 </div>
 
@@ -93,7 +101,7 @@
                 @enderror
 
                 <div class="flex items-center mt-1">
-                    <label class="w-48">Plataforma:</label>
+                    <label class="w-48 Lección:">Plataforma:</label>
                     <div class="w-full  ">
                         <select wire:model="platform_id"
                             class="block w-full bg-grey-lighter text-sm text-gray-800 font-bold border border-grey-lighter rounded-sm   md:w-full ">
@@ -107,7 +115,7 @@
                 </div>
 
                 <div class="flex mt-1 items-center">
-                    <label class="w-48">URL: </label>
+                    <label class="w-48 Lección:">URL: </label>
                     <input wire:model="url"
                         class="w-full bg-white focus:outline-none text-sm text-blue-400 font-bold border rounded-sm"
                         placeholder="Ingrese la URL del video" type="text">
