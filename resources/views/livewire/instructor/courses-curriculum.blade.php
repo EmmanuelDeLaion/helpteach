@@ -62,7 +62,7 @@
 
 
             <div class="container">
-                <div class="text-gray-800 text-sm font-bold mt-2">
+                <div class="text-gray-800  mt-2">
                     @livewire('instructor.courses-lesson', ['section' => $item], key($item->id))
                 </div>
             </div>
