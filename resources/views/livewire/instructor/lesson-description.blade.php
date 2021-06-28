@@ -1,9 +1,10 @@
 <div>
     <div x-data="{open: false}" class="bg-purple-200 p-2 m-2 rounded-sm mt-1">
-        <div class="px-4">
+        <div class="">
             <header class="flex items-center justify-between">
                 <div>
-                    <h1 x-on:click="open = !open" class="text-md font-bold cursor-pointer hover:text-purple-500">Descripción de la lección
+                    <h1 x-on:click="open = !open" class="text-md font-bold cursor-pointer hover:text-purple-500">
+                        Descripción de la lección
                     </h1>
                 </div>
                 <div>

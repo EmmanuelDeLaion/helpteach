@@ -1,76 +1,92 @@
 <div>
     @foreach ($section->lessons as $item)
-        <div class="bg-purple-100 p-2 m-2 rounded-sm mt-1">
-            <h1>
-                <i class="fas fa-play-circle text-purple-500"></i>
-               <span class="font-bold"> Lección:</span>  {{ $item->name }}
-            </h1>
-            
+        <div x-data="{open: false}" class="bg-purple-100 p-2 m-2 rounded-sm mt-1">
+
+            <div class="flex items-center justify-between px-2">
+                <div>
+                    <h1 class="cursor-pointer hover:text-purple-500 hover:font-bold" x-on:click="open = !open">
+                        <i class="fas fa-play-circle text-purple-500"></i> <span class="font-bold"> Lección:</span>
+                        {{ $item->name }}
+                    </h1>
+                </div>
+                <div>
+                    <p x-on:click="open = !open" class="cursor-pointer text-purple-500" cursor-pointer"">
+                        <i class="fas fa-chevron-down"></i>
+                    </p>
+                </div>
+            </div>
+
+
             <hr class="my-2">
 
-            @if ($lesson->id == $item->id)
-                <form wire:submit.prevent="update">
-                    <div class="flex mt-1 items-center">
-                        <label class="w-48 font-bold" for="">Nombre de la lección: </label>
-                        <input wire:model="lesson.name"
-                            class="w-full bg-white focus:outline-none text-sm text-gray-800 font-bold border rounded-sm"
-                            placeholder="Ingrese el nombre de la lección" type="text">
-                    </div>
+            <div x-show="open">
 
-                    @error('lesson.name')
-                        <span class="text-xs text-red-500">Favor de ingresar el titulo de la lección</span>
-                    @enderror
+                @if ($lesson->id == $item->id)
+                    <form wire:submit.prevent="update" class="px-2">
+                        <div class="flex mt-1 items-center">
+                            <label class="w-48 font-bold" for="">Nombre de la lección: </label>
+                            <input wire:model="lesson.name"
+                                class="w-full bg-white focus:outline-none text-sm text-gray-800 font-bold border rounded-sm"
+                                placeholder="Ingrese el nombre de la lección" type="text">
+                        </div>
 
-                    <div class="flex items-center mt-1">
-                        <label class="w-48 font-bold">Plataforma:</label>
-                        <div class="w-full  ">
-                            <select wire:model="lesson.platform_id"
-                                class="block w-full bg-grey-lighter text-sm text-gray-800 font-bold border border-grey-lighter rounded-sm   md:w-full ">
-                                @foreach ($platforms as $platform)
-                                    <option class="text-sm font-bold" value="{{ $platform->id }}">
-                                        {{ $platform->name }}
-                                    </option>
-                                @endforeach
-                            </select>
+                        @error('lesson.name')
+                            <span class="text-xs text-red-500">Favor de ingresar el titulo de la lección</span>
+                        @enderror
+
+                        <div class="flex items-center mt-1">
+                            <label class="w-48 font-bold">Plataforma:</label>
+                            <div class="w-full  ">
+                                <select wire:model="lesson.platform_id"
+                                    class="block w-full bg-grey-lighter text-sm text-gray-800 font-bold border border-grey-lighter rounded-sm   md:w-full ">
+                                    @foreach ($platforms as $platform)
+                                        <option class="text-sm font-bold" value="{{ $platform->id }}">
+                                            {{ $platform->name }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="flex mt-1 items-center">
+                            <label class="w-48 font-bold" for="">URL: </label>
+                            <input wire:model="lesson.url"
+                                class="w-full bg-white focus:outline-none text-sm text-blue-400 font-bold border rounded-sm"
+                                placeholder="Ingrese la URL del video" type="text">
+                        </div>
+
+                        @error('lesson.url')
+                            <span class="text-xs text-red-500">{{ $message }}</span>
+                        @enderror
+
+                        <div class="mt-4 flex justify-end">
+                            <button type="submit" class="btn-primario ">Actualizar</button>
+                            <button wire:click="cancel" type="button"
+                                class="btn-primario-outline-red ml-1">Cancelar</button>
+                        </div>
+
+                    </form>
+
+
+                @else
+
+                    <div class="my-2 px-2">
+                        <p>Plataforma: {{ $item->platform->name }}</p>
+                        <a href="{{ $item->url }}" target="_blanck">Enlace: <span class="text-blue-400">
+                                {{ $item->url }}</span> </a>
+                        <div class="flex my-2">
+                            <button wire:click="edit({{ $item }})" class="btn-primario ">Editar</button>
+                            <button wire:click="destroy({{ $item }})"
+                                class="btn-primario-outline-red ml-1">Eliminar</button>
+                        </div>
+                        <div>
+                            @livewire('instructor.lesson-description', ['lesson' => $item], key($item->id))
                         </div>
                     </div>
 
-                    <div class="flex mt-1 items-center">
-                        <label class="w-48 font-bold" for="">URL: </label>
-                        <input wire:model="lesson.url"
-                            class="w-full bg-white focus:outline-none text-sm text-blue-400 font-bold border rounded-sm"
-                            placeholder="Ingrese la URL del video" type="text">
-                    </div>
+                @endif
 
-                    @error('lesson.url')
-                        <span class="text-xs text-red-500">{{ $message }}</span>
-                    @enderror
-
-                    <div class="mt-4 flex justify-end">
-                        <button type="submit" class="btn-primario ">Actualizar</button>
-                        <button wire:click="cancel" type="button" class="btn-primario-outline-red ml-1">Cancelar</button>
-                    </div>
-
-                </form>
-
-
-            @else
-
-                <div class="my-2">
-                    <p>Plataforma: {{ $item->platform->name }}</p>
-                    <a href="{{ $item->url }}" target="_blanck">Enlace: <span class="text-blue-400">
-                            {{ $item->url }}</span> </a>
-                    <div class="flex my-2">
-                        <button wire:click="edit({{ $item }})" class="btn-primario ">Editar</button>
-                        <button wire:click="destroy({{ $item }})" class="btn-primario-outline-red ml-1">Eliminar</button>
-                    </div>
-
-                    <div>
-                        @livewire('instructor.lesson-description', ['lesson' => $item], key($item->id))
-                    </div>
-                </div>
-
-            @endif
+            </div>
 
         </div>
 
