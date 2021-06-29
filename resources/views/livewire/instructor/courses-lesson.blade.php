@@ -80,7 +80,11 @@
                                 class="btn-primario-outline-red ml-1">Eliminar</button>
                         </div>
                         <div>
-                            @livewire('instructor.lesson-description', ['lesson' => $item], key($item->id))
+                            @livewire('instructor.lesson-description', ['lesson' => $item], key('lesson-description'.$item->id))
+                        </div>
+
+                        <div>
+                            @livewire('instructor.lesson-resources', ['lesson' => $item], key('lesson-resources'.$item->id))
                         </div>
                     </div>
 

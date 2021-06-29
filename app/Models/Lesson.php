@@ -62,7 +62,7 @@ class Lesson extends Model
     //************************************//
 
     public function resource(){
-        return $this->morphOne('App\Models\Resource', 'resourseable');
+        return $this->morphOne('App\Models\Resource', 'resourceable');
     }
 
 
