@@ -19,6 +19,7 @@
         <div class="grid container grid-cols-1 md:grid-cols-3 gap-4 ">
             @foreach ($courses as $course)
 
+            {{-- card cursos --}}
                 <div onclick="location.href='{{ route('courses.show', $course) }}'" class="w-full max-w-sm overflow-hidden rounded border bg-white shadow hover:border-purple-500 hover:shadow-lg">
                     <div class="relative">
                         <div title="{{ $course->title }}" class="h-48 bg-cover bg-no-repeat bg-center"
@@ -80,6 +81,7 @@
 
                     </div>
                 </div>
+                {{-- fin card cursos  --}}
 
             @endforeach
 

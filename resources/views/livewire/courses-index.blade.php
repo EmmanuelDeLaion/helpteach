@@ -3,7 +3,7 @@
     <div class="py-4 filtros mt-6">
         <div class="container flex">
             {{-- todos los cursos --}}
-            <div class="dropdown mr-4">
+            <div wire:click="resetFilters" class="dropdown mr-4">
                 <div class="dropdown-select">
                     <a wire:click="resetFilters" class="select mr-4"> <i class="fas fa-list-alt"></i> Todos los
                         cursos</a>
@@ -37,60 +37,22 @@
             </div>
         </div>
     </div>
-
-    {{-- indicadores de filtrados en cursos --}}
-    <div class="container flex">
-        <p class="mr-2 text-sm"> <i class="fas fa-list-ul"></i> Categoria: <span class="span-primario">
-                <?php switch ($category_id) {
-                case 1:
-                echo 'Desarrollo web';
-                break;
-
-                case 2:
-                echo 'Diseño web';
-                break;
-
-                case 3:
-                echo 'Programación';
-                break;
-
-                default:
-                echo 'Todas las categorias';
-                } ?>
-            </span></p>
-
-        <p class="mr-2 text-sm"> <i class="fas fa-sort-numeric-up-alt"></i> Nivel: <span class="span-primario">
-                <?php switch ($level_id) {
-                case 1:
-                echo 'Nivel básico';
-                break;
-
-                case 2:
-                echo 'Nivel intermedio';
-                break;
-
-                case 3:
-                echo 'Nivel avanzado';
-                break;
-
-                default:
-                echo 'Todos los niveles';
-                } ?>
-            </span></p>
-    </div>
-    <br>
-
+ 
     {{-- lista de cursos --}}
-    <ul class="cards">
+    <div class="grid container grid-cols-1 md:grid-cols-4 gap-4 gap-y-6">
         @foreach ($courses as $course)
             {{-- componente del card de los cursos --}}
             <x-course-card :course="$course" />
         @endforeach
-    </ul>
+    </div>
+
 
     {{-- paginacion de los cursos --}}
-    <div class="container mb-12">
-        {{ $courses->links() }}
+    <div class="container">
+        <div class="mt-12">
+            {{ $courses->links() }}
+        </div>
+
     </div>
 
 </div>
