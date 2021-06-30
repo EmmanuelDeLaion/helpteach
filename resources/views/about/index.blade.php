@@ -21,7 +21,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
 </head>
- 
+
 <body class="body">
 
 
@@ -30,16 +30,29 @@
 
     <x-app-layout>
 
-        <section class="portada-about">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-36">
-                <div class=" text-home w-full md:w-3/4 lg:w-1/2">
-                    <h1 class="h1-titulo-home">¿Quienes somos? </h1>
-                    <p class="p-subtitulo-home text-lg ">En <span class="span"> HelpTeach </span> podrás encontrar
-                        cursos creados por alumnos totalmente gratuitos </p>
 
+        <!-- component -->
+        <div class="text-white mt-0 border border-blue-800 py-0 w-full h-full"
+            style="height: 100vh; background-image:url('https://demos.onepagelove.com/html/leno/images/header-background.jpg')">
+            <section class="px-2 lg:px-0 sm:mt-32 flex w-full container mx-auto pb-16">
+                <div class="w-full text-white flex justify-center md:justify-start text-center md:text-left">
+                    <div class="md:w-1/2 w-full">
+                        <h2 class="leading-none mt-36 font-bold text-2xl xs:text-2x1 md:text-5xl lg:6x1 uppercase">
+                            ¿Que es <span class="text-purple-500">Helpteach</span>?</h2>
+                        <p class="mt-12 mb-6">Plataforma de cursos en linea hechos por alumnos para alumnos
+                        </p>
+                        <button
+                            class="px-16 rounded-full bg-purple-500 text-white font-bold p-4 uppercase border-purple-500 border">Ver más</button>
+                    </div>
+                    <div class="md:w-1/2 md:justify-center mt-32 md:flex hidden">
+                        <img src="https://demos.onepagelove.com/html/leno/images/header-iphone.png"
+                            alt="Mobile Phone" />
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+        </div>
+
 
         <section class="container mt-6">
 
@@ -50,8 +63,9 @@
 
             <div class="flex justify-center mt-6">
                 <h1 class="w-full md:w-3/4 lg:w-3/4 text-center titulo-cursos-home">Plataforma de cursos en linea hechos
-                    por <span class="span-primario">alumnos</span>  para
-                    <span class="span-primario"> alumnos </span> </h1>
+                    por <span class="span-primario">alumnos</span> para
+                    <span class="span-primario"> alumnos </span>
+                </h1>
             </div>
 
             <div class="flex justify-center">
