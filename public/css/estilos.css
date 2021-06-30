@@ -14,11 +14,9 @@
 @import url('section-start.css');
 @import url('sections.css');
 
-/* estilos show courses   */
 @import url("estilos-show-course.css");
 
 :root {
-    /* colores  */
     --color-blanco-fondo: #eff3f5;
     --color-primario: #8B5CF6;
     --color-secundario: #150c21;
