@@ -100,7 +100,7 @@
                         <input wire:model="name" placeholder="Ingrese el titulo de la sección"
                             class="w-full bg-white focus:outline-none text-sm text-gray-800 font-bold border rounded-sm   py-2 border  px-2">
                         @error('name')
-                            <span class="font-bold text-red-400">Favor de ingrsar un titulo a la sección</span>
+                            <span class="font-bold text-red-400">Favor de ingresar un titulo a la sección</span>
                         @enderror
                     </form>
                 </div>
