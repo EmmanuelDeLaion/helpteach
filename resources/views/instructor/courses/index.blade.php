@@ -4,6 +4,6 @@
     @livewire('instructor.courses-index')
 </x-app-layout>
 
-@livewire('footer')
 
+@livewire('footer')
 <script type="text/javascript" src="{{ asset('js/cargar-loading.js') }}"></script>

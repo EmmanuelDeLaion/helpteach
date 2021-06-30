@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
 </head>
 
- 
+
 
 <body class="body">
 
@@ -42,13 +42,16 @@
                     <div class="col-span-1">
                         <div class="content-home">
                             <div class="content-text-home">
+                                @isset(Auth::user()->name)
+                                    <p class="text-2xl font-bold text-gray-700"> {{ Auth::user()->name }}</p>
+                                @endisset
                                 <h1 class="title-portada">Construyamos juntos <br>
-                                     tus    <span class="span-primario"> habilidades</span> 
+                                    tus <span class="span-primario"> habilidades</span>
                                 </h1>
                                 @livewire('search')
                             </div>
-                            <p class="frase-home">“Hay que unirse, 
-                                no para estar juntos, 
+                            <p class="frase-home">“Hay que unirse,
+                                no para estar juntos,
                                 sino para hacer algo juntos.”</p>
                         </div>
                     </div>
@@ -83,7 +86,6 @@
 
     <script>
         AOS.init();
-
     </script>
 
 

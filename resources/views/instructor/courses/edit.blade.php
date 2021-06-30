@@ -67,5 +67,4 @@
     </x-slot>
 
 </x-instructor-layout>
-
-@livewire('footer')
+ 

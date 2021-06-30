@@ -11,7 +11,7 @@ ul {
 	list-style: none;
 }
 .footer {
-	background-color: var(--color-blanco-fondo);
+	background-color: var(--color-secundario);
 	padding: 70px 0;
 }
 .footer-col {
@@ -59,7 +59,7 @@ ul {
 	display: inline-block;
 	height: 40px;
 	width: 40px;
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: var(--color-secundario);
 	margin: 0 10px 10px 0;
 	text-align: center;
 	line-height: 40px;
@@ -107,18 +107,17 @@ ul {
 .bottom center {
 	padding: 5px;
 	font-size: 14px;
-	background: var(--color-blanco-fondo);
-	margin-bottom: 10px;
+	background: var(--color-primario);
 }
 .bottom center span {
 	font-size: 12px;
 }
 .bottom center a {
-	color: var(--color-primario);
+	color: var(--color-blanco);
 	text-decoration: none;
 }
 .bottom center a:hover {
-	color: var(--color-primario);
+	color: var(--color-blanco);
 }
 
 /*responsive*/
