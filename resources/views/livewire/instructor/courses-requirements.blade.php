@@ -64,7 +64,7 @@
             <div class="lg:flex items-center mt-2">
                 <div class="bg-purple-500 rounded-lg lg:w-2/12 p-3 block  md:ml-2 h-full shadow-inner">
                     <div class="text-center">
-                        <div class="text-white font-bold text-sm">Nueva Requerimiento</div>
+                        <div class="text-white font-bold text-sm">Nuevo Requerimiento</div>
                     </div>
                 </div>
                 <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
