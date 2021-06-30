@@ -36,13 +36,13 @@
 
             <div class="flex mt-2">
                 @if ($this->previous)
-                    <button wire:click="changeLesson({{ $this->previous }})" class="btn-primario-outline"><i
+                    <button wire:click="changeLesson({{ $this->previous }})" class="btn-primario-outline my-2"><i
                             class="fas fa-chevron-left"></i> Anterior</button>
                 @endif
 
                 @if ($this->next)
                     <button wire:click="changeLesson({{ $this->next }})"
-                        class="ml-auto btn-primario-outline">Siguiente <i class="fas fa-chevron-right"></i> </button>
+                        class="ml-auto btn-primario-outline my-2">Siguiente <i class="fas fa-chevron-right"></i> </button>
                 @endif
 
             </div>
