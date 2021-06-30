@@ -21,6 +21,7 @@ class CoursesGoals extends Component
         $this->goal = new Goal();
     }
 
+    
     public function render()
     {
         return view('livewire.instructor.courses-goals');

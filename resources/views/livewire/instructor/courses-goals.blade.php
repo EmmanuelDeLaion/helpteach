@@ -40,7 +40,6 @@
                         </div>
                     </div>
 
-
                     <div
                         class="flex flex-row items-center w-full lg:w-1/3 bg-white lg:justify-end justify-center px-2 py-4 lg:px-0">
                         <button wire:click="edit({{ $item }})" class="btn-primario">
@@ -50,16 +49,9 @@
                             <i class="fas fa-trash-alt"></i>
                         </button>
                     </div>
-
-
                 @endif
-
             </div>
-
-
-
         </div>
-
     @endforeach
 
 
@@ -68,9 +60,7 @@
         <h1 x-show="!open" x-on:click="open = true"
             class="text-md font-bold text-gray-800 mt-5 cursor-pointer hover:text-purple-500"><i
                 class="fas fa-plus-circle"></i> Agregar nueva meta al curso</h1>
-
         <div class="shadow  rounded-lg border border-purple-400 mt-5" x-show="open">
-
             <div class="lg:flex items-center mt-2">
                 <div class="bg-purple-500 rounded-lg lg:w-2/12 p-3 block  md:ml-2 h-full shadow-inner">
                     <div class="text-center">
@@ -97,9 +87,6 @@
                 </button>
             </div>
         </div>
-
     </div>
-
-
 
 </section>
