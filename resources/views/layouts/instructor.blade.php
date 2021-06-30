@@ -71,6 +71,9 @@
         </div>
     </div>
 
+    @livewire('footer')
+
+
     @stack('modals')
 
     @livewireScripts
