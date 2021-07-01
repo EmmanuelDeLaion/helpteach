@@ -77,6 +77,7 @@
 }
 
 
+
 @media screen and (max-width: 640px) {
     .titulo-anuncios {
         font-size: 40px;
@@ -90,6 +91,8 @@
         font-size: var(--size-title-portada-responsive);
         line-height: 90%;
     }
+
+    
 }
 
 @media screen and (max-width: 302px) {

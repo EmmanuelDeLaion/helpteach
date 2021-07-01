@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/0dd7a6f868.js" crossorigin="anonymous"></script>
-    {{-- <link rel="shortcut icon" href="{{ asset('/images/logo.svg') }}"> --}}
-
-    <title>HelpTeach</title>
+    <link rel="shortcut icon" href="{{ asset('/images/logo.svg') }}">
+    <title>Home - Helpteach</title>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
