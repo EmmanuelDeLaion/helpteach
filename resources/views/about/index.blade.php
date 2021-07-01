@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/0dd7a6f868.js" crossorigin="anonymous"></script>
-    {{-- <link rel="shortcut icon" href="{{ asset('/images/logo.svg') }}"> --}}
-
-    <title>HelpTeach</title>
+    <link rel="shortcut icon" href="{{ asset('/images/logo.svg') }}">
+    <title>Acerca de Helpteach</title>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
@@ -29,23 +28,29 @@
 
 
     <x-app-layout>
-
-
-        <!-- component -->
-        <div class="text-white mt-0 border border-blue-800 py-0 w-full h-full"
+ 
+        <div class="text-white mt-0 border border-blue-800 py-0 w-full h-full relative overflow-hidden"
             style="height: 100vh; background-image:url('https://demos.onepagelove.com/html/leno/images/header-background.jpg')">
             <section class="px-2 lg:px-0 sm:mt-32 flex w-full container mx-auto pb-16">
                 <div class="w-full text-white flex justify-center md:justify-start text-center md:text-left">
                     <div class="md:w-1/2 w-full">
-                        <h2 class="leading-none mt-36 font-bold text-2xl xs:text-2x1 md:text-5xl lg:6x1 uppercase">
+
+                        <div class="flex justify-center md:justify-start mt-36">
+                            <img width="200" src="{{ asset('/images/logo-blanco.png') }}" alt="">
+                        </div>
+
+                        
+                        <h2 class="leading-none mt-6  font-bold text-2xl xs:text-2x1 md:text-5xl lg:6x1 uppercase">
                             ¿Que es <span class="text-purple-500">Helpteach</span>?</h2>
-                        <p class="mt-12 mb-6">Plataforma de cursos en linea hechos por alumnos para alumnos
+                        <p class="mt-6 mb-6">Plataforma de cursos en linea hechos por alumnos para alumnos
                         </p>
                         <button
-                            class="px-16 rounded-full bg-purple-500 text-white font-bold p-4 uppercase border-purple-500 border">Ver más</button>
+                            class="px-16 rounded-full bg-purple-500 text-white font-bold p-4 uppercase border-purple-500 border">
+                            Ver más
+                        </button>
                     </div>
-                    <div class="md:w-1/2 md:justify-center mt-32 md:flex hidden">
-                        <img src="https://demos.onepagelove.com/html/leno/images/header-iphone.png"
+                    <div class="  imagen-dispositivos">
+                        <img src="{{ asset('images/about/dispositivos.png') }}"
                             alt="Mobile Phone" />
                     </div>
                 </div>
@@ -54,20 +59,13 @@
         </div>
 
 
-        <section class="container mt-6">
+        <section class="container">
 
-            <div class="flex justify-center">
+            <div class="flex justify-center mt-12">
                 <img width="200" src="{{ asset('/images/logo.png') }}" alt="">
             </div>
 
-
-            <div class="flex justify-center mt-6">
-                <h1 class="w-full md:w-3/4 lg:w-3/4 text-center titulo-cursos-home">Plataforma de cursos en linea hechos
-                    por <span class="span-primario">alumnos</span> para
-                    <span class="span-primario"> alumnos </span>
-                </h1>
-            </div>
-
+ 
             <div class="flex justify-center">
                 <p class="w-full md:w-1/2 lg:w-3/4 text-sm text-gray-500 mt-12">La idea principal de este proyecto es
                     motivar a los alumnos de la
