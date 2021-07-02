@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Storage;
 class LessonObserver
 {
 
+    // Comentar observadores en caso de error al migrar con los seeders no olvidar xsdddassdsd 
+
     public function creating(Lesson $lesson)
     {
         $url = $lesson->url;
@@ -46,4 +48,6 @@ class LessonObserver
             $lesson->resource->delete();
         }
     }
+
+
 }
