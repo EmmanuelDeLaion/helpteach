@@ -41,10 +41,11 @@
 
             <aside class="col-span-5 md:col-span-1">
                 <h1 class="title-section">Edición del curso</h1>
-                <ul class="mt-2">
+
+                <ul class="mt-2 mb-6">
                     <li onclick="location.href='{{ route('instructor.courses.edit', $course) }}'"
                     class="leading-7 mb-1  cursor-pointer  border-l-4 border-transparent pl-2  @routeIs('instructor.courses.edit', $course) font-bold bg-purple-500 text-white  rounded-sm @else text-gray-500 hover:bg-purple-100 rounded-sm font-normal @endif">
-                        <a class="text-sm" >Información del curso</a>
+                        <a class="text-sm">Información del curso</a>
                     </li>
 
                     <li onclick="location.href='{{ route('instructor.courses.curriculum', $course) }}'"
@@ -61,8 +62,73 @@
                     class="leading-7 mb-1  cursor-pointer  border-l-4 border-transparent pl-2  @routeIs('instructor.courses.students', $course) font-bold bg-purple-500 text-white  rounded-sm @else text-gray-500 hover:bg-purple-100 rounded-sm font-normal @endif">
                         <a class="text-sm">Estudiantes del curso</a>
                     </li>
-
                 </ul>
+
+
+
+                @switch($course->status)
+                    @case(1)
+                        <form action="{{ route('instructor.courses.status', $course) }}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn-primario-outline">Solicitar aprobación</button>
+                        </form>
+                    @break
+
+                    @case(2)
+                        <div
+                            class="alert flex flex-row items-center bg-yellow-200 p-5 rounded border-b-2 border-yellow-300 alerta-info">
+                            <div
+                                class="alert-icon flex items-center bg-yellow-100 border-2 border-yellow-500 justify-center h-10 w-10 flex-shrink-0 rounded-full">
+                                <span class="text-yellow-500">
+                                    <svg fill="currentColor" viewBox="0 0 20 20" class="h-6 w-6">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="alert-content ml-4">
+                                <div class="alert-title font-semibold text-lg text-yellow-800">
+                                    Curso en revisión
+                                </div>
+                                <div class="alert-description text-sm text-yellow-600">
+                                    Este curso se mandó a revisión
+                                </div>
+                            </div>
+                        </div>
+                    @break
+
+                    @case(3)
+                        <div
+                            class="alert flex flex-row items-center bg-green-200 p-5 rounded border-b-2 border-green-300 alerta-info">
+                            <div
+                                class="alert-icon flex items-center bg-green-100 border-2 border-green-500 justify-center h-10 w-10 flex-shrink-0 rounded-full">
+                                <span class="text-green-500">
+                                    <svg fill="currentColor" viewBox="0 0 20 20" class="h-6 w-6">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="alert-content ml-4">
+                                <div class="alert-title font-semibold text-lg text-green-800">
+                                    Curso publicado
+                                </div>
+                                <div class="alert-description text-sm text-green-600">
+                                    Este curso se ha publicado correctamente
+                                </div>
+                            </div>
+                        </div>
+                    @break
+
+                    @default
+
+                @endswitch
+
+
+
+
             </aside>
 
             <div class="col-span-5 md:col-span-4 shadow-sm rounded-md  ">
