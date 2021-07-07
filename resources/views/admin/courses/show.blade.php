@@ -9,7 +9,7 @@
 
     <title>HelpTeach</title>
 
- 
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
@@ -30,14 +30,19 @@
 
     <x-app-layout>
         <section class="portada-show-course">
-            <div class="w-full container flex  md:hidden lg:hidden xl:hidden  ">
-                <img class="img-show-course-top" src="{{ Storage::url($course->image->url) }}" alt="">
+            <div class="w-full container flex  md:hidden lg:hidden xl:hidden">
+                @if ($course->image)
+                    <img class="img-show-course-top" src="{{ Storage::url($course->image->url) }}" alt="">
+                @else
+                    <img class="img-show-course-top" src="{{ asset('images/logo.png') }}"
+                        alt="Imagen de logo por defecto">
+                @endif
             </div>
             <div
                 class="container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 mt-2 ">
                 <div class="container py-6 sm:py-6 md:py-24 lg:py-24 titulos-show-courses">
                     <h1 class="title-section"> {{ $course->title }} </h1>
-                    <p class=" mt-6 font-bold" > {{ $course->subtitle }} </p>
+                    <p class=" mt-6 font-bold"> {{ $course->subtitle }} </p>
                     <p class="p text-gray-500"> {!! $course->description !!} </p>
                     <ul class="mt-6">
                         <li>
@@ -61,62 +66,64 @@
                                     {{ $course->created_at }} </span> </p>
                         </li>
                     </ul>
-                    <div class="flex justify-between mt-2">
-                        <ul class="rating flex text-sm">
-                            <li> <i class="fas fa-star text-{{ $course->rating >= 1 ? 'yellow' : 'gray' }}-400 "></i>
-                            </li>
-                            <li> <i class="fas fa-star text-{{ $course->rating >= 2 ? 'yellow' : 'gray' }}-400 "></i>
-                            </li>
-                            <li> <i class="fas fa-star text-{{ $course->rating >= 3 ? 'yellow' : 'gray' }}-400 "></i>
-                            </li>
-                            <li> <i class="fas fa-star text-{{ $course->rating >= 4 ? 'yellow' : 'gray' }}-400 "></i>
-                            </li>
-                            <li> <i class="fas fa-star text-{{ $course->rating >= 5 ? 'yellow' : 'gray' }}-400 "></i>
-                            </li>
-                        </ul>
-                    </div>
+
                     <div class="flex">
-                        @can('enrolled', $course)
-                            {{-- si el usuario ya esta registrado le aparece este boton que dice continuar --}}
-                            <button onclick="location.href='{{ route('courses.status', $course) }}'"
-                                class="btn-primario">Continuar con el curso</button>
-                        @else
-                            {{-- si el usuario no esta registrado en el curso le aparece el boton para poder registrarse al curso --}}
-                            <form action="{{ route('courses.enrolled', $course) }}" method="post">
-                                @csrf
-                                <button type="submit" class="btn-primario">Inscribirte al curso</button>
-                            </form>
-                        @endcan
+                        {{-- si el usuario no esta registrado en el curso le aparece el boton para poder registrarse al curso --}}
+                        <form action="{{ route('admin.courses.approved', $course) }}" method="post">
+                            @csrf
+                            <button type="submit" class="btn-primario">Aprobar curso</button>
+                        </form>
+
                         <button onclick="location.href='#info-curso'" class="ml-2 btn-primario-outline">Ver
-                            temario</button>
+                            temario
+                        </button>
                     </div>
-                    <p class="text-sm mt-6">Comparte: </p>
-                    <div class="social-shared">
-                        <a class="shared-fb" target="_blanck"
-                            href="https://web.facebook.com/jesusemmanuel.lerma/?_rdc=1&_rdr"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="shared-tw" target="_blanck" href="https://twitter.com/ElMonoDl"><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="shared-ig" target="_blanck" href="https://www.instagram.com/emmanueldelaion/"><i
-                                class="fab fa-instagram"></i></a>
-                        <a class="shared-li" target="_blanck"
-                            href="https://www.linkedin.com/in/jesus-emmanuel-de-leon-lerma-0903071b7/"><i
-                                class="fab fa-linkedin-in"></i></a>
-                        <a class="shared-li" target="_blanck"><i class="fab fa-whatsapp"></i></a>
-                        <a href="javascript:getlink();" class="shared-copy"><i class="fas fa-copy"></i></a>
-                    </div>
+
                 </div>
                 {{-- columna de la imagen --}}
-                <div class="w-full hidden  md:flex lg:flex xl:flex  ">
-                    <img class="img-show-course" src="{{ Storage::url($course->image->url) }}" alt="">
+                <div class="w-full hidden  md:flex lg:flex xl:flex">
+                    @if ($course->image)
+                        <img class="img-show-course" src="{{ Storage::url($course->image->url) }}" alt="">
+                    @else
+                        <img class="img-show-course" src="{{ asset('/imageS/logo.png') }}" alt="">
+
+                    @endif
                 </div>
             </div>
+
+            <div class="container">
+                {{-- no aprovado --}}
+                @if (session('info'))
+                    <div
+                        class="alert flex flex-row items-center bg-red-200 p-5 rounded border-b-2 border-red-300 alerta-info">
+                        <div
+                            class="alert-icon flex items-center bg-red-100 border-2 border-red-500 justify-center h-10 w-10 flex-shrink-0 rounded-full">
+                            <span class="text-red-500">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </div>
+                        <div class="alert-content ml-4">
+                            <div class="alert-title font-semibold text-lg text-red-800">
+                                Falta información del curso
+                            </div>
+                            <div class="alert-description text-sm text-red-600">
+                                {{ session('info') }}
+                            </div>
+                        </div>
+                    </div>
+                @else
+                @endif
+  
+            </div>
+
         </section>
 
+ 
 
         <div>
             {{-- temario /info del curso --}}
             <div class="container grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 xs:grid-cols-1 gap-3  ">
+
                 <div class="col-span-2">
                     {{-- contenedor metas del curso --}}
                     <div
@@ -125,10 +132,18 @@
                             <h3 class="text-lg font-bold text-gray-700 mt-2">Lo que aprenderás en este curso</h3>
                             <ul
                                 class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2  gap-x-6 gap-y-2 mt-2">
-                                @foreach ($course->goals as $goal)
-                                    <li class="text-sm text-gray-500"> <span class="span-primario"> <i
-                                                class="fas fa-check-circle"></i> </span> {{ $goal->name }}</li>
-                                @endforeach
+
+                                @forelse ($course->goals as $goal)
+                                    <li class="text-sm text-gray-500"> <span class="span-primario">
+                                            <i class="fas fa-check-circle"></i> </span> {{ $goal->name }}
+                                    </li>
+                                @empty
+                                    <li class="text-sm text-gray-500">Este curso no tiene asignado ninguan meta
+                                    </li>
+                                @endforelse
+
+
+
                             </ul>
                         </div>
                     </div>
@@ -136,29 +151,39 @@
 
                     <section>
                         <h3 class="text-2xl font-bold text-gray-700 mt-10">Descripción del curso</h3>
-                        <p class="p text-gray-500 text-sm">{!! $course->description !!}</p>
+                        @if ($course->description)
+                            <p class="p text-gray-500 text-sm">{!! $course->description !!}</p>
+                        @else
+                            <p class="p text-gray-500 text-sm">Este curso no tiene una descripción</p>
+                        @endif
 
                     </section>
 
                     <section>
                         <h3 class="text-2xl font-bold text-gray-700 mt-10">Requisitos</h3>
                         <ul>
-                            @foreach ($course->requirements as $requirement)
-                                <li class="text-sm text-gray-500"> <span class="span-primario"> <i
-                                            class="fas fa-clipboard-check"></i> </span>
-                                    {{ $requirement->name }}</li>
-                            @endforeach
+                            @forelse ($course->requirements as $requirement)
+                                <li class="text-sm text-gray-500">
+                                    <span class="span-primario">
+                                        <i class="fas fa-clipboard-check"></i>
+                                    </span>
+                                    {{ $requirement->name }}
+                                </li>
+                            @empty
+                                <li class="text-sm text-gray-500">
+                                    Este curso no tiene ningún requerimiento
+                                </li>
+                            @endforelse
                         </ul>
                     </section>
 
                     {{-- temario del curso --}}
                     <section id="info-curso">
                         <h3 class="text-2xl font-bold text-gray-700 mt-10">Temario del curso</h3>
-                        @foreach ($course->sections as $section)
 
+                        @forelse ($course->sections as $section)
                             <section class="shadow bg-white mt-2 mb-2" @if ($loop->first) x-data="{ open: true }"
-@else
-                            x-data="{ open: false }" @endif>
+@else x-data="{ open: false }" @endif>
 
                                 <article class="border-b">
                                     <div class="border-l-2 border-transparent">
@@ -194,23 +219,31 @@
                                         <div>
                                             <div class="pl-8 pr-8 pb-5 text-grey-darkest">
                                                 <ul class="pl-4">
-                                                    @foreach ($section->lessons as $lesson)
+
+                                                    @forelse ($section->lessons as $lesson)
                                                         <li class="text-sm text-gray-500 pb-2">
                                                             <span class="span-primario"> <i
                                                                     class="fas fa-play-circle"></i>
                                                             </span> {{ $lesson->name }}
                                                         </li>
-                                                    @endforeach
+                                                    @empty
+                                                        <p class="text-sm text-gray-500">
+                                                            Este curso no tiene ninguna lección
+                                                        </p>
+                                                    @endforelse
+
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </article>
                             </section>
-
-                        @endforeach
+                        @empty
+                            <p class="text-sm text-gray-500">
+                                Este curso no tiene ninguna sección
+                            </p>
+                        @endforelse
                     </section>
-
                 </div>
 
 
@@ -242,65 +275,7 @@
                             </span>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-700 mt-10">Cursos recomendados</h3>
-                    {{-- apartado otros cursos --}}
-                    @foreach ($recomendados as $recomendado)
-                        <div class="hover-recomendados w-full bg-white p-5 rounded-md shadow-lg mt-4 mb-4">
-                            <div class="flex grid grid-cols-2">
-                                <div class="col-span-1">
-                                    <img onclick="location.href='{{ route('courses.show', $recomendado) }}'"
-                                        alt="mountain"
-                                        class="w-full object-cover rounded-md border-gray-300 cursor-pointer"
-                                        src=" {{ Storage::url($recomendado->image->url) }} " />
-                                </div>
 
-                                <div class="col-span-1">
-                                    <div class="flex flex-col
-                                    ml-5">
-                                        <a href="{{ route('courses.show', $recomendado) }}"
-                                            class="text-sm font-semibold"> {{ $recomendado->title }} </a>
-                                        {{-- <p class=" text-gray-500 text-sm">{{ $recomendado->category->name }}</p> --}}
-
-                                        <div class="flex items-center">
-                                            <img width="30" class="rounded-full"
-                                                src="{{ $recomendado->teacher->profile_photo_url }}"
-                                                alt="imagen de perfil del instructor">
-                                            <p class="text-gray-800 text-xs ml-2"> <span
-                                                    class="span-primario">{{ $recomendado->teacher->name }}
-                                                </span> </p>
-                                        </div>
-
-
-                                        <div class="flex justify-between mt-2">
-                                            <ul class="rating flex text-sm">
-                                                <li> <i
-                                                        class="fas fa-star text-{{ $recomendado->rating >= 1 ? 'yellow' : 'gray' }}-400 "></i>
-                                                </li>
-                                                <li> <i
-                                                        class="fas fa-star text-{{ $recomendado->rating >= 2 ? 'yellow' : 'gray' }}-400 "></i>
-                                                </li>
-                                                <li> <i
-                                                        class="fas fa-star text-{{ $recomendado->rating >= 3 ? 'yellow' : 'gray' }}-400 "></i>
-                                                </li>
-                                                <li> <i
-                                                        class="fas fa-star text-{{ $recomendado->rating >= 4 ? 'yellow' : 'gray' }}-400 "></i>
-                                                </li>
-                                                <li> <i
-                                                        class="fas fa-star text-{{ $recomendado->rating >= 5 ? 'yellow' : 'gray' }}-400 "></i>
-                                                </li>
-                                            </ul>
-
-                                            <p class="text-sm text-gray">
-                                                <i class=" icon-students fas fa-chalkboard-teacher"></i>
-                                                ({{ $recomendado->students_count }})
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    @endforeach
 
                 </div>
             </div>
@@ -313,8 +288,10 @@
 
     </x-app-layout>
 
+    <script src="{{ asset('js/instructor/courses/alerta.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/cargar-loading.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/obtener-link.js') }}"></script>
+
 
 
 </body>
