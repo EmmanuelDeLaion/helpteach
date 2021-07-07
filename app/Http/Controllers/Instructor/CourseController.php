@@ -16,9 +16,9 @@ class CourseController extends Controller
 {
 
     public function __construct(){
-        $this->middleware('can:Listar cursos')->only('index');
+        $this->middleware('can:Leer cursos')->only('index');
         $this->middleware('can:Crear cursos')->only('create', 'store');
-        $this->middleware('can:actualizar cursos')->only('edit', 'update', 'goals');
+        $this->middleware('can:Actualizar cursos')->only('edit', 'update', 'goals');
         $this->middleware('can:Eliminar cursos')->only('destroy');
     }
 
@@ -164,5 +164,13 @@ class CourseController extends Controller
         $this->authorize('dicatated', $course);
 
         return view('instructor.courses.goals', compact('course'));
+    }
+
+    public function status(Course $course){
+        $course->status = 2;
+
+        $course->save();
+
+        return back();
     }
 }

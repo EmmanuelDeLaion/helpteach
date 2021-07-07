@@ -1,8 +1,4 @@
-<x-instructor-layout>
-
-    <x-slot name="course">
-        {{ $course->slug }}
-    </x-slot>
+<x-instructor-layout :course="$course">
 
     @if (session('info-create-course'))
         <div class="alert flex flex-row items-center bg-green-200 p-5 rounded border-b-2 border-green-300 alerta-info">
