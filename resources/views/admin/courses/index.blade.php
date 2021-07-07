@@ -3,7 +3,21 @@
 @section('title', 'HelpTeach')
 
 @section('content_header')
-    <h1>Cursos pendientes de aprobación</h1>
+
+    <div class="d-flex justify-content-between">
+        <div>
+            <h1>Cursos pendientes de aprobación</h1>
+        </div>
+        <div>
+            @if (session('info-approved'))
+                <div class="alert alert-success alerta-info" role="alert">
+                    <i class="fas fa-check"></i> <a href="#" class="alert-link">¡Aprobado correctamente!</a>.
+                    {{ session('info-approved') }}
+                </div>
+            @endif
+        </div>
+    </div>
+
 @stop
 
 @section('content')
@@ -30,7 +44,8 @@
                                 <td>{{ $course->title }}</td>
                                 <td>{{ $course->category->name }}</td>
                                 <td>
-                                    <a class="btn btn-primary" href="">Revisar</a>
+                                    <a class="btn btn-primary"
+                                        href="{{ route('admin.courses.show', $course) }}">Revisar</a>
                                 </td>
                             </tr>
                         @endforeach
@@ -54,7 +69,5 @@
 @stop
 
 @section('js')
-    <script>
-        console.log('Hi!');
-    </script>
+    <script src="{{ asset('js/instructor/courses/alerta.js') }}"></script>
 @stop

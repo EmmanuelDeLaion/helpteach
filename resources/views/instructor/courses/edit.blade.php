@@ -60,7 +60,10 @@
         <script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/classic/ckeditor.js"></script>
         <script src="{{ asset('js/instructor/courses/form.js') }}"></script>
         <script src="{{ asset('js/instructor/courses/alerta.js') }}"></script>
+
+        
     </x-slot>
 
+
+
 </x-instructor-layout>
- 

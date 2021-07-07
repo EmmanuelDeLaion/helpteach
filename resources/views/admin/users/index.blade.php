@@ -3,7 +3,7 @@
 @section('title', 'HelpTeach')
 
 @section('content_header')
-    <h1>Lista de usuarios</h1>
+  <h1>Lista de usuarios</h1>
 @stop
 
 @section('content')
@@ -15,5 +15,7 @@
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+    <script>
+        console.log('Hi!');
+    </script>
 @stop
