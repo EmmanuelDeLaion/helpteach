@@ -244,7 +244,7 @@ return [
             'text'        => 'Lista de Roles',
             'route'         => 'admin.roles.index',
             'icon'        => 'fas fa-fw fa-users-cog',
-            'active'       => [ 'admin/roles*' ],
+            'active'       => ['admin/roles*'],
             'can'          => 'Listar rol'
         ],
 
@@ -252,7 +252,7 @@ return [
             'text'        => 'Lista de Usuarios',
             'route'         => 'admin.users.index',
             'icon'        => 'fas fa-fw fa-users',
-            'active'       => [ 'admin/users*' ],
+            'active'       => ['admin/users*'],
             'can'          => 'Leer usuarios'
         ],
 
@@ -262,6 +262,25 @@ return [
             'route'  => 'admin.courses.index',
             'icon' => 'fas fa-fw fa-user',
         ],
+
+        [
+            'text' => 'Categorias',
+            'route'  => 'admin.categories.index',
+            'icon' => 'fas fa-fw fa-cogs',
+        ],
+
+        [
+            'text' => 'Niveles',
+            'route'  => 'admin.categories.index',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+
+        [
+            'text' => 'Precios',
+            'route'  => 'admin.categories.index',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+
         [
             'text' => 'change_password',
             'url'  => 'admin/settings',
