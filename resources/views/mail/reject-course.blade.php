@@ -132,7 +132,7 @@
             position: relative;
         }
 
-        .content-info .content-info-course{
+        .content-info .content-info-course {
             max-width: 80%;
         }
 
@@ -204,6 +204,7 @@
         li {
             list-style: none;
         }
+
     </style>
 
 
@@ -211,13 +212,13 @@
     <header class="header">
         <div class="content">
             <div>
-                <h1>¡Enhorabuena! <br> tu cruso ha sido aprobado 😃</h1>
-                <p>Tu curso llamado<span> {{ $course->title }} </span> ha sido aprobado
-                    correctamente</p>
-                <p>Ahora los alumnos ya se podrán inscribir a tu curso
+                <h1>¡Lo sentimos! <br> tu cruso ha sido rechazado 😪</h1>
+                <p>Tu curso llamado<span> {{ $course->title }} </span> ha sido rechazado por no cumplir los
+                    requerimientos necesarios</p>
+                <p>Te pedimos que modifiques tu cruso y vuelvas a enviarlo para aprobación
                 </p>
                 <p>¡Éxito!</p>
-                <button  onclick="location.href='{{ route('courses.show', $course) }}'" class="btn">Ver curso</button>
+                <button  class="btn">Ver curso</button>
             </div>
         </div>
     </header>
@@ -238,7 +239,9 @@
             <h4>Precio:</h4>
             <p>{{ $course->price->name }}</p>
 
-            <button onclick="location.href='{{ route('courses.show', $course) }}'" class="btn">Ver curso</button>
+            <h3>Motivos del rechazo:</h3>
+            <p>{!!$course->observation->body !!}</p>
+            <button  class="btn">Ver curso</button>
 
         </div>
     </div>

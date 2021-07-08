@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Storage;
 class CourseController extends Controller
 {
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->middleware('can:Leer cursos')->only('index');
         $this->middleware('can:Crear cursos')->only('create', 'store');
         $this->middleware('can:Actualizar cursos')->only('edit', 'update', 'goals');
@@ -52,8 +53,7 @@ class CourseController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request){
         $request->validate([
             'title' => 'required',
             'slug' => 'required|unique:courses',
@@ -96,8 +96,7 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Course $course)
-    {
+    public function edit(Course $course){
         $this->authorize('dicatated', $course);
 
         $categories = Category::pluck('name', 'id');
@@ -114,10 +113,9 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Course $course)
-    {
+    public function update(Request $request, Course $course){
         $this->authorize('dicatated', $course);
-        
+
 
         $request->validate([
             'title' => 'required',
@@ -146,7 +144,7 @@ class CourseController extends Controller
                 ]);
             }
         }
-        return redirect()->route('instructor.courses.edit', $course)->with('info-update-course','El curso se actualizó correctamente');
+        return redirect()->route('instructor.courses.edit', $course)->with('info-update-course', 'El curso se actualizó correctamente');
     }
 
     /**
@@ -155,8 +153,7 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Course $course)
-    {
+    public function destroy(Course $course){
         //
     }
 
@@ -168,9 +165,17 @@ class CourseController extends Controller
 
     public function status(Course $course){
         $course->status = 2;
-
         $course->save();
 
-        return back();
+        if ($course->observation) {
+            $course->observation->delete();
+        }
+
+
+        return redirect()->route('instructor.courses.edit', $course);
+    }
+
+    public function observation(Course $course){
+        return view('instructor.courses.observation', compact('course'));
     }
 }

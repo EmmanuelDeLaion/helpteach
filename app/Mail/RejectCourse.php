@@ -8,7 +8,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class ApprovedCourse extends Mailable
+class RejectCourse extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -30,6 +30,6 @@ class ApprovedCourse extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.approved-course')->subject('Curso aprobado');
+        return $this->view('mail.reject-course')->subject('Curso rechazado');
     }
 }
