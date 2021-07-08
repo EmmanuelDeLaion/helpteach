@@ -15,6 +15,13 @@
                     {{ session('info-approved') }}
                 </div>
             @endif
+
+            @if (session('info-reject'))
+            <div class="alert alert-danger alerta-info" role="alert">
+                <i class="fas fa-check"></i> <a href="#" class="alert-link">Curso rechazado</a>.
+                {{ session('info-approved') }}
+            </div>
+        @endif
         </div>
     </div>
 

@@ -74,6 +74,8 @@
                             <button type="submit" class="btn-primario">Aprobar curso</button>
                         </form>
 
+                        <button onclick="location.href='{{ route('admin.courses.observation', $course) }}'" class="ml-2 btn-primario-outline">Observar curso</button>
+
                         <button onclick="location.href='#info-curso'" class="ml-2 btn-primario-outline">Ver
                             temario
                         </button>

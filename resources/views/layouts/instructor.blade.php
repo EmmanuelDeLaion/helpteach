@@ -62,6 +62,14 @@
                     class="leading-7 mb-1  cursor-pointer  border-l-4 border-transparent pl-2  @routeIs('instructor.courses.students', $course) font-bold bg-purple-500 text-white  rounded-sm @else text-gray-500 hover:bg-purple-100 rounded-sm font-normal @endif">
                         <a class="text-sm">Estudiantes del curso</a>
                     </li>
+
+                    @if ($course->observation)
+                        <li onclick="location.href='{{ route('instructor.courses.observation', $course) }}'"
+                        class="leading-7 mb-1  cursor-pointer  border-l-4 border-transparent pl-2  @routeIs('instructor.courses.observation', $course) font-bold bg-purple-500 text-white  rounded-sm @else text-gray-500 hover:bg-purple-100 rounded-sm font-normal @endif">
+                            <a class="text-sm">Observaciones</a>
+                        </li>
+                    @endif
+
                 </ul>
 
 
