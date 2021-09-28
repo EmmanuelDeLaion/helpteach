@@ -211,7 +211,7 @@
     <header class="header">
         <div class="content">
             <div>
-                <h1>¡Enhorabuena! <br> tu cruso ha sido aprobado 😃</h1>
+                <h1>¡Enhorabuena! <br> tu curso ha sido aprobado 😃</h1>
                 <p>Tu curso llamado<span> {{ $course->title }} </span> ha sido aprobado
                     correctamente</p>
                 <p>Ahora los alumnos ya se podrán inscribir a tu curso

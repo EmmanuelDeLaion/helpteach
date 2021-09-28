@@ -15,7 +15,7 @@
                     </path>
                 </svg>
             </span>
-            <input wire:model="search" placeholder="Escriba el titulo del estudiante"
+            <input wire:model="search" placeholder="Escriba el nombre del estudiante"
                 class="appearance-none rounded-r rounded-l sm:rounded-l-none border border-purple-400 border-b block pl-8 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-500 focus:bg-white focus:placeholder-gray-600 focus:text-gray-500 focus:outline-none" />
         </div>
 
@@ -71,7 +71,7 @@
                 </tbody>
             </table>
         @else
-            <p class="px-6 py-4">El curso escrito no existe 🤔</p>
+            <p class="px-6 py-4">El estudiante no existe 🤔</p>
         @endif
 
         <div class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between">

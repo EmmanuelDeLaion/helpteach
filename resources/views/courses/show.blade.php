@@ -9,7 +9,7 @@
 
     <title>HelpTeach</title>
 
- 
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
@@ -37,7 +37,7 @@
                 class="container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 mt-2 ">
                 <div class="container py-6 sm:py-6 md:py-24 lg:py-24 titulos-show-courses">
                     <h1 class="title-section"> {{ $course->title }} </h1>
-                    <p class=" mt-6 font-bold" > {{ $course->subtitle }} </p>
+                    <p class=" mt-6 font-bold"> {{ $course->subtitle }} </p>
                     <p class="p text-gray-500"> {!! $course->description !!} </p>
                     <ul class="mt-6">
                         <li>
@@ -46,9 +46,13 @@
                         </li>
 
                         <li>
-                            <p class="textos"> <span class="span-primario"><i class="fas fa-list-ol"></i> </span>
-                                Categoria: <span class="span-primario">
-                                    {{ $course->category->name }} </span> </p>
+                            <p class="textos"> <span class="span-primario"><i class="fas fa-list-ol"></i>
+                                </span>Categoria: <span class="span-primario">
+                                    @isset($course->category->name)
+                                        {{ $course->category->name }}
+                                    @endisset
+                                </span>
+                            </p>
                         </li>
                         <li>
                             <p class="textos"> <span class="span-primario"> <i class="fas fa-users"></i></span>

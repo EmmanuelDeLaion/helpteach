@@ -38,7 +38,11 @@
                     </div>
                     <div class="p-3">
                         <p class="text-sm font-bold text-purple-500">
+                            @isset($course->category->name)
                             {{ $course->category->name }}
+                            @endisset
+                            
+                            
                         </p>
 
                         <h3 class="mr-10 text-sm truncate-2nd">
