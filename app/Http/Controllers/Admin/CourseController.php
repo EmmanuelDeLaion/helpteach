@@ -60,8 +60,7 @@ class CourseController extends Controller
 
         $course->status = 1;
         $course->save();
-
-        // Enviar correo 
+ 
         $mail = new RejectCourse($course);
         Mail::to($course->teacher->email)->queue($mail);
 
