@@ -14,9 +14,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
     <title>HelpTeach</title>
-</head>
-
-<body>
 
     <style>
         * {
@@ -34,7 +31,7 @@
 
 
         .header {
-            height: 100vh;
+            margin: 10px;
             width: 100%;
             background-image:
                 linear-gradient(to right bottom,
@@ -90,7 +87,7 @@
             color: #fff;
         }
 
-        .content h1 {
+        .header .content div h1 {
             font-size: 2rem;
             color: rgb(255, 255, 255);
             line-height: 99%;
@@ -125,34 +122,34 @@
 
         .content-info {
             padding: 1rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
         }
 
         .content-info .content-info-course {
-            max-width: 80%;
+     
         }
 
-        .content-info h1 {
+        .content-info .content-info-course h2 {
             font-size: 2rem;
             color: rgb(24, 20, 20);
             line-height: 90%;
             margin: .5rem;
         }
 
-        .content-info p {
+        .content-info .content-info-course p {
             font-size: 14px;
         }
 
-        .content-info p span {
+        .content-info .content-info-course p span {
             font-weight: bold;
             color: #8B5CF6;
         }
 
-        .content-info .btn {
+        .content-info .content-info-course .btn {
             background-color: rgba(255, 255, 255, 0);
             color: #8B5CF6;
             border: 2px solid #8B5CF6;
@@ -163,13 +160,13 @@
             transition: 0.25s;
         }
 
-        .content-info .btn:hover {
+        .content-info .content-info-course .btn:hover {
             background-color: #8B5CF6;
             color: #ffffff;
             cursor: pointer;
         }
 
-        .img {
+        .content-info .content-info-course .img {
             margin: 1rem 0 1rem 0;
         }
 
@@ -181,6 +178,11 @@
         footer {
             padding: 1rem;
             background-color: #150c21;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
         }
 
         ul {
@@ -208,6 +210,9 @@
     </style>
 
 
+</head>
+
+<body>
 
     <header class="header">
         <div class="content">
@@ -218,7 +223,7 @@
                 <p>Te pedimos que modifiques tu cruso y vuelvas a enviarlo para aprobación
                 </p>
                 <p>¡Éxito!</p>
-                <button  class="btn">Ver curso</button>
+                <button class="btn">Ver curso</button>
             </div>
         </div>
     </header>
@@ -240,8 +245,8 @@
             <p>{{ $course->price->name }}</p>
 
             <h3>Motivos del rechazo:</h3>
-            <p>{!!$course->observation->body !!}</p>
-            <button  class="btn">Ver curso</button>
+            <p>{!! $course->observation->body !!}</p>
+            <button class="btn">Ver curso</button>
 
         </div>
     </div>
@@ -249,9 +254,7 @@
 
 
     <footer>
-        <div class="content-img-footer">
-            <img width="100px" src="{{ asset('/images/logo-blanco.png') }}" alt="">
-        </div>
+        
         <ul>
             <li><a target="_blanck" href="https://www.facebook.com/jesusemmanuel.lerma/">Facebook</a></li>
             <li><a target="_blanck" href="https://www.instagram.com/emmanueldelaion/">Instagram</a></li>
