@@ -212,7 +212,7 @@
     <header class="header">
         <div class="content">
             <div>
-                <h1>¡Lo sentimos! <br> tu cruso ha sido rechazado 😪</h1>
+                <h1>¡Lo sentimos! <br> tu curso ha sido rechazado 😪</h1>
                 <p>Tu curso llamado<span> {{ $course->title }} </span> ha sido rechazado por no cumplir los
                     requerimientos necesarios</p>
                 <p>Te pedimos que modifiques tu cruso y vuelvas a enviarlo para aprobación

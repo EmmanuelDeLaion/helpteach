@@ -92,6 +92,12 @@ class CourseStatus extends Component
     }
 
 
+    
+    public function downloadDiploma(){
+        return response()->download( storage_path('app/public/diploma/prueba-diploma.png') );
+    }
+
+
 
 
 }

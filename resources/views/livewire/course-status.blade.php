@@ -12,26 +12,51 @@
     <div class="container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3  gap-8 ">
         <div class="col-span-1 xs:col-span sm:col-span-1 md:col-span-2 lg:col-span-2 mt-2">
             <div class="embed-responsive">
-                {!! $current->frame !!}
+                @isset($current->frame)
+                    {!! $current->frame !!}
+                @endisset
+
             </div>
-            <p class="mt-2 date-lesson-course">{{ $current->created_at }}</p>
+            <p class="mt-2 date-lesson-course">
+                @isset($current->created_at)
+                    {{ $current->created_at }}
+                @endisset
 
-            <h3 class="title-lesson-course">{{ $current->name }} </h3>
+            </p>
 
-            @if ($current->description)
-                <div class="text-gray-600">
-                    {{ $current->description->name }}
-                </div>
-            @endif
+            <h3 class="title-lesson-course">
+                @isset($current->name)
+                    {{ $current->name }}
+                @endisset
+
+            </h3>
+
+            @isset($current->description)
+                @if ($current->description)
+                    <div class="text-gray-600">
+                        @isset($current->description->name)
+                            {{ $current->description->name }}
+                        @endisset
+                    </div>
+                @endif
+            @endisset
+
+
+
 
             <div class="flex items-center mt-4 cursor-pointer" wire:click="completed">
-                @if ($current->completed)
-                    <i class="fas fa-check-square text-purple-500 text-3xl"></i>
-                @else
-                    <i class="far fa-square text-purple-500 text-3xl"></i>
 
-                @endif
+                @isset($current->completed)
+                    @if ($current->completed)
+                        <i class="fas fa-check-square text-purple-500 text-3xl"></i>
+                    @else
+                        <i class="far fa-square text-purple-500 text-3xl"></i>
+
+                    @endif
+                @endisset
+
                 <p class="text-sm ml-2 hover:text-purple-500">Marcar como terminada</p>
+
             </div>
 
             <div class="flex mt-2">
@@ -42,7 +67,8 @@
 
                 @if ($this->next)
                     <button wire:click="changeLesson({{ $this->next }})"
-                        class="ml-auto btn-primario-outline my-2">Siguiente <i class="fas fa-chevron-right"></i> </button>
+                        class="ml-auto btn-primario-outline my-2">Siguiente <i class="fas fa-chevron-right"></i>
+                    </button>
                 @endif
 
             </div>
@@ -118,6 +144,17 @@
 
                         @endforeach
                     </ul>
+
+                    <div>
+                        <hr>
+                        @if ($this->advance == 100)
+                            <button wire:click="downloadDiploma" class="btn-primario">
+                                <i class="fas fa-download"></i>
+                            </button>
+                            <h1 class="font-bold inline-block mb-2 mt-2">Descargar certificado</h1>
+                        @endif
+                    </div>
+
                 </div>
 
 

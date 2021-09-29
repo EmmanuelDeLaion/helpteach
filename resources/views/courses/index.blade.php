@@ -23,9 +23,9 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
 
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
-    
+
     {{-- AOS SCROLL --}}
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
@@ -40,7 +40,7 @@
 
 
 </head>
- 
+
 
 
 
@@ -89,25 +89,6 @@
         @livewire('doubts')
 
         @livewire('comments-students')
-
-        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@jesusdeleonlerma/video/6937778101942291717"
-            data-video-id="6937778101942291717" style="max-width: 605px;min-width: 325px;">
-            <section> <a target="_blank" title="@jesusdeleonlerma"
-                    href="https://www.tiktok.com/@jesusdeleonlerma">@jesusdeleonlerma</a>
-                <p>Diseño de Facebook en AdobeXD - Comenta aplicaciones para diseñarlas <a title="adobexd"
-                        target="_blank" href="https://www.tiktok.com/tag/adobexd">##AdobeXd</a> <a title="mobiledesign"
-                        target="_blank" href="https://www.tiktok.com/tag/mobiledesign">##mobiledesign</a> <a
-                        title="design" target="_blank" href="https://www.tiktok.com/tag/design">##design</a> <a
-                        title="uiux" target="_blank" href="https://www.tiktok.com/tag/uiux">##uiux</a> <a
-                        title="uiuxdesign" target="_blank" href="https://www.tiktok.com/tag/uiuxdesign">##uiuxdesign</a>
-                    <a title="frontend" target="_blank" href="https://www.tiktok.com/tag/frontend">##frontend</a> <a
-                        title="facebook" target="_blank" href="https://www.tiktok.com/tag/facebook">##facebook</a> <a
-                        title="webdesign" target="_blank" href="https://www.tiktok.com/tag/webdesign">##webdesign</a>
-                </p> <a target="_blank" title="♬ sonido original - Jesus De Leon Lerma"
-                    href="https://www.tiktok.com/music/sonido-original-6937778059953244934">♬ sonido original - Jesus De
-                    Leon Lerma</a>
-            </section>
-        </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
 
 
         @livewire('footer')

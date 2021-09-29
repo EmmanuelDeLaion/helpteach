@@ -51,9 +51,13 @@
                         </li>
 
                         <li>
-                            <p class="textos"> <span class="span-primario"><i class="fas fa-list-ol"></i> </span>
-                                Categoria: <span class="span-primario">
-                                    {{ $course->category->name }} </span> </p>
+                            <p class="textos"> <span class="span-primario"><i class="fas fa-list-ol"></i>
+                                </span>Categoria: <span class="span-primario">
+                                    @isset($course->category->name)
+                                        {{ $course->category->name }}
+                                    @endisset
+                                </span>
+                            </p>
                         </li>
                         <li>
                             <p class="textos"> <span class="span-primario"> <i class="fas fa-users"></i></span>
@@ -74,7 +78,8 @@
                             <button type="submit" class="btn-primario">Aprobar curso</button>
                         </form>
 
-                        <button onclick="location.href='{{ route('admin.courses.observation', $course) }}'" class="ml-2 btn-primario-outline">Observar curso</button>
+                        <button onclick="location.href='{{ route('admin.courses.observation', $course) }}'"
+                            class="ml-2 btn-primario-outline">Observar curso</button>
 
                         <button onclick="location.href='#info-curso'" class="ml-2 btn-primario-outline">Ver
                             temario
@@ -115,12 +120,12 @@
                     </div>
                 @else
                 @endif
-  
+
             </div>
 
         </section>
 
- 
+
 
         <div>
             {{-- temario /info del curso --}}
