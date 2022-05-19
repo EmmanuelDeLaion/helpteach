@@ -16,21 +16,20 @@
                 <div class="footer-col">
                     <h4>Ayuda</h4>
                     <ul>
-                        <li><a class="text-gray-500" href=""> <i class="fas fa-question-circle"></i> Preguntas
+                        <li><a class="text-gray-500" href="{{ route('frequent-questions.index') }}"> <i class="fas fa-question-circle"></i> Preguntas
                                 Frecuentes</a></li>
-                        <li><a class="text-gray-500" href=""> <i class="fas fa-money-bill-wave"></i> Opciones de
+                        <li><a class="text-gray-500" href="{{ route('payment-options.index') }}"> <i class="fas fa-money-bill-wave"></i> Opciones de
                                 pago</a></li>
-                        <li><a class="text-gray-500" href=""> <i class="fas fa-chalkboard-teacher"></i> Ser
+                        <li><a class="text-gray-500" href="{{ route('be-an-instructor.index') }}"> <i class="fas fa-chalkboard-teacher"></i> Ser
                                 instructor</a></li>
-                        <li><a class="text-gray-500" href=""> <i class="fas fa-user-graduate"></i> Ser cursante</a></li>
+
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Otros servicios</h4>
                     <ul>
-                        <li><a class="text-gray-500" href=""> <i class="fas fa-briefcase"></i> Sistemas Web
-                                Empresariales</a></li>
-                        <li><a class="text-gray-500" href=""> <i class="fas fa-desktop"></i> Sitios Web </a></li>
+
+                        <li><a class="text-gray-500" href="{{ route('web-system.index') }}"> <i class="fas fa-desktop"></i> Sitios Web </a></li>
                     </ul>
                     <button onclick="location.href='http://tecdevsmx.com/'" type="submit" class="btn-primario   ">
                         TecDevs
