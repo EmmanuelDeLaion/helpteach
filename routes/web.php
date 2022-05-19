@@ -7,6 +7,12 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\AboutController;
 use App\Http\Livewire\CourseStatus;
 use App\Http\Controllers\PrivacyPoliciesController;
+use App\Http\Controllers\FrequentQuestionController;
+use App\Http\Controllers\PaymentOptionsController;
+use App\Http\Controllers\BeAnInstructorController;
+use App\Http\Controllers\WebSystemsController;
+
+
 
 use App\Models\Course;
 
@@ -78,3 +84,27 @@ Route::get(
     'privacy-policies',
     [PrivacyPoliciesController::class, 'index']
 )->name('privacy-policies.index');
+
+
+Route::get(
+    'frequent-questions',
+    [FrequentQuestionController::class, 'index']
+)->name('frequent-questions.index');
+
+
+Route::get(
+    'payment-options',
+    [PaymentOptionsController::class, 'index']
+)->name('payment-options.index');
+
+
+Route::get(
+    'be-an-instructor',
+    [BeAnInstructorController::class, 'index']
+)->name('be-an-instructor.index');
+
+
+Route::get(
+    'web-system',
+    [WebSystemsController::class, 'index']
+)->name('web-system.index');
