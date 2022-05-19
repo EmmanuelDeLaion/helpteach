@@ -25,6 +25,7 @@ class CourseSeeder extends Seeder
         $courses = Course::factory(40)->create();
 
         foreach ($courses as $course) {
+
             Image::factory(1)->create([
                 'imageable_id' => $course->id,
                 'imageable_type' => 'App\Models\Course'

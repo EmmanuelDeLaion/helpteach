@@ -10,6 +10,7 @@ class LessonObserver
 
     // Comentar observadores en caso de error al migrar con los seeders no olvidar xsdddassdsd
 
+/*
 
     public function creating(Lesson $lesson)
     {
@@ -50,7 +51,7 @@ class LessonObserver
         }
     }
 
-
+*/
 
 
 //Descomentar una vez  que ya se haya hecho la migracion con los seeders por completo

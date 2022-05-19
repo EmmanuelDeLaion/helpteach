@@ -28,7 +28,12 @@ class CourseFactory extends Factory
      */
     public function definition()
     {
+
+
+
         $title = $this->faker->sentence();
+
+
         return [
             'title' => $title,
             'subtitle' => $this->faker->sentence(),
