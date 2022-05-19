@@ -6,6 +6,8 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\AboutController;
 use App\Http\Livewire\CourseStatus;
+use App\Http\Controllers\PrivacyPoliciesController;
+
 use App\Models\Course;
 
 /*
@@ -19,20 +21,60 @@ use App\Models\Course;
 |
 */
 
-Route::get('/', HomeController::class)->name('home');
+Route::get(
+    '/',
+    HomeController::class
+)->name('home');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
 
-Route::get('cursos', [CourseController::class, 'index'])->name('courses.index');
+Route::middleware(
+    ['auth:sanctum', 'verified']
+)->get(
+    '/dashboard',
+    function () {
+        return view('dashboard');
+    }
+)->name('dashboard');
 
-Route::get('cursos/{course}', [CourseController::class, 'show'])->name('courses.show');
 
-Route::get('blog', [BlogController::class, 'index'])->name('blogs.index');
+Route::get(
+    'cursos',
+    [CourseController::class, 'index']
+)->name('courses.index');
 
-Route::get('about', [AboutController::class, 'index'])->name('about.index');
 
-Route::post('courses/{course}/enrolled', [CourseController::class, 'enrolled'])->middleware('auth')->name('courses.enrolled');
+Route::get(
+    'cursos/{course}',
+    [CourseController::class, 'show']
+)->name('courses.show');
 
-Route::get('course-status/{course}', CourseStatus::class)->name('courses.status')->middleware('auth');
+
+Route::get(
+    'blog',
+    [BlogController::class, 'index']
+)->name('blogs.index');
+
+
+Route::get(
+    'about',
+    [AboutController::class, 'index']
+)->name('about.index');
+
+
+Route::post(
+    'courses/{course}/enrolled',
+    [CourseController::class, 'enrolled']
+)->middleware('auth')->name('courses.enrolled');
+
+
+
+Route::get(
+    'course-status/{course}',
+    CourseStatus::class
+)->name('courses.status')->middleware('auth');
+
+
+Route::get(
+    'privacy-policies',
+    [PrivacyPoliciesController::class, 'index']
+)->name('privacy-policies.index');

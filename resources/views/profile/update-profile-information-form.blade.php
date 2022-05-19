@@ -27,9 +27,12 @@
                 <x-jet-label for="photo" value="{{ __('Imagen de perfil') }}" />
 
                 <!-- Current Profile Photo -->
+
+
                 <div class="mt-2" x-show="! photoPreview">
                     <img src="{{ $this->user->profile_photo_url }}" alt="{{ $this->user->name }}" class="rounded-full h-20 w-20 object-cover">
                 </div>
+
 
                 <!-- New Profile Photo Preview -->
                 <div class="mt-2" x-show="photoPreview">
@@ -59,7 +62,7 @@
             <x-jet-input-error for="name" class="mt-2" />
         </div>
 
-  
+
 
         <!-- Email -->
         <div class="col-span-6 sm:col-span-4">

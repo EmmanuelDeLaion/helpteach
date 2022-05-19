@@ -12,9 +12,8 @@
 @import url("section-ad.css");
 @import url('section-start.css');
 @import url('sections.css');
-
+@import url('policies.css');
 @import url("estilos-show-course.css");
-
 :root {
     --color-blanco-fondo: #eff3f5;
     --color-primario: #8B5CF6;
@@ -22,10 +21,8 @@
     --color-amarillo: #ecb709;
     --color-negro: #000000;
     --color-rojo: #EF4444;
-
     --color-fondo-primario: #e7deff;
     --color-fondo-secundario: #f1f1f1;
-
     --color-negro-primario: #151515;
     --color-texto-titulos-curso: #8596b2;
     /* color botones secundarios  */
@@ -34,17 +31,12 @@
     --color-gris-fondo: #f6f6f6;
     --color-gris: #9da9b2;
     --color-blanco: #fff;
-
     /* colores textos  */
     --color-texto: #697477;
     /* tamaños  */
-
-
-
     /* bordes  */
     --border-radius-botones: 50px;
     --border-radius-enlaces: 50px;
-
     scroll-behavior: smooth;
 }
 
@@ -70,21 +62,28 @@ html {
 
 
 /* *************************************************** */
+
+
 /* container  */
+
+
 /* *************************************************** */
+
 .container {
     max-width: 80rem;
     padding-left: 10px;
     padding-right: 10px;
 }
 
- 
-
-
 
 /* *************************************************** */
+
+
 /* seccion dudas  */
+
+
 /* *************************************************** */
+
 .avatars-doubts {
     margin: 20px;
     width: 300px;
@@ -97,17 +96,29 @@ html {
     cursor: pointer;
 }
 
+
 /* *************************************************** */
+
+
 /* navbar  */
+
+
 /* *************************************************** */
+
 .navbar-jet {
     position: fixed;
     z-index: 999;
 }
 
+
 /* *****************************************************/
+
+
 /* loader  */
+
+
 /* *************************************************** */
+
 .loading {
     position: fixed;
     z-index: 1000;
@@ -138,9 +149,15 @@ html {
     animation: aparecer 1.3s;
 }
 
+
 /* *************************************************** */
+
+
 /* responsive del video  */
+
+
 /* *************************************************** */
+
 .embed-responsive {
     position: relative;
     overflow: hidden;
@@ -156,24 +173,25 @@ html {
     border: 0;
 }
 
+
 /* progress bar  */
-.progress{
+
+.progress {
     position: relative;
     width: 200px;
     height: 10px;
     border-radius: 10px;
 }
-.porcentaje{
+
+.porcentaje {
     position: absolute;
-    content:'';
+    content: '';
     background-color: var(--color-primario);
     height: 10px;
     border-radius: 10px;
 }
 
-
-
-.imagen-dispositivos{
+.imagen-dispositivos {
     position: absolute;
     top: 55%;
     left: 70%;
@@ -181,8 +199,13 @@ html {
     width: 600px;
 }
 
+
 /* *************************************************** */
+
+
 /* keyframes */
+
+
 /* *************************************************** */
 
 @keyframes animacion-loading {
@@ -207,9 +230,15 @@ html {
     }
 }
 
+
 /* *************************************************** */
+
+
 /* medias  */
+
+
 /* *************************************************** */
+
 @media screen and (max-width: 900px) {
     footer {
         position: relative;
@@ -222,8 +251,7 @@ html {
     .main-content .box {
         margin: 5px 0;
     }
-
-    .imagen-dispositivos{
+    .imagen-dispositivos {
         position: absolute;
         top: 75%;
         left: 50%;

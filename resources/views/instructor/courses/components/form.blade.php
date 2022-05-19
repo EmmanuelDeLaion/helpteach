@@ -69,8 +69,7 @@
     </figure>
 
     <div class="ml-2">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ullam ab dolore? Quidem
-            asperiores officia, explicabo autem sunt quis non.
+        <p>Por favor seleccione una imagen de su galería el cual será la portada del curso
         </p>
         {!! Form::file('file', ['class' => 'w-full form-input rounded-sm  pr-6 py-2 bg-white text-sm placeholder-gray-400 text-gray-500 focus:bg-white focus:placeholder-gray-600 focus:outline-none'  . ($errors->has('file') ? 'border border-red-500' : '') ,  'id' => 'file', 'accept' => 'image/*']) !!}
         @error('file')

@@ -7,7 +7,7 @@
                     <ul>
                         <li><a class="text-gray-500" href="{{ route('about.index') }}"> <i class="fas fa-users"></i>
                                 ¿Quienes Somos?</a></li>
-                        <li><a class="text-gray-500" href=""> <i class="fas fa-landmark"></i> Políticas de
+                        <li><a class="text-gray-500" href="{{ route('privacy-policies.index') }}"> <i class="fas fa-landmark"></i> Políticas de
                                 privacidad</a></li>
                     </ul>
                     <img onclick="location.href='#'" class="mt-6 logo-footer" src="{{ asset('/images/logo-blanco.png') }}"
